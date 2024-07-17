@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const MainContainer = styled.div`
   background: #fff;
@@ -24,10 +24,13 @@ export const MainContainer = styled.div`
     font-weight: 500;
     font-size: 14px;
     color: #121417;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    transition:
+      color 250ms cubic-bezier(0.4, 0, 0.2, 1),
       background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     z-index: 1;
+    padding: 12px 20px;
+    display: inline-block;
 
     &:hover {
       color: #85aa9f;
@@ -39,14 +42,13 @@ export const MainContainer = styled.div`
     }
 
     &.active::after {
-      content: "";
-      left: -20px;
-      bottom: -12px;
-      z-index: -1;
-      height: 15px;
-      width: 100%;
+      content: '';
       position: absolute;
-      padding: 12px 20px;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
       border-radius: 15px;
       background-color: #85aa9f;
       transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -56,6 +58,7 @@ export const MainContainer = styled.div`
   .RightSideHeader {
     display: flex;
     align-items: center;
+    gap: 10px;
   }
 
   .LogoContainer {
@@ -84,15 +87,31 @@ export const MainContainer = styled.div`
     }
   }
 
+  .Logo {
+    width: 36px;
+    height: 36px;
+  }
+
+  .LogoTitle {
+    font-size: 18px;
+    @media only screen and (max-width: 374px) {
+      font-size: 14px;
+    }
+  }
+
   .UserContainer {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 10px;
   }
 
   .UserName {
     font-weight: 500;
-    font-size: 20px;
+    font-size: 16px;
+    color: #121417;
+    @media only screen and (max-width: 374px) {
+      font-size: 12px;
+    }
   }
 
   .UserImag {
@@ -117,30 +136,34 @@ export const MainContainer = styled.div`
       }
       transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
+    @media only screen and (max-width: 374px) {
+      margin-left: 0px;
+    }
     @media only screen and (min-width: 1440px) {
       display: none;
     }
   }
 
   .ButtonLogOut {
-    border: 1px solid #85aa9f;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    background: #85aa9f;
+    display: none;
+  }
 
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
+  @media only screen and (min-width: 1440px) {
+    .ButtonLogOut {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      border: none;
+      color: #121417;
+      background: transparent;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
 
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 156%;
-    color: #fcfcfc;
-
-    &:hover {
-      color: #85aa9f;
-      background: #f8f8f8;
+      &:hover {
+        color: #85aa9f;
+        transition: fill 0.3s ease;
+      }
     }
   }
 `;

@@ -1,11 +1,11 @@
-import styled from "styled-components";
-import vector from "../../img/Vector-min.jpg";
-import mobileImg from "../../img/registration-mobile.png";
-import desctopImg from "../../img/registration-desctop.png";
-import eye from "../../img/eye.svg";
-import eye_off from "../../img/eye-off.svg";
-import correct from "../../img/correct.svg";
-import error from "../../img/error.svg";
+import styled from 'styled-components';
+import vector from '../../img/Vector-min.jpg';
+import mobileImg from '../../img/registration-mobile.png';
+import desctopImg from '../../img/registration-desctop.png';
+import eye from '../../img/eye.svg';
+import eye_off from '../../img/eye-off.svg';
+import correct from '../../img/correct.svg';
+import error from '../../img/error.svg';
 
 export const LogInPageContainer = styled.div`
   width: 100%;
@@ -23,16 +23,16 @@ export const LogInPageContainer = styled.div`
     margin-top: 50px;
     display: grid;
     grid-template-areas:
-      "f i"
-      "f l"
-      "f l"
-      "f l";
+      'f i'
+      'f l'
+      'f l'
+      'f l';
   }
 
   .ImgContainer {
     order: 1;
-    display: grid;
-    justify-content: center;
+    display: flex;
+    justify-content: end;
 
     @media only screen and (min-width: 768px) {
       display: none;
@@ -44,9 +44,11 @@ export const LogInPageContainer = styled.div`
   }
 
   .RegisterImg {
-    background-image: url(${mobileImg});
+    background-image: url(${desctopImg});
     width: 247px;
     height: 191px;
+    background-repeat: no-repeat;
+    background-size: 85%;
 
     @media only screen and (min-width: 1440px) {
       width: 498px;
@@ -59,17 +61,17 @@ export const LogInPageContainer = styled.div`
   .FormContainer {
     margin-top: 40px;
     order: 3;
-    padding: 15px 30px;
+    padding: 32px 16px;
     border-radius: 25px 25px 0 0;
     background: rgba(133, 170, 159, 0.1);
     height: 100vh;
 
     @media only screen and (min-width: 768px) {
       margin-top: 150px;
-      padding: 40px 60px;
+      padding: 48px 64px;
       border-radius: 30px;
-      width: 627px;
-      height: 591px;
+      width: 628px;
+      height: 518px;
     }
 
     @media only screen and (min-width: 1440px) {
@@ -87,7 +89,7 @@ export const LogInPageContainer = styled.div`
     color: #121417;
 
     @media only screen and (min-width: 768px) {
-      font-size: 53px;
+      font-size: 40px;
       line-height: 120%;
     }
   }
@@ -100,7 +102,7 @@ export const LogInPageContainer = styled.div`
     margin-top: 16px;
 
     @media only screen and (min-width: 768px) {
-      font-size: 27px;
+      font-size: 20px;
       margin-top: 20px;
     }
   }
@@ -140,7 +142,7 @@ export const LogInPageContainer = styled.div`
     border: none;
 
     font-weight: 700;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 150%;
     color: #fcfcfc;
 
@@ -150,7 +152,7 @@ export const LogInPageContainer = styled.div`
     }
 
     @media only screen and (min-width: 768px) {
-      margin-top: 36px;
+      margin-top: 14px;
     }
   }
 
@@ -165,7 +167,7 @@ export const LogInPageContainer = styled.div`
     }
 
     & li:not(:last-child)::after {
-      content: "·";
+      content: '·';
       margin-left: 7px;
     }
 
@@ -202,7 +204,7 @@ export const LogInPageContainer = styled.div`
   .NavLogIn {
     justify-content: center;
     display: flex;
-    margin-top: 32px;
+    margin-top: 16px;
     font-weight: 700;
     font-size: 16px;
     line-height: 150%;
@@ -262,7 +264,6 @@ export const LogInPageContainer = styled.div`
     position: absolute;
     color: red;
     top: 60px;
-    left: 20px;
     font-size: 12px;
     align-items: flex-start;
     display: flex;
@@ -278,7 +279,6 @@ export const LogInPageContainer = styled.div`
     position: absolute;
     color: green;
     top: 60px;
-    left: 20px;
     font-size: 12px;
     align-items: flex-start;
     display: flex;

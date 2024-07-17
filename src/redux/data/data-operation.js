@@ -1,32 +1,32 @@
-import { createAsyncThunk } from "@reduxjs/toolkit";
-import axios, { token } from "../../api/axiosSettings";
-import toast from "react-hot-toast";
+import { createAsyncThunk } from '@reduxjs/toolkit';
+import axios, { token } from '../../api/axiosSettings';
+import toast from 'react-hot-toast';
 
 export const getAllCategories = createAsyncThunk(
-  "/words/categories",
+  '/words/categories',
   async (_, thunkAPI) => {
     const state = thunkAPI.getState();
     const persistedToken = state.auth.token;
     try {
-      const response = await axios.get("/words/categories");
+      const response = await axios.get('/words/categories');
       token.set(persistedToken);
       return response.data;
     } catch (error) {
       if (error.response && error.response.status === 400) {
-        return toast.error("Opppsss something went wrong!");
+        return toast.error('Opppsss something went wrong!');
       }
       if (error.response && error.response.status === 404) {
-        return toast.error("Service not found");
+        return toast.error('Service not found');
       }
       if (error.response && error.response.status === 500) {
-        return toast.error("Server error");
+        return toast.error('Server error');
       }
     }
   }
 );
 
 export const statisticsWords = createAsyncThunk(
-  "/words/statistics/",
+  '/words/statistics/',
   async (_, thunkAPI) => {
     const state = thunkAPI.getState();
     const persistedToken = state.auth.token;
@@ -37,20 +37,20 @@ export const statisticsWords = createAsyncThunk(
       return response.data;
     } catch (error) {
       if (error.response && error.response.status === 400) {
-        return toast.error("Opppsss something went wrong!");
+        return toast.error('Opppsss something went wrong!');
       }
       if (error.response && error.response.status === 404) {
-        return toast.error("Service not found");
+        return toast.error('Service not found');
       }
       if (error.response && error.response.status === 500) {
-        return toast.error("Server error");
+        return toast.error('Server error');
       }
     }
   }
 );
 
 export const ownWord = createAsyncThunk(
-  "/words/own",
+  '/words/own',
   async (formData, thunkAPI) => {
     const state = thunkAPI.getState();
     const persistedToken = state.auth.token;
@@ -63,53 +63,53 @@ export const ownWord = createAsyncThunk(
     };
 
     try {
-      const response = await axios.get("/words/own", { params });
+      const response = await axios.get('/words/own', { params });
       token.set(persistedToken);
       return response.data;
     } catch (error) {
       if (error.response && error.response.status === 400) {
-        return toast.error("Opppsss something went wrong!");
+        return toast.error('Opppsss something went wrong!');
       }
       if (error.response && error.response.status === 404) {
-        return toast.error("Service not found");
+        return toast.error('Service not found');
       }
       if (error.response && error.response.status === 500) {
-        return toast.error("Server error");
+        return toast.error('Server error');
       }
     }
   }
 );
 
 export const createWord = createAsyncThunk(
-  "/words/create",
+  '/words/create',
   async (formData, thunkAPI) => {
     const state = thunkAPI.getState();
     const persistedToken = state.auth.token;
 
     try {
-      const response = await axios.post("/words/create", formData);
+      const response = await axios.post('/words/create', formData);
       token.set(persistedToken);
       toast.success(`Succsess created  ${response.data.en}`);
       return response.data;
     } catch (error) {
       if (error.response && error.response.status === 400) {
-        return toast.error("Opppsss something went wrong!");
+        return toast.error('Opppsss something went wrong!');
       }
       if (error.response && error.response.status === 401) {
-        return toast.error("Such a word exists");
+        return toast.error('Such a word exists');
       }
       if (error.response && error.response.status === 404) {
-        return toast.error("Service not found");
+        return toast.error('Service not found');
       }
       if (error.response && error.response.status === 500) {
-        return toast.error("Server error");
+        return toast.error('Server error');
       }
     }
   }
 );
 
 export const deleteWord = createAsyncThunk(
-  "/words/delete",
+  '/words/delete',
   async (wordDelete, thunkAPI) => {
     const state = thunkAPI.getState();
     const persistedToken = state.auth.token;
@@ -121,23 +121,23 @@ export const deleteWord = createAsyncThunk(
       return response.data;
     } catch (error) {
       if (error.response && error.response.status === 400) {
-        return toast.error("Opppsss something went wrong!");
+        return toast.error('Opppsss something went wrong!');
       }
       if (error.response && error.response.status === 401) {
-        return toast.error("This word not found");
+        return toast.error('This word not found');
       }
       if (error.response && error.response.status === 404) {
-        return toast.error("Service not found");
+        return toast.error('Service not found');
       }
       if (error.response && error.response.status === 500) {
-        return toast.error("Server error");
+        return toast.error('Server error');
       }
     }
   }
 );
 
 export const editWord = createAsyncThunk(
-  "/words/edit",
+  '/words/edit',
   async (wordEdit, thunkAPI) => {
     const state = thunkAPI.getState();
     const persistedToken = state.auth.token;
@@ -148,30 +148,30 @@ export const editWord = createAsyncThunk(
         wordEdit.edit
       );
       token.set(persistedToken);
-      toast.success(`Succsess edit  ${wordEdit.en}`);
+      toast.success(`Successfully edited ${wordEdit.edit.en}`);
       return response.data;
     } catch (error) {
       if (error.response && error.response.status === 400) {
-        return toast.error("Opppsss something went wrong!");
+        return toast.error('Opppsss something went wrong!');
       }
       if (error.response && error.response.status === 401) {
-        return toast.error("This word not found");
+        return toast.error('This word not found');
       }
       if (error.response && error.response.status === 403) {
         return toast.error("You don't have right to edit this word!");
       }
       if (error.response && error.response.status === 404) {
-        return toast.error("Service not found");
+        return toast.error('Service not found');
       }
       if (error.response && error.response.status === 500) {
-        return toast.error("Server error");
+        return toast.error('Server error');
       }
     }
   }
 );
 
 export const getAllWord = createAsyncThunk(
-  "/words/all",
+  '/words/all',
   async (formData, thunkAPI) => {
     const state = thunkAPI.getState();
     const persistedToken = state.auth.token;
@@ -184,25 +184,25 @@ export const getAllWord = createAsyncThunk(
     };
 
     try {
-      const response = await axios.get("/words/all", { params });
+      const response = await axios.get('/words/all', { params });
       token.set(persistedToken);
       return response.data;
     } catch (error) {
       if (error.response && error.response.status === 400) {
-        return toast.error("Opppsss something went wrong!");
+        return toast.error('Opppsss something went wrong!');
       }
       if (error.response && error.response.status === 404) {
-        return toast.error("Service not found");
+        return toast.error('Service not found');
       }
       if (error.response && error.response.status === 500) {
-        return toast.error("Server error");
+        return toast.error('Server error');
       }
     }
   }
 );
 
 export const addWord = createAsyncThunk(
-  "/words/add/",
+  '/words/add/',
   async (wordId, thunkAPI) => {
     const state = thunkAPI.getState();
     const persistedToken = state.auth.token;
@@ -214,26 +214,26 @@ export const addWord = createAsyncThunk(
       return response.data;
     } catch (error) {
       if (error.response && error.response.status === 400) {
-        return toast.error("Opppsss something went wrong!");
+        return toast.error('Opppsss something went wrong!');
       }
       if (error.response && error.response.status === 409) {
-        return toast.error("The same word you already have!");
+        return toast.error('The same word you already have!');
       }
       if (error.response && error.response.status === 403) {
         return toast.error("You don't have right to edit this word!");
       }
       if (error.response && error.response.status === 404) {
-        return toast.error("Service not found");
+        return toast.error('Service not found');
       }
       if (error.response && error.response.status === 500) {
-        return toast.error("Server error");
+        return toast.error('Server error');
       }
     }
   }
 );
 
 export const tasksWords = createAsyncThunk(
-  "/words/tasks/",
+  '/words/tasks/',
   async (_, thunkAPI) => {
     const state = thunkAPI.getState();
     const persistedToken = state.auth.token;
@@ -244,40 +244,40 @@ export const tasksWords = createAsyncThunk(
       return response.data;
     } catch (error) {
       if (error.response && error.response.status === 400) {
-        return toast.error("Opppsss something went wrong!");
+        return toast.error('Opppsss something went wrong!');
       }
       if (error.response && error.response.status === 404) {
-        return toast.error("Service not found");
+        return toast.error('Service not found');
       }
       if (error.response && error.response.status === 500) {
-        return toast.error("Server error");
+        return toast.error('Server error');
       }
     }
   }
 );
 
 export const answersWord = createAsyncThunk(
-  "/words/answers",
+  '/words/answers',
   async (answers, thunkAPI) => {
     const state = thunkAPI.getState();
     const persistedToken = state.auth.token;
 
     try {
-      const response = await axios.post("/words/answers", answers);
+      const response = await axios.post('/words/answers', answers);
       token.set(persistedToken);
       return response.data;
     } catch (error) {
       if (error.response && error.response.status === 400) {
-        return toast.error("Incorrect answer");
+        return toast.error('Incorrect answer');
       }
       if (error.response && error.response.status === 401) {
-        return toast.error("Such a word exists");
+        return toast.error('Such a word exists');
       }
       if (error.response && error.response.status === 404) {
-        return toast.error("Service not found");
+        return toast.error('Service not found');
       }
       if (error.response && error.response.status === 500) {
-        return toast.error("Server error");
+        return toast.error('Server error');
       }
     }
   }

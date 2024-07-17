@@ -1,13 +1,13 @@
-import styled from "styled-components";
-import Img from "../../img/registration-mobile.png";
-import X from "../../img/x-modal.svg";
+import styled from 'styled-components';
+import Img from '../../img/registration-mobile.png';
+import X from '../../img/x-modal.svg';
 
 export const ModalDiv = styled.div`
   background-color: #85aa9f;
   position: fixed;
   top: 0;
   right: 0;
-  width: 50%;
+  width: 100%;
   height: 100%;
   z-index: 9999;
   transition: right 0.5s ease-in-out;
@@ -16,6 +16,32 @@ export const ModalDiv = styled.div`
   .HeaderOfModal {
     display: flex;
     justify-content: space-between;
+  }
+
+  .UserContainer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .UserName {
+    font-weight: 500;
+    font-size: 16px;
+    color: #fcfcfc;
+  }
+
+  .UserImag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    width: 36px;
+    height: 36px;
+    background: #fcfcfc;
+  }
+
+  .user-icon {
+    fill: #85aa9f;
   }
 
   .ButtonClose {
@@ -37,11 +63,11 @@ export const ModalDiv = styled.div`
 
   .NavElement {
     text-decoration: none;
-
     font-weight: 500;
     font-size: 14px;
-    color: #f8f8f8;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color: #fcfcfc;
+    transition:
+      color 250ms cubic-bezier(0.4, 0, 0.2, 1),
       background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     z-index: 1;
@@ -57,13 +83,28 @@ export const ModalDiv = styled.div`
   }
 
   .Img {
-    width: 100%;
-    height: 100%;
+    background-size: 100%;
     background-image: url(${Img});
     background-repeat: no-repeat;
-    margin-top: 150px;
-
     background-position: center;
-    height: 700px;
+    height: 1050px;
+  }
+
+  .ButtonLogOut {
+    border: none;
+    color: #fcfcfc;
+    background: transparent;
+    padding-left: 0;
+    font-weight: 500;
+    font-size: 14px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    &:hover {
+      color: #85aa9f;
+      transition: fill 0.3s ease;
+    }
   }
 `;

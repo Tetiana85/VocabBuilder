@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const TrainingPageContainer = styled.div`
   background: #f8f8f8;
@@ -40,7 +40,7 @@ export const TrainingPageContainer = styled.div`
 
     @media only screen and (min-width: 768px) {
       right: 20px;
-      top: 16px;
+      top: 20px;
     }
   }
 
@@ -70,14 +70,14 @@ export const TrainingPageContainer = styled.div`
     background: #fcfcfc;
     display: grid;
     grid-template-areas:
-      "i i i i"
-      "b b n n";
+      'i i i i'
+      'b b n n';
 
     @media only screen and (min-width: 768px) {
       height: 282px;
       grid-template-areas:
-        "i i n n "
-        "b b _ _ ";
+        'i i n n '
+        'b b _ _ ';
     }
 
     @media only screen and (min-width: 1440px) {
@@ -85,7 +85,7 @@ export const TrainingPageContainer = styled.div`
     }
   }
 
-  .InputContainer[id="ukrainian"] {
+  .InputContainer[id='ukrainian'] {
     border-bottom: 1px solid #dbdbdb;
     @media only screen and (min-width: 1440px) {
       border-bottom: none;
@@ -109,6 +109,9 @@ export const TrainingPageContainer = styled.div`
       outline: none;
     }
   }
+  input::placeholder {
+    color: #121417;
+  }
 
   .LangueButton {
     cursor: pointer;
@@ -117,7 +120,7 @@ export const TrainingPageContainer = styled.div`
     align-items: center;
     gap: 8px;
     margin-top: auto;
-
+    color: rgba(18, 20, 23, 0.5);
     background: none;
     border: none;
 
@@ -172,6 +175,10 @@ export const TrainingPageContainer = styled.div`
     &:hover {
       color: #85aa9f;
       background: #f8f8f8;
+    }
+
+    @media only screen and (max-width: 374px) {
+      width: 288px;
     }
 
     @media only screen and (min-width: 768px) {

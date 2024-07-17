@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const PageList = styled.ul`
   /* flex-wrap: wrap; */
@@ -6,6 +6,9 @@ export const PageList = styled.ul`
   display: flex;
   justify-content: center;
   gap: 10px;
+  @media only screen and (max-width: 374px) {
+    gap: 5px;
+  }
 
   .PageButton {
     border: 1px solid rgba(18, 20, 23, 0.1);
@@ -13,11 +16,9 @@ export const PageList = styled.ul`
     min-width: 32px;
     height: 32px;
     cursor: pointer;
-
     justify-content: center;
     display: flex;
     align-items: center;
-
     font-weight: 600;
     font-size: 13px;
 

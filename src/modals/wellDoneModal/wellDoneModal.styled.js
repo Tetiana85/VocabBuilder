@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import bookMobile from "../../img/open-orange-book-mobile-min.png";
-import bookDesctop from "../../img/open-orange-book-desctop-min.png";
+import styled from 'styled-components';
+import bookMobile from '../../img/open-orange-book-mobile-min.png';
+import bookDesctop from '../../img/open-orange-book-desctop-min.png';
 
 export const WellDoneContainer = styled.div`
   border-radius: 15px;
@@ -12,18 +12,22 @@ export const WellDoneContainer = styled.div`
   position: relative;
   box-sizing: border-box;
 
+  @media only screen and (max-width: 374px) {
+    width: 288px;
+  }
+
   @media only screen and (min-width: 768px) {
     border-radius: 30px;
-    width: 527px;
-    height: 519px;
-
+    width: 528px;
+    height: 520px;
     padding: 18px 64px;
   }
 
   .ButtonClose {
     cursor: pointer;
     position: absolute;
-    right: 18px;
+    right: 20px;
+    top: 20px;
 
     &:hover {
       path {

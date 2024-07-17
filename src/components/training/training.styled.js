@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import ImgMobile from "../../img/blood-report-mobile.png";
-import ImgDesctop from "../../img/blood-report-desctop.png";
+import styled from 'styled-components';
+import ImgMobile from '../../img/blood-report-mobile.png';
+import ImgDesctop from '../../img/blood-report-desctop.png';
 
 export const TrainingContainer = styled.div`
   background: #f8f8f8;
@@ -28,8 +28,8 @@ export const TrainingContainer = styled.div`
       height: 289px;
       display: grid;
       grid-template-areas:
-        "t t i"
-        "b b i";
+        't t i'
+        'b b i';
       margin-top: 0px;
     }
   }
@@ -117,6 +117,9 @@ export const TrainingContainer = styled.div`
       background: #f8f8f8;
     }
 
+    @media only screen and (max-width: 374px) {
+      width: 288px;
+    }
     @media only screen and (min-width: 768px) {
       width: 203px;
       padding: 14px;

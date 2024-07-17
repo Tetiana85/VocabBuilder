@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import correct from "../../img/correct.svg";
-import error from "../../img/error.svg";
+import styled from 'styled-components';
+import correct from '../../img/correct.svg';
+import error from '../../img/error.svg';
 
 export const ModalContainer = styled.div`
   position: relative;
@@ -12,6 +12,10 @@ export const ModalContainer = styled.div`
   background: #85aa9f;
   box-sizing: border-box;
 
+  @media only screen and (max-width: 374px) {
+    width: 288px;
+  }
+
   @media only screen and (min-width: 768px) {
     width: 627px;
     height: 345px;
@@ -21,7 +25,8 @@ export const ModalContainer = styled.div`
   .ButtonClose {
     cursor: pointer;
     position: absolute;
-    right: 18px;
+    right: 20px;
+    top: 20px;
 
     &:hover {
       path {
@@ -40,8 +45,8 @@ export const ModalContainer = styled.div`
     }
   }
 
-  input[id="ukrainian"],
-  input[id="english"] {
+  input[id='ukrainian'],
+  input[id='english'] {
     border: 1px solid #d1d5db;
     border-radius: 15px;
     padding: 12px 176px 12px 24px;
@@ -61,8 +66,15 @@ export const ModalContainer = styled.div`
     }
   }
 
-  input[id="ukrainian"],
-  input[id="english"] {
+  input[id='ukrainian'],
+  input[id='english'] {
+    @media only screen and (max-width: 374px) {
+      width: 256px;
+    }
+  }
+
+  input[id='ukrainian'],
+  input[id='english'] {
     @media only screen and (min-width: 768px) {
       padding: 16px 227px 16px 18px;
       width: 354px;
@@ -118,19 +130,24 @@ export const ModalContainer = styled.div`
     line-height: 150%;
     color: #121417;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     &:hover {
       color: #fcfcfc;
       background: #85aa9f;
       border: 1px solid #d1d5db;
     }
 
+    @media only screen and (max-width: 374px) {
+      width: 125px;
+    }
+
     @media only screen and (min-width: 768px) {
       padding: 14px 101px;
       width: 245px;
       height: 56px;
-
-      display: flex;
-      align-items: center;
 
       font-size: 23px;
       line-height: 156%;
@@ -150,9 +167,17 @@ export const ModalContainer = styled.div`
     line-height: 150%;
     color: #fcfcfc;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     &:hover {
       color: #85aa9f;
       background: #fcfcfc;
+    }
+
+    @media only screen and (max-width: 374px) {
+      width: 125px;
     }
 
     @media only screen and (min-width: 768px) {
@@ -166,7 +191,6 @@ export const ModalContainer = styled.div`
     position: absolute;
     color: red;
     top: 90px;
-    left: 20px;
     font-size: 12px;
     align-items: flex-start;
     display: flex;
@@ -186,7 +210,6 @@ export const ModalContainer = styled.div`
     position: absolute;
     color: green;
     top: 90px;
-    left: 20px;
     font-size: 12px;
     align-items: flex-start;
     display: flex;

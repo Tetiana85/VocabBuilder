@@ -1,6 +1,6 @@
-import { combineReducers, configureStore } from "@reduxjs/toolkit";
-import { modalReducer } from "./modals/modal-slice";
-import storage from "redux-persist/lib/storage";
+import { combineReducers, configureStore } from '@reduxjs/toolkit';
+import { modalReducer } from './modals/modal-slice';
+import storage from 'redux-persist/lib/storage';
 import {
   persistStore,
   FLUSH,
@@ -10,48 +10,48 @@ import {
   PURGE,
   REGISTER,
   persistReducer,
-} from "redux-persist";
-import authSlise from "./auth/auth-slise";
-import dataSlise from "./data/data-slise";
+} from 'redux-persist';
+import authSlice from './auth/auth-slice';
+import dataSlice from './data/data-slice';
 
 const authPersistConfig = {
-  key: "auth",
+  key: 'auth',
   storage,
-  whitelist: ["token"],
+  whitelist: ['token'],
 };
 
 const modalPersistConfig = {
-  key: "modal",
+  key: 'modal',
   storage,
   whitelist: [
-    "isModalOpenMobile",
-    "isModalOpenAddWord",
-    "isModalOpenTrainOneseif",
-    "isModalOpenConfirmation",
-    "isModalOpenEdit",
-    "clickWordCoordinates",
-    "clickWordId",
-    "isModalOpenWellDone",
+    'isModalOpenMobile',
+    'isModalOpenAddWord',
+    'isModalOpenTrainOneseif',
+    'isModalOpenConfirmation',
+    'isModalOpenEdit',
+    'clickWordCoordinates',
+    'clickWordId',
+    'isModalOpenWellDone',
   ],
 };
 
 const dataPersistConfig = {
-  key: "data",
+  key: 'data',
   storage,
   whitelist: [
-    "words",
-    "categories",
-    "allWords",
-    "statistics",
-    "tasks",
-    "answers",
+    'words',
+    'categories',
+    'allWords',
+    'statistics',
+    'tasks',
+    'answers',
   ],
 };
 
 const rootReducer = combineReducers({
-  auth: persistReducer(authPersistConfig, authSlise),
+  auth: persistReducer(authPersistConfig, authSlice),
   modal: persistReducer(modalPersistConfig, modalReducer),
-  data: persistReducer(dataPersistConfig, dataSlise),
+  data: persistReducer(dataPersistConfig, dataSlice),
 });
 
 export const store = configureStore({

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const TableList = styled.table`
   border-collapse: collapse;
@@ -23,9 +23,12 @@ export const TableList = styled.table`
     text-align: left;
 
     font-weight: 500;
-    font-size: 18px;
+    font-size: 14px;
 
     overflow-wrap: break-word;
+    @media only screen and (min-width: 768px) {
+      font-size: 18px;
+    }
 
     @media only screen and (min-width: 1440px) {
       font-size: 20px;
@@ -41,12 +44,21 @@ export const TableList = styled.table`
 
   .PercentContainer {
     display: flex;
-    gap: 10px;
     align-items: center;
+    justify-content: center;
 
-    width: 90px;
-    display: flex;
-    justify-content: end;
+    @media only screen and (min-width: 768px) {
+      gap: 10px;
+    }
+  }
+
+  .ProgressText {
+    display: none;
+
+    @media only screen and (min-width: 768px) {
+      display: block;
+      font-size: 18px;
+    }
   }
 
   .AddDictionaryContainer {
@@ -78,18 +90,11 @@ export const TableList = styled.table`
   }
 
   .TableHeader {
-    background-color: #f2f2f2;
+    background-color: rgba(133, 170, 159, 0.1);
   }
 
-  /* .WordList:nth-child(even) {
-    background-color: #f2f2f2;
-  } */
-
-  /* .WordList {
-    cursor: pointer;
-  } */
   .WordList:nth-child(odd) {
-    background-color: #ffffff;
+    background-color: #fcfcfc;
   }
 
   .Circle {

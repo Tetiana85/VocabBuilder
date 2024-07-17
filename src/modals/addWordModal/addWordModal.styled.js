@@ -1,30 +1,34 @@
-import styled from "styled-components";
-import toggle from "../../img/toggle.svg";
-import correct from "../../img/correct.svg";
-import error from "../../img/error.svg";
+import styled from 'styled-components';
+import toggle from '../../img/toggle.svg';
+import correct from '../../img/correct.svg';
+import error from '../../img/error.svg';
 
 export const ContainerAddWordModal = styled.div`
   position: relative;
   border-radius: 15px;
-  width: 342px;
-  height: 621px;
-
+  width: 343px;
+  height: 622px;
   background: #85aa9f;
-  padding: 18px;
+  padding: 48px 16px;
+
+  @media only screen and (max-width: 374px) {
+    width: 288px;
+  }
 
   @media only screen and (min-width: 768px) {
     box-sizing: border-box;
     border-radius: 30px;
-    width: 627px;
-    height: 621px;
-
-    padding: 18px 63px;
+    width: 628px;
+    height: 622px;
+    padding: 48px 64px;
+    overflow: hidden;
   }
 
   .ButtonClose {
     cursor: pointer;
     position: absolute;
-    right: 18px;
+    right: 20px;
+    top: 20px;
 
     &:hover {
       path {
@@ -33,16 +37,16 @@ export const ContainerAddWordModal = styled.div`
     }
   }
 
-  .TextContainer {
+  /* .TextContainer {
     margin-top: 30px;
-  }
+  } */
 
   .Title {
     font-weight: 600;
-    font-size: 30px;
+    font-size: 24px;
     line-height: 117%;
     letter-spacing: -0.02em;
-    color: #f8f8f8;
+    color: rgba(248, 248, 248, 0.8);
 
     @media only screen and (min-width: 768px) {
       font-size: 40px;
@@ -54,12 +58,11 @@ export const ContainerAddWordModal = styled.div`
     font-weight: 400;
     font-size: 16px;
     line-height: 150%;
-    color: #f8f8f8;
-
+    color: rgba(248, 248, 248, 0.8);
     margin-top: 20px;
 
     @media only screen and (min-width: 768px) {
-      font-size: 25px;
+      font-size: 20px;
     }
   }
 
@@ -68,23 +71,25 @@ export const ContainerAddWordModal = styled.div`
     position: relative;
     display: grid;
     gap: 15px;
+
+    @media only screen and (max-width: 374px) {
+      width: 288px;
+    }
+
     @media only screen and (min-width: 768px) {
       gap: 20px;
     }
   }
 
-  input[id="statistics"],
-  input[id="ukrainian"],
-  input[id="english"] {
+  input[id='ukrainian'],
+  input[id='english'] {
     border: 1px solid #d1d5db;
     border-radius: 15px;
-    padding: 12px 24px;
-    width: 100%;
+    padding: 12px 18px;
+    width: 311px;
     height: 48px;
-
     background: none;
     box-sizing: border-box;
-
     font-weight: 500;
     font-size: 16px;
     line-height: 150%;
@@ -95,15 +100,15 @@ export const ContainerAddWordModal = styled.div`
     }
   }
 
-  input[id="statistics"] {
-    @media only screen and (min-width: 768px) {
-      width: 204px;
-      height: 52px;
+  input[id='ukrainian'],
+  input[id='english'] {
+    @media only screen and (max-width: 374px) {
+      width: 256px;
     }
   }
 
-  input[id="ukrainian"],
-  input[id="english"] {
+  input[id='ukrainian'],
+  input[id='english'] {
     @media only screen and (min-width: 768px) {
       width: 353px;
       height: 52px;
@@ -130,32 +135,6 @@ export const ContainerAddWordModal = styled.div`
       brightness(91%) contrast(92%);
   }
 
-  .dropdownAdd {
-    z-index: 1000;
-    position: absolute;
-    margin-top: 5px;
-    display: none;
-    gap: 8px;
-
-    border-radius: 15px;
-    padding: 12px 24px;
-    width: 86%;
-    box-shadow: 0 4px 47px 0 rgba(18, 20, 23, 0.08);
-    background: #fff;
-  }
-
-  .ListItem {
-    cursor: pointer;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 150%;
-    border-radius: 6px;
-
-    &:hover {
-      background-color: #85aa9f;
-    }
-  }
-
   .RadioButtonList {
     position: absolute;
     top: 65px;
@@ -168,12 +147,10 @@ export const ContainerAddWordModal = styled.div`
     position: relative;
     display: flex;
     gap: 8px;
-
     font-weight: 400;
     font-size: 12px;
     text-align: center;
     color: #fcfcfc;
-    text-align: center;
     align-items: center;
   }
 
@@ -187,7 +164,7 @@ export const ContainerAddWordModal = styled.div`
     cursor: pointer;
 
     &:before {
-      content: "";
+      content: '';
       position: absolute;
       top: 50%;
       width: 14px;
@@ -195,7 +172,7 @@ export const ContainerAddWordModal = styled.div`
       border-radius: 50%;
       transform: translate(-50%, -50%);
       background-color: #85aa9f;
-      border: 3px solid #80808059;
+      border: 2px solid #d1d5db;
     }
 
     &:checked:before {
@@ -203,11 +180,11 @@ export const ContainerAddWordModal = styled.div`
     }
 
     &:checked::after {
-      content: "";
+      content: '';
       position: absolute;
       top: 50%;
-      width: 10px;
-      height: 10px;
+      width: 5px;
+      height: 5px;
       border-radius: 50%;
       background-color: #fcfcfc;
       transform: translate(-50%, -50%);
@@ -215,8 +192,13 @@ export const ContainerAddWordModal = styled.div`
     }
   }
 
-  .UkrainianContainer[id="ukrainian"] {
+  .UkrainianContainer[id='ukrainian'] {
     margin-top: 50px;
+
+    @media only screen and (max-width: 374px) {
+      margin-top: 35px;
+    }
+
     @media only screen and (min-width: 768px) {
       margin-top: 40px;
     }
@@ -233,14 +215,15 @@ export const ContainerAddWordModal = styled.div`
       gap: 32px;
     }
   }
+
   .InputImagContainer {
     display: flex;
     align-items: center;
     gap: 8px;
-
     font-weight: 500;
     font-size: 14px;
     color: #fcfcfc;
+
     @media only screen and (min-width: 768px) {
       order: 2;
     }
@@ -249,26 +232,33 @@ export const ContainerAddWordModal = styled.div`
   .ButtonList {
     margin-top: 30px;
     display: flex;
-    justify-content: space-between;
+    gap: 8px;
 
-    @media only screen and (min-width: 768px) {
+    @media only screen and (max-width: 374px) {
       margin-top: 15px;
+      gap: 10px;
     }
+  }
+
+  @media only screen and (min-width: 768px) {
+    margin-top: 15px;
   }
 
   .ButtonAdd {
     cursor: pointer;
     border-radius: 30px;
     padding: 12px 63px;
-    width: 169px;
+    width: 159px;
     height: 48px;
     background: #fcfcfc;
     box-sizing: border-box;
-
     font-weight: 700;
     font-size: 16px;
     line-height: 150%;
     color: #121417;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     &:hover {
       background: #85aa9f;
@@ -276,16 +266,16 @@ export const ContainerAddWordModal = styled.div`
       border: 1px solid #d1d5db;
     }
 
+    @media only screen and (max-width: 374px) {
+      width: 120px;
+    }
+
     @media only screen and (min-width: 768px) {
       border-radius: 30px;
       padding: 14px 104px;
       width: 245px;
       height: 56px;
-
-      display: flex;
-      align-items: center;
-
-      font-size: 23px;
+      font-size: 18px;
       line-height: 156%;
     }
   }
@@ -295,24 +285,31 @@ export const ContainerAddWordModal = styled.div`
     border: 1px solid rgba(252, 252, 252, 0.4);
     border-radius: 30px;
     padding: 12px 45px;
-    width: 155px;
+    width: 145px;
     height: 48px;
     box-sizing: border-box;
-
     font-weight: 700;
     font-size: 16px;
     line-height: 150%;
     color: #fcfcfc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     &:hover {
       background: #fcfcfc;
       color: #85aa9f;
     }
 
+    @media only screen and (max-width: 374px) {
+      width: 120px;
+    }
+
     @media only screen and (min-width: 768px) {
       padding: 14px 92px;
       width: 245px;
       height: 56px;
+      font-size: 18px;
     }
   }
 
@@ -320,7 +317,6 @@ export const ContainerAddWordModal = styled.div`
     position: absolute;
     color: red;
     top: 90px;
-    left: 20px;
     font-size: 12px;
     align-items: flex-start;
     display: flex;
@@ -340,7 +336,6 @@ export const ContainerAddWordModal = styled.div`
     position: absolute;
     color: green;
     top: 90px;
-    left: 20px;
     font-size: 12px;
     align-items: flex-start;
     display: flex;
@@ -360,7 +355,6 @@ export const ContainerAddWordModal = styled.div`
     position: absolute;
     color: red;
     top: 90px;
-    left: 20px;
     font-size: 12px;
     align-items: flex-start;
     display: flex;

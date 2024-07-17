@@ -1,8 +1,9 @@
-import styled from "styled-components";
-import search from "../../img/search.svg";
-import toggle from "../../img/toggle.svg";
+import styled from 'styled-components';
+import search from '../../img/search.svg';
+import toggle from '../../img/toggle.svg';
 
 export const RecommendPageContainer = styled.div`
+  height: 100vh;
   padding: 32px 16px;
 
   @media only screen and (min-width: 768px) {
@@ -83,13 +84,13 @@ export const RecommendPageContainer = styled.div`
     }
   }
 
-  .Input[id="filters"] {
+  .Input[id='filters'] {
     @media only screen and (min-width: 768px) {
       width: 274px;
     }
   }
 
-  .Input[id="statistics"] {
+  .Input[id='statistics'] {
     @media only screen and (min-width: 768px) {
       width: 164px;
     }
@@ -104,7 +105,7 @@ export const RecommendPageContainer = styled.div`
 
     border-radius: 15px;
     padding: 12px 24px;
-    width: 343px;
+    width: 189px;
     box-shadow: 0 4px 47px 0 rgba(18, 20, 23, 0.08);
     background: #fff;
   }
@@ -115,9 +116,10 @@ export const RecommendPageContainer = styled.div`
     font-size: 16px;
     line-height: 150%;
     border-radius: 6px;
+    text-transform: capitalize;
 
     &:hover {
-      background-color: #85aa9f;
+      color: #85aa9f;
     }
   }
 
@@ -206,7 +208,7 @@ export const RecommendPageContainer = styled.div`
     cursor: pointer;
 
     &:before {
-      content: "";
+      content: '';
       position: absolute;
       top: 50%;
       width: 14px;
@@ -214,7 +216,7 @@ export const RecommendPageContainer = styled.div`
       border-radius: 50%;
       transform: translate(-50%, -50%);
       background-color: #fff;
-      border: 3px solid #8a8a89;
+      border: 2px solid #8a8a89;
     }
 
     &:checked:before {
@@ -222,11 +224,11 @@ export const RecommendPageContainer = styled.div`
     }
 
     &:checked::after {
-      content: "";
+      content: '';
       position: absolute;
       top: 50%;
-      width: 10px;
-      height: 10px;
+      width: 5px;
+      height: 5px;
       border-radius: 50%;
       background-color: #85aa9f;
       transform: translate(-50%, -50%);
