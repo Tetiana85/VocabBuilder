@@ -1,0 +1,1 @@
+import{b as n,j as e,x as a}from"./index-ac66f443.js";function u({children:s,restricted:t=!1}){const o=n(i=>i.auth.isLoggedIn)&&t;return e.jsx("div",{children:o?e.jsx(a,{to:"/dictionary"}):s})}export{u as default};
