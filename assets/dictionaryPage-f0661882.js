@@ -1,4 +1,4 @@
-import{p as k,r as s,u as B,b as n,E as m,y as L,F as R,j as e,L as z,C as S,N as W}from"./index-ac66f443.js";import{s as D,u as A,l as E,T as F,P}from"./table-5343e953.js";import{t as T}from"./toggle-25f8bf64.js";import{S as M}from"./index-627b7736.js";import"./extends-05553f16.js";const H=k.div`
+import{p as B,r as o,u as R,b as n,E as m,y as z,F as S,j as t,L as W,C as F,N as D}from"./index-09443a53.js";import{s as A,u as E,l as P,T,P as M}from"./table-8c466738.js";import{t as H}from"./toggle-f96f5e19.js";import{S as V}from"./index-0578c2b6.js";import"./extends-52557f3c.js";const $=B.div`
   height: 100vh;
   padding: 32px 16px;
 
@@ -21,6 +21,7 @@ import{p as k,r as s,u as B,b as n,E as m,y as L,F as R,j as e,L as z,C as S,N a
 
     @media only screen and (min-width: 768px) {
       display: flex;
+      margin-top: 16px;
     }
   }
 
@@ -29,8 +30,7 @@ import{p as k,r as s,u as B,b as n,E as m,y as L,F as R,j as e,L as z,C as S,N a
       display: flex;
       align-items: end;
       gap: 16px;
-
-      margin-top: 30px;
+      margin-top: 28px;
     }
 
     @media only screen and (min-width: 1440px) {
@@ -43,7 +43,7 @@ import{p as k,r as s,u as B,b as n,E as m,y as L,F as R,j as e,L as z,C as S,N a
     position: relative;
 
     &::after {
-      content: url(${D});
+      content: url(${A});
       position: absolute;
       top: 14px;
       right: 24px;
@@ -54,7 +54,7 @@ import{p as k,r as s,u as B,b as n,E as m,y as L,F as R,j as e,L as z,C as S,N a
     position: relative;
 
     &::after {
-      content: url(${T});
+      content: url(${H});
       position: absolute;
       top: 14px;
       right: 24px;
@@ -68,7 +68,6 @@ import{p as k,r as s,u as B,b as n,E as m,y as L,F as R,j as e,L as z,C as S,N a
     width: 100%;
     height: 48px;
     box-sizing: border-box;
-
     font-weight: 500;
     font-size: 16px;
     line-height: 150%;
@@ -98,7 +97,6 @@ import{p as k,r as s,u as B,b as n,E as m,y as L,F as R,j as e,L as z,C as S,N a
     margin-top: 5px;
     display: none;
     gap: 8px;
-
     border-radius: 15px;
     padding: 12px 24px;
     width: 189px;
@@ -120,11 +118,10 @@ import{p as k,r as s,u as B,b as n,E as m,y as L,F as R,j as e,L as z,C as S,N a
   }
 
   .CountWord {
-    margin-top: 50px;
+    margin-top: 40px;
     font-weight: 500;
     font-size: 14px;
     color: rgba(18, 20, 23, 0.5);
-
     align-items: center;
     display: flex;
     gap: 8px;
@@ -141,7 +138,7 @@ import{p as k,r as s,u as B,b as n,E as m,y as L,F as R,j as e,L as z,C as S,N a
   }
 
   .ButtonList {
-    margin-top: 16px;
+    margin-top: 8px;
     display: flex;
     gap: 16px;
 
@@ -187,7 +184,6 @@ import{p as k,r as s,u as B,b as n,E as m,y as L,F as R,j as e,L as z,C as S,N a
     position: relative;
     display: flex;
     gap: 8px;
-
     font-weight: 400;
     font-size: 12px;
     text-align: center;
@@ -234,12 +230,11 @@ import{p as k,r as s,u as B,b as n,E as m,y as L,F as R,j as e,L as z,C as S,N a
 
   .TableContainer {
     margin-top: 40px;
-    /* height: 457px; */
     @media only screen and (min-width: 768px) {
       padding: 18px;
       background: #fcfcfc;
       border-radius: 15px;
-      margin-top: 24px;
+      margin-top: 28px;
     }
   }
-`,V=i=>s.createElement("svg",{xmlns:"http://www.w3.org/2000/svg",width:20,height:20,fill:"none",...i},s.createElement("path",{stroke:"#85AA9F",strokeLinecap:"round",strokeLinejoin:"round",strokeWidth:1.5,d:"M10 4.167v11.666M4.167 10h11.666"}));function K(){const i=B(),{categories:h,customInputRef:g,inputRef:f,dropdownRef:b}=A(),[a,d]=s.useState({filters:"",statistics:"",isIrregular:void 0,page:1}),[w,l]=s.useState(!1),o=n(t=>t.data.words),y=n(t=>t.data.statistics),j=n(t=>t.data.isLoadingCategories),C=n(t=>t.data.isLoadingStatistics),p=n(t=>t.data.isDeleteWord),c=n(t=>t.data.isAddWord);s.useEffect(()=>{i(m(p||c)),i(L()),i(R())},[i,p,c]);const v=s.useRef(E.debounce(t=>{i(m(t))},300));s.useEffect(()=>{v.current(a)},[a]);const x=t=>{const{name:r,value:N}=t.target;d({...a,[r]:N.trim()})},I=t=>{d(r=>({...r,statistics:t})),l(t==="verb")},u=t=>{d(r=>({...r,isIrregular:t}))};return e.jsxs(H,{children:[e.jsxs("div",{className:"FilterContainer",children:[e.jsxs("form",{className:"Form",children:[e.jsx("div",{className:"SearchContainer",children:e.jsx("input",{id:"filters",className:"Input",type:"text",placeholder:"Find the word",name:"filters",value:a.filters,onChange:x})}),e.jsxs("div",{ref:g,className:"custom-input",children:[e.jsx("input",{id:"statistics",name:"statistics",className:"Input",type:"text",placeholder:"Categories",value:a.statistics,onChange:x,ref:f}),e.jsx("ul",{ref:b,className:"dropdown",children:j?e.jsx("div",{children:e.jsx(z,{})}):h.map(t=>e.jsx("li",{className:"ListItem",onClick:()=>I(t),children:t},t))})]}),e.jsxs("ul",{className:"RadioButtonList",style:{display:w?"flex":"none"},children:[e.jsxs("li",{className:"RadioButtonItem",children:[e.jsx("input",{className:"RadioButton",id:"regular",name:"regular",type:"radio",onChange:()=>u(!1),checked:a.isIrregular===!1}),"Regular"]}),e.jsxs("li",{className:"RadioButtonItem",children:[e.jsx("input",{className:"RadioButton",id:"irregular",name:"irregular",type:"radio",onChange:()=>u(!0),checked:a.isIrregular===!0}),"Irregular"]})]})]}),e.jsxs("div",{className:"CountContainer",children:[e.jsxs("p",{className:"CountWord",children:["To study:",e.jsx("span",{className:"NumberCountWord",children:!C&&y.totalCount})]}),e.jsxs("ul",{className:"ButtonList",children:[e.jsxs("li",{className:"ButtonItem",onClick:()=>i(S()),children:["Add word ",e.jsx(V,{className:"IconButton"})]}),e.jsx("li",{children:e.jsxs(W,{className:"ButtonItem",to:"/training",children:["Train oneself ",e.jsx(M,{className:"IconButton"})]})})]})]})]}),e.jsx("div",{className:"TableContainer",children:o.results&&o.results.length!==0?e.jsx(F,{data:o}):e.jsx("p",{style:{fontSize:"20px",textAlign:"center"},children:"You dont have own words"})}),o.totalPages>1&&e.jsx(P,{data:o,formData:a,setFormData:d})]})}export{K as default};
+`,Y=i=>o.createElement("svg",{xmlns:"http://www.w3.org/2000/svg",width:20,height:20,fill:"none",...i},o.createElement("path",{stroke:"#85AA9F",strokeLinecap:"round",strokeLinejoin:"round",strokeWidth:1.5,d:"M10 4.167v11.666M4.167 10h11.666"}));function Q(){const i=R(),{categories:g,customInputRef:h,inputRef:f,dropdownRef:b,capitalizeFirstLetter:w,toLowerCase:y}=E(),[a,d]=o.useState({filters:"",statistics:"",isIrregular:void 0,page:1}),[j,l]=o.useState(!1),r=n(e=>e.data.words),C=n(e=>e.data.statistics),v=n(e=>e.data.isLoadingCategories),I=n(e=>e.data.isLoadingStatistics),p=n(e=>e.data.isDeleteWord),c=n(e=>e.data.isAddWord);o.useEffect(()=>{i(m(p||c)),i(z()),i(S())},[i,p,c]);const N=o.useRef(P.debounce(e=>{const s={...e,statistics:y(e.statistics)};i(m(s))},300));o.useEffect(()=>{N.current(a)},[a]);const x=e=>{const{name:s,value:L}=e.target;d({...a,[s]:L.trim()})},k=e=>{d(s=>({...s,statistics:w(e.toLowerCase())})),e.toLowerCase()==="verb"?l(!0):l(!1)},u=e=>{d(s=>({...s,isIrregular:e}))};return t.jsxs($,{children:[t.jsxs("div",{className:"FilterContainer",children:[t.jsxs("form",{className:"Form",children:[t.jsx("div",{className:"SearchContainer",children:t.jsx("input",{id:"filters",className:"Input",type:"text",placeholder:"Find the word",name:"filters",value:a.filters,onChange:x})}),t.jsxs("div",{ref:h,className:"custom-input",children:[t.jsx("input",{id:"statistics",name:"statistics",className:"Input",type:"text",placeholder:"Categories",value:a.statistics,onChange:x,ref:f}),t.jsx("ul",{ref:b,className:"dropdown",children:v?t.jsx("div",{children:t.jsx(W,{})}):g.map(e=>t.jsx("li",{className:"ListItem",onClick:()=>k(e),children:e},e))})]}),t.jsxs("ul",{className:"RadioButtonList",style:{display:j?"flex":"none"},children:[t.jsxs("li",{className:"RadioButtonItem",children:[t.jsx("input",{className:"RadioButton",id:"regular",name:"regular",type:"radio",onChange:()=>u(!1),checked:a.isIrregular===!1}),"Regular"]}),t.jsxs("li",{className:"RadioButtonItem",children:[t.jsx("input",{className:"RadioButton",id:"irregular",name:"irregular",type:"radio",onChange:()=>u(!0),checked:a.isIrregular===!0}),"Irregular"]})]})]}),t.jsxs("div",{className:"CountContainer",children:[t.jsxs("p",{className:"CountWord",children:["To study:",t.jsx("span",{className:"NumberCountWord",children:!I&&C.totalCount})]}),t.jsxs("ul",{className:"ButtonList",children:[t.jsxs("li",{className:"ButtonItem",onClick:()=>i(F()),children:["Add word ",t.jsx(Y,{className:"IconButton"})]}),t.jsx("li",{children:t.jsxs(D,{className:"ButtonItem",to:"/training",children:["Train oneself ",t.jsx(V,{className:"IconButton"})]})})]})]})]}),t.jsx("div",{className:"TableContainer",children:r.results&&r.results.length!==0?t.jsx(T,{data:r}):t.jsx("p",{style:{fontSize:"20px",textAlign:"center"},children:"You don't have own words"})}),r.totalPages>1&&t.jsx(M,{data:r,formData:a,setFormData:d})]})}export{Q as default};

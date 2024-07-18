@@ -1,4 +1,4 @@
-import{p as y,u as w,r as s,b as j,y as C,z as I,j as e,N}from"./index-ac66f443.js";import{s as v,u as R,l as k,T as B,P as z}from"./table-5343e953.js";import{t as L}from"./toggle-25f8bf64.js";import{S}from"./index-627b7736.js";import"./extends-05553f16.js";const W=y.div`
+import{p as j,u as C,r as s,b as I,y as N,z as v,j as e,N as R}from"./index-09443a53.js";import{s as k,u as B,l as z,T as L,P as F}from"./table-8c466738.js";import{t as S}from"./toggle-f96f5e19.js";import{S as W}from"./index-0578c2b6.js";import"./extends-52557f3c.js";const T=j.div`
   height: 100vh;
   padding: 32px 16px;
 
@@ -21,6 +21,7 @@ import{p as y,u as w,r as s,b as j,y as C,z as I,j as e,N}from"./index-ac66f443.
 
     @media only screen and (min-width: 768px) {
       display: flex;
+      margin-top: 16px;
     }
   }
 
@@ -29,8 +30,7 @@ import{p as y,u as w,r as s,b as j,y as C,z as I,j as e,N}from"./index-ac66f443.
       display: flex;
       align-items: end;
       gap: 16px;
-
-      margin-top: 30px;
+      margin-top: 28px;
     }
 
     @media only screen and (min-width: 1440px) {
@@ -43,7 +43,7 @@ import{p as y,u as w,r as s,b as j,y as C,z as I,j as e,N}from"./index-ac66f443.
     position: relative;
 
     &::after {
-      content: url(${v});
+      content: url(${k});
       position: absolute;
       top: 14px;
       right: 24px;
@@ -54,7 +54,7 @@ import{p as y,u as w,r as s,b as j,y as C,z as I,j as e,N}from"./index-ac66f443.
     position: relative;
 
     &::after {
-      content: url(${L});
+      content: url(${S});
       position: absolute;
       top: 14px;
       right: 24px;
@@ -68,7 +68,6 @@ import{p as y,u as w,r as s,b as j,y as C,z as I,j as e,N}from"./index-ac66f443.
     width: 100%;
     height: 48px;
     box-sizing: border-box;
-
     font-weight: 500;
     font-size: 16px;
     line-height: 150%;
@@ -98,7 +97,6 @@ import{p as y,u as w,r as s,b as j,y as C,z as I,j as e,N}from"./index-ac66f443.
     margin-top: 5px;
     display: none;
     gap: 8px;
-
     border-radius: 15px;
     padding: 12px 24px;
     width: 189px;
@@ -120,7 +118,7 @@ import{p as y,u as w,r as s,b as j,y as C,z as I,j as e,N}from"./index-ac66f443.
   }
 
   .CountWord {
-    margin-top: 50px;
+    margin-top: 40px;
     font-weight: 500;
     font-size: 14px;
     color: rgba(18, 20, 23, 0.5);
@@ -141,7 +139,7 @@ import{p as y,u as w,r as s,b as j,y as C,z as I,j as e,N}from"./index-ac66f443.
   }
 
   .ButtonList {
-    margin-top: 16px;
+    margin-top: 8px;
     display: flex;
     gap: 16px;
 
@@ -187,7 +185,6 @@ import{p as y,u as w,r as s,b as j,y as C,z as I,j as e,N}from"./index-ac66f443.
     position: relative;
     display: flex;
     gap: 8px;
-
     font-weight: 400;
     font-size: 12px;
     text-align: center;
@@ -238,7 +235,7 @@ import{p as y,u as w,r as s,b as j,y as C,z as I,j as e,N}from"./index-ac66f443.
       padding: 18px;
       background: #fcfcfc;
       border-radius: 15px;
-      margin-top: 24px;
+      margin-top: 28px;
     }
   }
-`;function A(){const r=w(),{categories:l,customInputRef:x,inputRef:u,dropdownRef:m}=R(),[a,o]=s.useState({filters:"",statistics:"",isIrregular:void 0,page:1}),[h,p]=s.useState(!1),i=j(t=>t.data.allWords);s.useEffect(()=>{r(C())},[r]);const g=s.useRef(k.debounce(t=>{r(I(t))},300));s.useEffect(()=>{g.current(a)},[a]);const d=t=>{const{name:n,value:b}=t.target;o({...a,[n]:b.trim()})},f=t=>{o(n=>({...n,statistics:t})),p(t==="verb")},c=t=>{o(n=>({...n,isIrregular:t}))};return e.jsxs(W,{children:[e.jsxs("div",{className:"FilterContainer",children:[e.jsxs("form",{className:"Form",children:[e.jsx("div",{className:"SearchContainer",children:e.jsx("input",{id:"filters",className:"Input",type:"text",placeholder:"Find the word",name:"filters",value:a.filters,onChange:d})}),e.jsxs("div",{ref:x,className:"custom-input",children:[e.jsx("input",{id:"statistics",name:"statistics",className:"Input",type:"text",placeholder:"Categories",value:a.statistics,onChange:d,ref:u}),e.jsx("ul",{ref:m,className:"dropdown",children:l&&l.map(t=>e.jsx("li",{className:"ListItem",onClick:()=>f(t),children:t},t))})]}),e.jsxs("ul",{className:"RadioButtonList",style:{display:h?"flex":"none"},children:[e.jsxs("li",{className:"RadioButtonItem",children:[e.jsx("input",{className:"RadioButton",id:"regular",name:"regular",type:"radio",onChange:()=>c(!1),checked:a.isIrregular===!1}),"Regular"]}),e.jsxs("li",{className:"RadioButtonItem",children:[e.jsx("input",{className:"RadioButton",id:"reason",name:"reason",type:"radio",onChange:()=>c(!0),checked:a.isIrregular===!0}),"Irregular"]})]})]}),e.jsxs("div",{className:"CountContainer",children:[e.jsxs("p",{className:"CountWord",children:["To study:",e.jsx("span",{className:"NumberCountWord",children:i.results&&i.results.length})]}),e.jsx("ul",{className:"ButtonList",children:e.jsx("li",{children:e.jsxs(N,{className:"ButtonItem",to:"/training",children:["Train oneself ",e.jsx(S,{className:"IconButton"})]})})})]})]}),e.jsx("div",{className:"TableContainer",children:i?e.jsx(B,{data:i}):e.jsx("div",{children:"Oooops samething wrong..."})}),i.totalPages>1&&e.jsx(z,{data:i,formData:a,setFormData:o})]})}export{A as default};
+`;function V(){const r=C(),{categories:l,customInputRef:x,inputRef:m,dropdownRef:u,capitalizeFirstLetter:h,toLowerCase:g}=B(),[a,o]=s.useState({filters:"",statistics:"",isIrregular:void 0,page:1}),[f,p]=s.useState(!1),n=I(t=>t.data.allWords);s.useEffect(()=>{r(N())},[r]);const b=s.useRef(z.debounce(t=>{const i={...t,statistics:g(t.statistics)};r(v(i))},300));s.useEffect(()=>{b.current(a)},[a]);const d=t=>{const{name:i,value:y}=t.target;o({...a,[i]:y.trim()})},w=t=>{o(i=>({...i,statistics:h(t.toLowerCase())})),t.toLowerCase()==="verb"?p(!0):p(!1)},c=t=>{o(i=>({...i,isIrregular:t}))};return e.jsxs(T,{children:[e.jsxs("div",{className:"FilterContainer",children:[e.jsxs("form",{className:"Form",children:[e.jsx("div",{className:"SearchContainer",children:e.jsx("input",{id:"filters",className:"Input",type:"text",placeholder:"Find the word",name:"filters",value:a.filters,onChange:d})}),e.jsxs("div",{ref:x,className:"custom-input",children:[e.jsx("input",{id:"statistics",name:"statistics",className:"Input",type:"text",placeholder:"Categories",value:a.statistics,onChange:d,ref:m}),e.jsx("ul",{ref:u,className:"dropdown",children:l&&l.map(t=>e.jsx("li",{className:"ListItem",onClick:()=>w(t),children:t},t))})]}),e.jsxs("ul",{className:"RadioButtonList",style:{display:f?"flex":"none"},children:[e.jsxs("li",{className:"RadioButtonItem",children:[e.jsx("input",{className:"RadioButton",id:"regular",name:"regular",type:"radio",onChange:()=>c(!1),checked:a.isIrregular===!1}),"Regular"]}),e.jsxs("li",{className:"RadioButtonItem",children:[e.jsx("input",{className:"RadioButton",id:"reason",name:"reason",type:"radio",onChange:()=>c(!0),checked:a.isIrregular===!0}),"Irregular"]})]})]}),e.jsxs("div",{className:"CountContainer",children:[e.jsxs("p",{className:"CountWord",children:["To study:",e.jsx("span",{className:"NumberCountWord",children:n.results&&n.results.length})]}),e.jsx("ul",{className:"ButtonList",children:e.jsx("li",{children:e.jsxs(R,{className:"ButtonItem",to:"/training",children:["Train oneself ",e.jsx(W,{className:"IconButton"})]})})})]})]}),e.jsx("div",{className:"TableContainer",children:n?e.jsx(L,{data:n}):e.jsx("div",{children:"Oooops samething wrong..."})}),n.totalPages>1&&e.jsx(F,{data:n,formData:a,setFormData:o})]})}export{V as default};
