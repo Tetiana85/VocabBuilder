@@ -5,5 +5,3 @@ export const selectShowModalRegister = (state) =>
 
 export const selectShowModalClickWord = (state) =>
   state.modal.isModalOpenClickWord;
-
-// export const selectBookTrialLesson = (state) => state.modal.isBookTrialLesson;

@@ -52,10 +52,8 @@ export const ModalContainer = styled.div`
     padding: 12px 176px 12px 24px;
     width: 311px;
     height: 48px;
-
     background: none;
     box-sizing: border-box;
-
     font-weight: 500;
     font-size: 16px;
     line-height: 150%;
@@ -97,7 +95,6 @@ export const ModalContainer = styled.div`
     display: flex;
     align-items: center;
     gap: 8px;
-
     font-weight: 500;
     font-size: 14px;
     color: #fcfcfc;
@@ -124,12 +121,10 @@ export const ModalContainer = styled.div`
     height: 48px;
     background: #fcfcfc;
     box-sizing: border-box;
-
     font-weight: 700;
     font-size: 16px;
     line-height: 150%;
     color: #121417;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -161,12 +156,10 @@ export const ModalContainer = styled.div`
     width: 145px;
     height: 48px;
     box-sizing: border-box;
-
     font-weight: 700;
     font-size: 16px;
     line-height: 150%;
     color: #fcfcfc;
-
     display: flex;
     justify-content: center;
     align-items: center;

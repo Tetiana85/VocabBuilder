@@ -123,7 +123,6 @@ export const LogInPageContainer = styled.div`
     border-radius: 15px;
     padding: 16px 18px;
     width: 100%;
-
     font-weight: 400;
     font-size: 16px;
     line-height: 150%;
@@ -140,7 +139,6 @@ export const LogInPageContainer = styled.div`
     padding: 16px 18px;
     background: #85aa9f;
     border: none;
-
     font-weight: 700;
     font-size: 18px;
     line-height: 150%;

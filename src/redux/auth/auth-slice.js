@@ -1,6 +1,6 @@
-import { createSlice, isAnyOf } from "@reduxjs/toolkit";
+import { createSlice, isAnyOf } from '@reduxjs/toolkit';
 
-import authOperations from "./auth-operations";
+import authOperations from './auth-operations';
 
 const initialState = {
   id: null,
@@ -52,7 +52,7 @@ const handleRegisterLogInReject = (state, { payload }) => {
 };
 
 const authSlice = createSlice({
-  name: "auth",
+  name: 'auth',
   initialState,
 
   extraReducers: (builder) => {
@@ -94,12 +94,3 @@ const authSlice = createSlice({
 });
 
 export default authSlice.reducer;
-
-// const confused = "no";
-// const myKey = confused;
-
-// const obj = {
-//   [myKey]: false,
-// };
-
-// console.log(obj);

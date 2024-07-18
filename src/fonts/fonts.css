@@ -1,7 +1,8 @@
 @font-face {
   font-display: swap;
   font-family: 'MacPaw Fixel Display';
-  src: url('../fonts/MacPawFixelDisplay-Bold.otf') format('opentype'),
+  src:
+    url('../fonts/MacPawFixelDisplay-Bold.otf') format('opentype'),
     url('../fonts/MacPawFixelDisplay-Bold.woff') format('woff'),
     url('../fonts/MacPawFixelDisplay-Bold.woff2') format('woff2');
   font-style: normal;
@@ -11,7 +12,8 @@
 @font-face {
   font-display: swap;
   font-family: 'MacPaw Fixel Display';
-  src: url('../fonts/MacPawFixelDisplay-ExtraBold.otf') format('opentype'),
+  src:
+    url('../fonts/MacPawFixelDisplay-ExtraBold.otf') format('opentype'),
     url('../fonts/MacPawFixelDisplay-ExtraBold.woff') format('woff'),
     url('../fonts/MacPawFixelDisplay-ExtraBold.woff2') format('woff2');
   font-style: normal;
@@ -21,7 +23,8 @@
 @font-face {
   font-display: swap;
   font-family: 'MacPaw Fixel Display';
-  src: url('../fonts/MacPawFixelDisplay-Light.otf') format('opentype'),
+  src:
+    url('../fonts/MacPawFixelDisplay-Light.otf') format('opentype'),
     url('../fonts/MacPawFixelDisplay-Light.woff') format('woff'),
     url('../fonts/MacPawFixelDisplay-Light.woff2') format('woff2');
   font-style: normal;
@@ -31,7 +34,8 @@
 @font-face {
   font-display: swap;
   font-family: 'MacPaw Fixel Display';
-  src: url('../fonts/MacPawFixelDisplay-Medium.otf') format('opentype'),
+  src:
+    url('../fonts/MacPawFixelDisplay-Medium.otf') format('opentype'),
     url('../fonts/MacPawFixelDisplay-Medium.woff') format('woff'),
     url('../fonts/MacPawFixelDisplay-Medium.woff2') format('woff2');
   font-style: normal;
@@ -41,7 +45,8 @@
 @font-face {
   font-display: swap;
   font-family: 'MacPaw Fixel Display';
-  src: url('../fonts/MacPawFixelDisplay-Regular.otf') format('opentype'),
+  src:
+    url('../fonts/MacPawFixelDisplay-Regular.otf') format('opentype'),
     url('../fonts/MacPawFixelDisplay-Regular.woff') format('woff'),
     url('../fonts/MacPawFixelDisplay-Regular.woff2') format('woff2');
   font-style: normal;
@@ -51,7 +56,8 @@
 @font-face {
   font-display: swap;
   font-family: 'MacPaw Fixel Display';
-  src: url('../fonts/MacPawFixelDisplay-SemiBold.otf') format('opentype'),
+  src:
+    url('../fonts/MacPawFixelDisplay-SemiBold.otf') format('opentype'),
     url('../fonts/MacPawFixelDisplay-SemiBold.woff') format('woff'),
     url('../fonts/MacPawFixelDisplay-SemiBold.woff2') format('woff2');
   font-style: normal;
@@ -61,7 +67,8 @@
 @font-face {
   font-display: swap;
   font-family: 'MacPaw Fixel Display';
-  src: url('../fonts/MacPawFixelDisplay-Thin.otf') format('opentype'),
+  src:
+    url('../fonts/MacPawFixelDisplay-Thin.otf') format('opentype'),
     url('../fonts/MacPawFixelDisplay-Thin.woff') format('woff'),
     url('../fonts/MacPawFixelDisplay-Thin.woff2') format('woff2');
   font-style: normal;
@@ -71,9 +78,9 @@
 @font-face {
   font-display: swap;
   font-family: 'SF Pro Display';
-  src: url('../fonts/SF-Pro-Display-Black.otf') format('opentype'),
+  src:
+    url('../fonts/SF-Pro-Display-Black.otf') format('opentype'),
     url('../fonts/SF-Pro-Display-Black.woff') format('woff');
-    /* url('../fonts/SF-Pro-Display-Black.woff2') format('woff2'); */
   font-style: normal;
   font-weight: 900;
 }
@@ -81,9 +88,9 @@
 @font-face {
   font-display: swap;
   font-family: 'SF Pro Display';
-  src: url('../fonts/SF-Pro-Display-BlackItalic.otf') format('opentype'),
+  src:
+    url('../fonts/SF-Pro-Display-BlackItalic.otf') format('opentype'),
     url('../fonts/SF-Pro-Display-BlackItalic.woff') format('woff');
-    /* url('../fonts/SF-Pro-Display-BlackItalic.woff2') format('woff2'); */
   font-style: italic;
   font-weight: 900;
 }
@@ -91,9 +98,9 @@
 @font-face {
   font-display: swap;
   font-family: 'SF Pro Display';
-  src: url('../fonts/SF-Pro-Display-Bold.otf') format('opentype'),
+  src:
+    url('../fonts/SF-Pro-Display-Bold.otf') format('opentype'),
     url('../fonts/SF-Pro-Display-Bold.woff') format('woff');
-    /* url('../fonts/SF-Pro-Display-Bold.woff2') format('woff2'); */
   font-style: normal;
   font-weight: 700;
 }
@@ -101,7 +108,8 @@
 @font-face {
   font-display: swap;
   font-family: 'SF Pro Display';
-  src: url('../fonts/SF-Pro-Display-BoldItalic.otf') format('opentype'),
+  src:
+    url('../fonts/SF-Pro-Display-BoldItalic.otf') format('opentype'),
     url('../fonts/SF-Pro-Display-BoldItalic.woff') format('woff'),
     url('../fonts/SF-Pro-Display-BoldItalic.woff2') format('woff2');
   font-style: italic;
@@ -111,7 +119,8 @@
 @font-face {
   font-display: swap;
   font-family: 'SF Pro Display';
-  src: url('../fonts/SF-Pro-Display-Heavy.otf') format('opentype'),
+  src:
+    url('../fonts/SF-Pro-Display-Heavy.otf') format('opentype'),
     url('../fonts/SF-Pro-Display-Heavy.woff') format('woff'),
     url('../fonts/SF-Pro-Display-Heavy.woff2') format('woff2');
   font-style: normal;
@@ -121,7 +130,8 @@
 @font-face {
   font-display: swap;
   font-family: 'SF Pro Display';
-  src: url('../fonts/SF-Pro-Display-HeavyItalic.otf') format('opentype'),
+  src:
+    url('../fonts/SF-Pro-Display-HeavyItalic.otf') format('opentype'),
     url('../fonts/SF-Pro-Display-HeavyItalic.woff') format('woff'),
     url('../fonts/SF-Pro-Display-HeavyItalic.woff2') format('woff2');
   font-style: italic;
@@ -131,7 +141,8 @@
 @font-face {
   font-display: swap;
   font-family: 'SF Pro Display';
-  src: url('../fonts/SF-Pro-Display-Light.otf') format('opentype'),
+  src:
+    url('../fonts/SF-Pro-Display-Light.otf') format('opentype'),
     url('../fonts/SF-Pro-Display-Light.woff') format('woff'),
     url('../fonts/SF-Pro-Display-Light.woff2') format('woff2');
   font-style: normal;
@@ -141,7 +152,8 @@
 @font-face {
   font-display: swap;
   font-family: 'SF Pro Display';
-  src: url('../fonts/SF-Pro-Display-LightItalic.otf') format('opentype'),
+  src:
+    url('../fonts/SF-Pro-Display-LightItalic.otf') format('opentype'),
     url('../fonts/SF-Pro-Display-LightItalic.woff') format('woff'),
     url('../fonts/SF-Pro-Display-LightItalic.woff2') format('woff2');
   font-style: italic;
@@ -151,7 +163,8 @@
 @font-face {
   font-display: swap;
   font-family: 'SF Pro Display';
-  src: url('../fonts/SF-Pro-Display-Medium.otf') format('opentype'),
+  src:
+    url('../fonts/SF-Pro-Display-Medium.otf') format('opentype'),
     url('../fonts/SF-Pro-Display-Medium.woff') format('woff'),
     url('../fonts/SF-Pro-Display-Medium.woff2') format('woff2');
   font-style: normal;
@@ -161,7 +174,8 @@
 @font-face {
   font-display: swap;
   font-family: 'SF Pro Display';
-  src: url('../fonts/SF-Pro-Display-MediumItalic.otf') format('opentype'),
+  src:
+    url('../fonts/SF-Pro-Display-MediumItalic.otf') format('opentype'),
     url('../fonts/SF-Pro-Display-MediumItalic.woff') format('woff'),
     url('../fonts/SF-Pro-Display-MediumItalic.woff2') format('woff2');
   font-style: italic;
@@ -171,7 +185,8 @@
 @font-face {
   font-display: swap;
   font-family: 'SF Pro Display';
-  src: url('../fonts/SF-Pro-Display-Regular.otf') format('opentype'),
+  src:
+    url('../fonts/SF-Pro-Display-Regular.otf') format('opentype'),
     url('../fonts/SF-Pro-Display-Regular.woff') format('woff'),
     url('../fonts/SF-Pro-Display-Regular.woff2') format('woff2');
   font-style: normal;
@@ -181,7 +196,8 @@
 @font-face {
   font-display: swap;
   font-family: 'SF Pro Display';
-  src: url('../fonts/SF-Pro-Display-RegularItalic.otf') format('opentype'),
+  src:
+    url('../fonts/SF-Pro-Display-RegularItalic.otf') format('opentype'),
     url('../fonts/SF-Pro-Display-RegularItalic.woff') format('woff'),
     url('../fonts/SF-Pro-Display-RegularItalic.woff2') format('woff2');
   font-style: italic;
@@ -191,7 +207,8 @@
 @font-face {
   font-display: swap;
   font-family: 'SF Pro Display';
-  src: url('../fonts/SF-Pro-Display-Semibold.otf') format('opentype'),
+  src:
+    url('../fonts/SF-Pro-Display-Semibold.otf') format('opentype'),
     url('../fonts/SF-Pro-Display-Semibold.woff') format('woff'),
     url('../fonts/SF-Pro-Display-Semibold.woff2') format('woff2');
   font-style: normal;
@@ -201,7 +218,8 @@
 @font-face {
   font-display: swap;
   font-family: 'SF Pro Display';
-  src: url('../fonts/SF-Pro-Display-SemiboldItalic.otf') format('opentype'),
+  src:
+    url('../fonts/SF-Pro-Display-SemiboldItalic.otf') format('opentype'),
     url('../fonts/SF-Pro-Display-SemiboldItalic.woff') format('woff'),
     url('../fonts/SF-Pro-Display-SemiboldItalic.woff2') format('woff2');
   font-style: italic;
@@ -211,7 +229,8 @@
 @font-face {
   font-display: swap;
   font-family: 'SF Pro Display';
-  src: url('../fonts/SF-Pro-Display-Thin.otf') format('opentype'),
+  src:
+    url('../fonts/SF-Pro-Display-Thin.otf') format('opentype'),
     url('../fonts/SF-Pro-Display-Thin.woff') format('woff'),
     url('../fonts/SF-Pro-Display-Thin.woff2') format('woff2');
   font-style: normal;
@@ -221,9 +240,9 @@
 @font-face {
   font-display: swap;
   font-family: 'SF Pro Display';
-  src: url('../fonts/SF-Pro-Display-ThinItalic.otf') format('opentype'),
+  src:
+    url('../fonts/SF-Pro-Display-ThinItalic.otf') format('opentype'),
     url('../fonts/SF-Pro-Display-ThinItalic.woff') format('woff');
-    /* url('../fonts/SF-Pro-Display-ThinItalic.woff2') format('woff2'); */
   font-style: italic;
   font-weight: 100;
 }
@@ -231,9 +250,9 @@
 @font-face {
   font-display: swap;
   font-family: 'SF Pro Text';
-  src: url('../fonts/SF-Pro-Display-Ultralight.otf') format('opentype'),
+  src:
+    url('../fonts/SF-Pro-Display-Ultralight.otf') format('opentype'),
     url('../fonts/SF-Pro-Display-Ultralight.woff') format('woff');
-    /* url('../fonts/SF-Pro-Display-Ultralight.woff2') format('woff2'); */
   font-style: normal;
   font-weight: 200;
 }

@@ -4,7 +4,6 @@ export const TableList = styled.table`
   border-collapse: collapse;
   width: 100%;
   table-layout: fixed;
-
   border-radius: 8px;
   overflow: hidden;
 
@@ -13,6 +12,12 @@ export const TableList = styled.table`
 
     @media only screen and (min-width: 768px) {
       display: inline-flex;
+      width: 28px;
+      height: 28px;
+    }
+    @media only screen and (min-width: 1440px) {
+      width: 32px;
+      height: 32px;
     }
   }
 
@@ -21,7 +26,6 @@ export const TableList = styled.table`
     border-bottom: 1px solid #dbdbdb;
     border-right: 1px solid #dbdbdb;
     text-align: left;
-
     font-weight: 500;
     font-size: 14px;
 

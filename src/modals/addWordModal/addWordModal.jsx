@@ -45,7 +45,9 @@ export function AddWordModal({ handleClickClose }) {
       const pattern = /^\w+-\w+-\w+$/;
       if (!pattern.test(values.en)) {
         return (
-          <p className="EnInputMistake">Must be example: "know-knew-known"</p>
+          <p className="EnInputMistake">
+            Must be example: &ldquo;know-knew-known&rdquo;
+          </p>
         );
       }
     }

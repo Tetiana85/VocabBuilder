@@ -7,7 +7,6 @@ export const WellDoneContainer = styled.div`
   width: 342px;
   height: 458px;
   padding: 18px;
-
   background: #85aa9f;
   position: relative;
   box-sizing: border-box;
@@ -112,7 +111,6 @@ export const WellDoneContainer = styled.div`
     width: 152px;
     height: 121px;
     background-image: url(${bookMobile});
-
     position: absolute;
     bottom: 40px;
     right: 0;

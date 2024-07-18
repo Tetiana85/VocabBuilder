@@ -37,10 +37,6 @@ export const ContainerAddWordModal = styled.div`
     }
   }
 
-  /* .TextContainer {
-    margin-top: 30px;
-  } */
-
   .Title {
     font-weight: 600;
     font-size: 24px;

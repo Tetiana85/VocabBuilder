@@ -25,6 +25,7 @@ export const RecommendPageContainer = styled.div`
 
     @media only screen and (min-width: 768px) {
       display: flex;
+      margin-top: 16px;
     }
   }
 
@@ -33,8 +34,7 @@ export const RecommendPageContainer = styled.div`
       display: flex;
       align-items: end;
       gap: 16px;
-
-      margin-top: 30px;
+      margin-top: 28px;
     }
 
     @media only screen and (min-width: 1440px) {
@@ -72,7 +72,6 @@ export const RecommendPageContainer = styled.div`
     width: 100%;
     height: 48px;
     box-sizing: border-box;
-
     font-weight: 500;
     font-size: 16px;
     line-height: 150%;
@@ -102,7 +101,6 @@ export const RecommendPageContainer = styled.div`
     margin-top: 5px;
     display: none;
     gap: 8px;
-
     border-radius: 15px;
     padding: 12px 24px;
     width: 189px;
@@ -124,7 +122,7 @@ export const RecommendPageContainer = styled.div`
   }
 
   .CountWord {
-    margin-top: 50px;
+    margin-top: 40px;
     font-weight: 500;
     font-size: 14px;
     color: rgba(18, 20, 23, 0.5);
@@ -145,7 +143,7 @@ export const RecommendPageContainer = styled.div`
   }
 
   .ButtonList {
-    margin-top: 16px;
+    margin-top: 8px;
     display: flex;
     gap: 16px;
 
@@ -191,7 +189,6 @@ export const RecommendPageContainer = styled.div`
     position: relative;
     display: flex;
     gap: 8px;
-
     font-weight: 400;
     font-size: 12px;
     text-align: center;
@@ -242,7 +239,7 @@ export const RecommendPageContainer = styled.div`
       padding: 18px;
       background: #fcfcfc;
       border-radius: 15px;
-      margin-top: 24px;
+      margin-top: 28px;
     }
   }
 `;

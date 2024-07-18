@@ -1,13 +1,15 @@
 import styled from 'styled-components';
 
 export const PageList = styled.ul`
-  /* flex-wrap: wrap; */
   margin-top: 32px;
   display: flex;
   justify-content: center;
   gap: 10px;
   @media only screen and (max-width: 374px) {
     gap: 5px;
+  }
+  @media only screen and (min-width: 768px) {
+    margin-top: 28px;
   }
 
   .PageButton {

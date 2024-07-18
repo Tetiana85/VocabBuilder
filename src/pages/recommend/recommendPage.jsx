@@ -11,8 +11,14 @@ import { Table } from 'components/table/table';
 
 export default function RecommendPage() {
   const dispatch = useDispatch();
-  const { categories, customInputRef, inputRef, dropdownRef } =
-    useDictionaryHook();
+  const {
+    categories,
+    customInputRef,
+    inputRef,
+    dropdownRef,
+    capitalizeFirstLetter,
+    toLowerCase,
+  } = useDictionaryHook();
   const [formData, setFormData] = useState({
     filters: '',
     statistics: '',
@@ -29,7 +35,11 @@ export default function RecommendPage() {
 
   const delayedDispatchRef = useRef(
     debounce((formData) => {
-      dispatch(getAllWord(formData));
+      const modifiedFormData = {
+        ...formData,
+        statistics: toLowerCase(formData.statistics),
+      };
+      dispatch(getAllWord(modifiedFormData));
     }, 300)
   );
 
@@ -48,9 +58,9 @@ export default function RecommendPage() {
   const handleListItemClick = (value) => {
     setFormData((prevState) => ({
       ...prevState,
-      statistics: value,
+      statistics: capitalizeFirstLetter(value.toLowerCase()),
     }));
-    value === 'verb' ? setIsVerb(true) : setIsVerb(false);
+    value.toLowerCase() === 'verb' ? setIsVerb(true) : setIsVerb(false);
   };
 
   const handleIsIrregularClick = (boolean) => {

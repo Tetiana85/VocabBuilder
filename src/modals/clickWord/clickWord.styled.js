@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const ClickWordContainer = styled.ul`
   border-radius: 15px;
@@ -16,6 +16,21 @@ export const ClickWordContainer = styled.ul`
 
   display: grid;
   gap: 8px;
+
+  @media (max-width: 374px) {
+    top: ${(props) => props.y + 0}px;
+    left: ${(props) => props.x - 120}px;
+  }
+
+  @media (min-width: 375px) {
+    top: ${(props) => props.y + 0}px;
+    left: ${(props) => props.x - 145}px;
+  }
+
+  @media (min-width: 768px) {
+    top: ${(props) => props.y + 0}px;
+    left: ${(props) => props.x - 80}px;
+  }
 
   .Element {
     cursor: pointer;

@@ -13,10 +13,11 @@ export function Table({ data }) {
   const dispatch = useDispatch();
   const location = useLocation();
   const navigate = useNavigate();
+  const wordsData = useSelector((state) => state.data.words);
 
   useEffect(() => {
-    console.log('Дані в Redux-сторі змінилися:', data.results);
-  }, [data.results]);
+    console.log('Дані в Redux-сторі змінилися:', wordsData.results);
+  }, [wordsData.results]);
 
   const handleClickWord = (event, word) => {
     const { clientX, clientY } = event;

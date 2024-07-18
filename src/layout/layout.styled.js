@@ -8,6 +8,7 @@ export const MainContainer = styled.div`
   padding: 16px;
 
   @media only screen and (min-width: 768px) {
+    padding: 20px;
   }
 
   .NavigationContainer {
@@ -65,7 +66,6 @@ export const MainContainer = styled.div`
     display: flex;
     gap: 16px;
     align-items: center;
-
     text-decoration: none;
     color: inherit;
 
@@ -90,12 +90,19 @@ export const MainContainer = styled.div`
   .Logo {
     width: 36px;
     height: 36px;
+    @media only screen and (min-width: 768px) {
+      width: 40px;
+      height: 40px;
+    }
   }
 
   .LogoTitle {
     font-size: 18px;
     @media only screen and (max-width: 374px) {
       font-size: 14px;
+    }
+    @media only screen and (min-width: 768px) {
+      font-size: 22px;
     }
   }
 
@@ -112,17 +119,24 @@ export const MainContainer = styled.div`
     @media only screen and (max-width: 374px) {
       font-size: 12px;
     }
+    @media only screen and (min-width: 768px) {
+      font-size: 20px;
+    }
   }
 
   .UserImag {
     display: flex;
     justify-content: center;
     align-items: center;
-
     border-radius: 30px;
     width: 36px;
     height: 36px;
     background: #85aa9f;
+
+    @media only screen and (min-width: 748px) {
+      width: 48px;
+      height: 48px;
+    }
   }
 
   .ButtonBurger {

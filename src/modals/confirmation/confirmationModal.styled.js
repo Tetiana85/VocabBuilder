@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const ModalContainer = styled.div`
   border-radius: 15px;
@@ -52,7 +52,6 @@ export const ModalContainer = styled.div`
     width: 155px;
     height: 48px;
     box-sizing: border-box;
-
     font-weight: 700;
     font-size: 16px;
     line-height: 150%;

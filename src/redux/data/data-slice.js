@@ -28,7 +28,7 @@ const initialState = {
   isAddWord: false,
 };
 
-const handleGetAllCategoriesPending = (state, { payload }) => {
+const handleGetAllCategoriesPending = (state) => {
   state.isLoadingCategories = true;
 };
 
@@ -37,7 +37,7 @@ const handleGetAllCategoriesulfilled = (state, { payload }) => {
   state.isLoadingCategories = false;
 };
 
-const handleGetStatisticsWordPending = (state, { payload }) => {
+const handleGetStatisticsWordPending = (state) => {
   state.isLoadingStatistics = true;
 };
 const handleGetStatisticsWordFulfilled = (state, { payload }) => {
@@ -45,18 +45,18 @@ const handleGetStatisticsWordFulfilled = (state, { payload }) => {
   state.isLoadingStatistics = false;
 };
 
-const handleGetOwnWordPending = (state, { payload }) => {
+const handleGetOwnWordPending = (state) => {
   state.isLoadingWords = true;
 };
 const handleGetOwnWordFulfilled = (state, { payload }) => {
   state.words = payload;
   state.isLoadingWords = false;
 };
-const handleGetOwnWordRejected = (state, { payload }) => {
+const handleGetOwnWordRejected = (state) => {
   state.isLoadingWords = true;
 };
 
-const handlegetAllWordsPending = (state, { payload }) => {
+const handlegetAllWordsPending = (state) => {
   state.isLoadingAllWords = true;
 };
 const handlegetAllWords = (state, { payload }) => {
@@ -64,7 +64,7 @@ const handlegetAllWords = (state, { payload }) => {
   state.isLoadingAllWords = false;
 };
 
-const handTasksWordsPending = (state, { payload }) => {
+const handTasksWordsPending = (state) => {
   state.isLoadingTasks = true;
 };
 const handTasksWords = (state, { payload }) => {
@@ -72,7 +72,7 @@ const handTasksWords = (state, { payload }) => {
   state.isLoadingTasks = false;
 };
 
-const handleAnswersPending = (state, { payload }) => {
+const handleAnswersPending = (state) => {
   state.isLoadingAnswers = true;
 };
 const handleAnswers = (state, { payload }) => {
@@ -80,51 +80,51 @@ const handleAnswers = (state, { payload }) => {
   state.isLoadingAnswers = false;
 };
 
-const handleDeleteWordPending = (state, { payload }) => {
+const handleDeleteWordPending = (state) => {
   state.isDeleteWord = false;
 };
 
-const handleDeleteWordFulfilled = (state, { payload }) => {
+const handleDeleteWordFulfilled = (state) => {
   state.isDeleteWord = true;
 };
 
-const handleDeleteWordRejected = (state, { payload }) => {
+const handleDeleteWordRejected = (state) => {
   state.isDeleteWord = false;
 };
 
-const handleAddWordPending = (state, { payload }) => {
+const handleAddWordPending = (state) => {
   state.isAddWord = false;
 };
 
-const handleAddWordFulfilled = (state, { payload }) => {
+const handleAddWordFulfilled = (state) => {
   state.isAddWord = true;
 };
 
-const handleAddWordRejected = (state, { payload }) => {
+const handleAddWordRejected = (state) => {
   state.isAddWord = false;
 };
 
-const handleEditWordPending = (state, { payload }) => {
+const handleEditWordPending = (state) => {
   state.isEditingWord = true;
 };
 
 const handleEditWordFulfilled = (state, { payload }) => {
   console.log('Editing word fulfilled with payload:', payload);
-  console.log('Current words state:', state.words.results);
 
-  if (Array.isArray(state.words)) {
-    // Обновляем только если состояние действительно является массивом
-    const index = state.words.findIndex((word) => word._id === payload._id);
+  if (Array.isArray(state.words.results)) {
+    const index = state.words.results.findIndex(
+      (word) => word._id === payload._id
+    );
     if (index !== -1) {
-      state.words[index] = payload; // Обновляем измененное слово
+      state.words.results[index] = payload;
     }
   } else {
-    console.error('state.words is not an array');
+    console.error('state.words.results is not an array');
   }
   state.isEditingWord = false;
 };
 
-const handleEditWordRejected = (state, { payload }) => {
+const handleEditWordRejected = (state) => {
   state.isEditingWord = false;
 };
 

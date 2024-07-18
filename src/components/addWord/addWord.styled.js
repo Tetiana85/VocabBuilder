@@ -4,7 +4,7 @@ export const TrainingPageContainer = styled.div`
   background: #f8f8f8;
   width: 100%;
   height: 100vh;
-  padding: 32px 16px;
+  padding: 24px 16px;
   box-sizing: border-box;
 
   @media only screen and (min-width: 768px) {
@@ -32,7 +32,6 @@ export const TrainingPageContainer = styled.div`
     width: 20px;
     height: 20px;
     text-align: center;
-
     font-weight: 500;
     font-size: 16px;
     line-height: 150%;
@@ -45,7 +44,10 @@ export const TrainingPageContainer = styled.div`
   }
 
   .Form {
-    margin-top: 16px;
+    margin-top: 8px;
+    @media only screen and (min-width: 768px) {
+      margin-top: 16px;
+    }
   }
 
   .FormContainer {
@@ -98,12 +100,14 @@ export const TrainingPageContainer = styled.div`
     border: none;
     background: #fcfcfc;
     width: 100%;
-
     font-weight: 500;
     font-size: 16px;
     line-height: 150%;
     color: #121417;
     margin-bottom: auto;
+    @media only screen and (min-width: 768px) {
+      font-size: 20px;
+    }
 
     &:focus {
       outline: none;
@@ -136,10 +140,12 @@ export const TrainingPageContainer = styled.div`
     gap: 8px;
     margin-top: auto;
     margin-left: auto;
+    font-size: 14px;
 
     @media only screen and (min-width: 768px) {
       margin-top: 0;
       margin-bottom: auto;
+      font-size: 16px;
     }
   }
 
@@ -150,9 +156,12 @@ export const TrainingPageContainer = styled.div`
 
     @media only screen and (min-width: 768px) {
       display: flex;
-      gap: 8px;
-      margin-top: 50px;
+      gap: 10px;
+      margin-top: 40px;
       justify-content: start;
+    }
+    @media only screen and (min-width: 1440px) {
+      margin-top: 80px;
     }
   }
 
@@ -164,12 +173,10 @@ export const TrainingPageContainer = styled.div`
     width: 343px;
     height: 56px;
     background: #85aa9f;
-
     font-weight: 700;
     font-size: 16px;
     line-height: 150%;
     color: #fcfcfc;
-
     text-align: center;
 
     &:hover {
@@ -205,7 +212,6 @@ export const TrainingPageContainer = styled.div`
       padding: 14px;
       width: 203px;
       height: 56px;
-
       font-size: 18px;
       line-height: 156%;
       color: #85aa9f;
