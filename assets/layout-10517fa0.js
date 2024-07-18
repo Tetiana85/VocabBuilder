@@ -1,4 +1,4 @@
-import{r as m,p as ae,u as pe,a as Xt,b as B,j as f,N as de,c as Jt,m as Kn,d as Zn,R as St,e as Qt,f as Xn,o as Jn,g as Qn,h as ei,i as ti,k as ni,l as ii,n as ri,q as ai,s as oi,t as si,v as ui,L as li,O as ci}from"./index-c64e8cad.js";import{m as di,e as nt,c as en,u as tn,A as pi,S as nn,E as fi}from"./error-d9c0ed13.js";import{t as hi}from"./toggle-480cad5a.js";import{_ as oe,a as re,b as S,c as mi,d as rn,e as gi,f as vi,g as Fe,h as F,S as an,i as on}from"./extends-369b3d31.js";const bi=t=>m.createElement("svg",{xmlns:"http://www.w3.org/2000/svg",width:40,height:40,viewBox:"0 0 40 40",fill:"none",...t},m.createElement("circle",{cx:20,cy:20,r:20,fill:"#85AA9F"}),m.createElement("path",{fill:"#FCFCFC",fillRule:"evenodd",d:"M20.443 19c5.944-4.483 6.206-7.2 0-12-6.325 4.902-5.51 7.501 0 12ZM19 20.557c-4.483-5.944-7.2-6.206-12 0 4.902 6.325 7.5 5.51 12 0Zm15 0c-4.483-5.944-7.2-6.206-12 0 4.902 6.325 7.5 5.51 12 0ZM20.443 34c5.944-4.483 6.206-7.2 0-12-6.325 4.902-5.51 7.501 0 12Z",clipRule:"evenodd"})),xi=t=>m.createElement("svg",{xmlns:"http://www.w3.org/2000/svg",width:20,height:20,fill:"none",...t},m.createElement("path",{fill:"#FCFCFC",fillOpacity:.7,d:"M9.999 3.333a3.333 3.333 0 1 1 0 6.667 3.333 3.333 0 0 1 0-6.667Zm0 13.334s6.666 0 6.666-1.667c0-2-3.25-4.167-6.666-4.167C6.582 10.833 3.332 13 3.332 15c0 1.667 6.667 1.667 6.667 1.667Z"})),Ei=t=>m.createElement("svg",{width:32,height:22,viewBox:"0 0 32 22",fill:"none",xmlns:"http://www.w3.org/2000/svg",...t},m.createElement("line",{x1:5.86914,y1:3.66663,x2:30.9996,y2:3.66663,stroke:"#121417",strokeWidth:2,strokeLinecap:"round"}),m.createElement("line",{x1:5.86914,y1:17,x2:30.9996,y2:17,stroke:"#121417",strokeWidth:2,strokeLinecap:"round"}),m.createElement("line",{x1:13.5215,y1:10.3334,x2:30.9997,y2:10.3334,stroke:"#121417",strokeWidth:2,strokeLinecap:"round"})),sn=t=>m.createElement("svg",{xmlns:"http://www.w3.org/2000/svg",width:20,height:20,fill:"none",...t},m.createElement("path",{stroke:"currentColor",strokeLinecap:"round",strokeLinejoin:"round",strokeWidth:1.5,d:"M3.333 10h13.334m0 0-3.334-3.333M16.667 10l-3.334 3.333"})),Ci=ae.div`
+import{r as m,p as ae,u as pe,a as Xt,b as B,j as f,N as de,c as Jt,m as Kn,d as Zn,R as St,e as Qt,f as Xn,o as Jn,g as Qn,h as ei,i as ti,k as ni,l as ii,n as ri,q as ai,s as oi,t as si,v as ui,L as li,O as ci}from"./index-be36d13a.js";import{m as di,e as nt,c as en,u as tn,A as pi,S as nn,E as fi}from"./error-0b02cb4a.js";import{t as hi}from"./toggle-73a2ecbc.js";import{_ as oe,a as re,b as S,c as mi,d as rn,e as gi,f as vi,g as Fe,h as F,S as an,i as on}from"./extends-c2e341e7.js";const bi=t=>m.createElement("svg",{xmlns:"http://www.w3.org/2000/svg",width:40,height:40,viewBox:"0 0 40 40",fill:"none",...t},m.createElement("circle",{cx:20,cy:20,r:20,fill:"#85AA9F"}),m.createElement("path",{fill:"#FCFCFC",fillRule:"evenodd",d:"M20.443 19c5.944-4.483 6.206-7.2 0-12-6.325 4.902-5.51 7.501 0 12ZM19 20.557c-4.483-5.944-7.2-6.206-12 0 4.902 6.325 7.5 5.51 12 0Zm15 0c-4.483-5.944-7.2-6.206-12 0 4.902 6.325 7.5 5.51 12 0ZM20.443 34c5.944-4.483 6.206-7.2 0-12-6.325 4.902-5.51 7.501 0 12Z",clipRule:"evenodd"})),xi=t=>m.createElement("svg",{xmlns:"http://www.w3.org/2000/svg",width:20,height:20,fill:"none",...t},m.createElement("path",{fill:"#FCFCFC",fillOpacity:.7,d:"M9.999 3.333a3.333 3.333 0 1 1 0 6.667 3.333 3.333 0 0 1 0-6.667Zm0 13.334s6.666 0 6.666-1.667c0-2-3.25-4.167-6.666-4.167C6.582 10.833 3.332 13 3.332 15c0 1.667 6.667 1.667 6.667 1.667Z"})),Ei=t=>m.createElement("svg",{width:32,height:22,viewBox:"0 0 32 22",fill:"none",xmlns:"http://www.w3.org/2000/svg",...t},m.createElement("line",{x1:5.86914,y1:3.66663,x2:30.9996,y2:3.66663,stroke:"#121417",strokeWidth:2,strokeLinecap:"round"}),m.createElement("line",{x1:5.86914,y1:17,x2:30.9996,y2:17,stroke:"#121417",strokeWidth:2,strokeLinecap:"round"}),m.createElement("line",{x1:13.5215,y1:10.3334,x2:30.9997,y2:10.3334,stroke:"#121417",strokeWidth:2,strokeLinecap:"round"})),sn=t=>m.createElement("svg",{xmlns:"http://www.w3.org/2000/svg",width:20,height:20,fill:"none",...t},m.createElement("path",{stroke:"currentColor",strokeLinecap:"round",strokeLinejoin:"round",strokeWidth:1.5,d:"M3.333 10h13.334m0 0-3.334-3.333M16.667 10l-3.334 3.333"})),Ci=ae.div`
   background: #fff;
   display: flex;
   align-items: center;
@@ -691,8 +691,24 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   top: ${t=>t.y}px;
   left: ${t=>t.x}px;
 
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 8px;
+
+  @media (max-width: 374px) {
+    top: ${t=>t.y+0}px;
+    left: ${t=>t.x-120}px;
+  }
+
+  @media (min-width: 375px) {
+    top: ${t=>t.y+0}px;
+    left: ${t=>t.x-145}px;
+  }
+
+  @media (min-width: 768px) {
+    top: ${t=>t.y+0}px;
+    left: ${t=>t.x-80}px;
+  }
 
   .Element {
     cursor: pointer;
@@ -934,18 +950,31 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   background: #85aa9f;
   box-sizing: border-box;
 
+  @media only screen and (max-width: 374px) {
+    width: 288px;
+    padding: 40px 20px;
+  }
+
   .Title {
     font-weight: 600;
     font-size: 24px;
     line-height: 117%;
     letter-spacing: -0.02em;
     color: #fff;
+    @media only screen and (max-width: 374px) {
+      width: 248px;
+      text-align: center;
+      font-size: 22px;
+    }
   }
 
   .ListButton {
     display: flex;
     gap: 20px;
     justify-content: center;
+    @media only screen and (max-width: 374px) {
+      gap: 10px;
+    }
   }
 
   .ButtonYes {
@@ -966,6 +995,11 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       background: #85aa9f;
       border: 1px solid #d1d5db;
     }
+
+    @media only screen and (max-width: 374px) {
+      width: 120px;
+      padding: 14px 45px;
+    }
   }
 
   .ButtonNo {
@@ -985,6 +1019,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     &:hover {
       color: #85aa9f;
       background: #fcfcfc;
+    }
+    @media only screen and (max-width: 374px) {
+      width: 120px;
     }
   }
 `;function bs({handleClickClose:t}){const e=pe(),i=B(n=>n.modal.clickWordId),r=()=>{e(ti(i)).then(n=>{isNaN(n.payload)&&t()})};return f.jsxs(vs,{children:[f.jsxs("h2",{className:"Title",children:["Are you sure you want to delete ",i.en,"?"]}),f.jsxs("ul",{className:"ListButton",children:[f.jsx("li",{className:"ButtonYes",onClick:r,children:"Yes"}),f.jsx("li",{className:"ButtonNo",onClick:()=>t(),children:"No"})]})]})}const xs="/VocabBuilder/assets/open-orange-book-mobile-min-c1af7270.png",Es="/VocabBuilder/assets/open-orange-book-desctop-min-45107eed.png",Cs=ae.div`
