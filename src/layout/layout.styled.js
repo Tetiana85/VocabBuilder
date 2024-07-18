@@ -6,6 +6,8 @@ export const MainContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 16px;
+  margin-left: auto;
+  margin-right: auto;
 
   @media only screen and (min-width: 768px) {
     padding: 20px;
@@ -97,9 +99,9 @@ export const MainContainer = styled.div`
   }
 
   .LogoTitle {
-    font-size: 18px;
-    @media only screen and (max-width: 374px) {
-      font-size: 14px;
+    font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (375 - 320)));
+    @media only screen and (min-width: 375px) {
+      font-size: 18px;
     }
     @media only screen and (min-width: 768px) {
       font-size: 22px;
@@ -114,10 +116,11 @@ export const MainContainer = styled.div`
 
   .UserName {
     font-weight: 500;
-    font-size: 16px;
+    font-size: calc(12px + (16 - 12) * ((100vw - 320px) / (375 - 320)));
     color: #121417;
-    @media only screen and (max-width: 374px) {
-      font-size: 12px;
+
+    @media only screen and (min-width: 375px) {
+      font-size: 16px;
     }
     @media only screen and (min-width: 768px) {
       font-size: 20px;

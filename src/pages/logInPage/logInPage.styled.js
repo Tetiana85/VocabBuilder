@@ -9,24 +9,25 @@ import error from '../../img/error.svg';
 
 export const LogInPageContainer = styled.div`
   width: 100%;
-  height: 100%;
+  height: 100vh;
   padding-bottom: 50px;
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
 
   @media only screen and (min-width: 768px) {
     background-image: url(${vector});
-    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
   }
 
   @media only screen and (min-width: 1440px) {
-    margin-top: 50px;
-    display: grid;
-    grid-template-areas:
-      'f i'
-      'f l'
-      'f l'
-      'f l';
+    display: flex;
+    flex-wrap: wrap;
+    max-height: 1000px;
+    flex-direction: column;
+    align-content: center;
   }
 
   .ImgContainer {
@@ -44,11 +45,9 @@ export const LogInPageContainer = styled.div`
   }
 
   .RegisterImg {
-    background-image: url(${desctopImg});
+    background-image: url(${mobileImg});
     width: 247px;
     height: 191px;
-    background-repeat: no-repeat;
-    background-size: 85%;
 
     @media only screen and (min-width: 1440px) {
       width: 498px;
@@ -59,25 +58,26 @@ export const LogInPageContainer = styled.div`
   }
 
   .FormContainer {
-    margin-top: 40px;
+    margin-top: 43px;
     order: 3;
     padding: 32px 16px;
     border-radius: 25px 25px 0 0;
     background: rgba(133, 170, 159, 0.1);
     height: 100vh;
+    max-width: 374px;
 
     @media only screen and (min-width: 768px) {
       margin-top: 150px;
       padding: 48px 64px;
       border-radius: 30px;
-      width: 628px;
+      max-width: 628px;
       height: 518px;
     }
 
     @media only screen and (min-width: 1440px) {
-      grid-area: f;
-      margin-right: 70px;
+      margin-right: 80px;
       margin-top: 0;
+      order: -1;
     }
   }
 
@@ -170,7 +170,7 @@ export const LogInPageContainer = styled.div`
     }
 
     @media only screen and (min-width: 768px) {
-      margin-top: 220px;
+      margin-top: 172px;
       order: 3;
       & li {
         margin-right: 15px;

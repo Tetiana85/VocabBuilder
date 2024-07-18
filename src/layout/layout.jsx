@@ -9,7 +9,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { openModalMobile } from '../redux/modals/modal-slice';
 import authOperations from '../redux/auth/auth-operations';
 import Modals from '../modals/modals';
-import { Footer } from '../modals/footer/footer';
+// import { Footer } from '../modals/footer/footer';
 import Loader from '../components/loader/loader';
 
 export default function Layout() {
@@ -39,7 +39,7 @@ export default function Layout() {
   };
 
   return (
-    <>
+    <div className="container">
       <MainContainer>
         <NavLink to="/" className="LogoContainer">
           <Logo className="Logo" />
@@ -100,7 +100,7 @@ export default function Layout() {
         isModalOpenConfirmation ||
         isModalOpenEdit ||
         isModalOpenWellDone) && <Modals />}
-      <Footer />
-    </>
+      {/* <Footer /> */}
+    </div>
   );
 }

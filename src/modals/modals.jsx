@@ -1,23 +1,23 @@
-import { useCallback, useEffect } from "react";
-import { createPortal } from "react-dom";
-import { useDispatch, useSelector } from "react-redux";
+import { useCallback, useEffect } from 'react';
+import { createPortal } from 'react-dom';
+import { useDispatch, useSelector } from 'react-redux';
 import {
   closeModalAddWord,
   closeModalClickWord,
   closeModalConfirmation,
-  closeModalEdil,
+  closeModalEdit,
   closeModalMobile,
   closeModalWellDone,
-} from "../redux/modals/modal-slice";
-import MobileModal from "./mobileModal/mobileModal";
-import { BackdropClickWord, BackdropStyle } from "./modals.styled";
-import { AddWordModal } from "./addWordModal/addWordModal";
-import { ClickWord } from "./clickWord/clickWord";
-import { EditModal } from "./editModal/editModal";
-import { ConfirmationModal } from "./confirmation/confirmationModal";
-import WellDoneModal from "./wellDoneModal/wellDoneModal";
+} from '../redux/modals/modal-slice';
+import MobileModal from './mobileModal/mobileModal';
+import { BackdropClickWord, BackdropStyle } from './modals.styled';
+import { AddWordModal } from './addWordModal/addWordModal';
+import { ClickWord } from './clickWord/clickWord';
+import { EditModal } from './editModal/editModal';
+import { ConfirmationModal } from './confirmation/confirmationModal';
+import WellDoneModal from './wellDoneModal/wellDoneModal';
 
-const modalRoot = document.querySelector("#modal-root");
+const modalRoot = document.querySelector('#modal-root');
 
 export default function Modals() {
   const dispatch = useDispatch();
@@ -42,7 +42,7 @@ export default function Modals() {
     dispatch(closeModalMobile());
     dispatch(closeModalAddWord());
     dispatch(closeModalClickWord());
-    dispatch(closeModalEdil());
+    dispatch(closeModalEdit());
     dispatch(closeModalConfirmation());
     dispatch(closeModalWellDone());
   }, [dispatch]);
@@ -55,16 +55,16 @@ export default function Modals() {
 
   useEffect(() => {
     const handleKeyDown = (e) => {
-      if (e.code === "Escape") {
+      if (e.code === 'Escape') {
         handleClickClose();
       }
     };
 
-    document.addEventListener("keydown", handleKeyDown);
+    document.addEventListener('keydown', handleKeyDown);
     document.body.style.cssText = `overflow: hidden; `;
 
     return () => {
-      document.removeEventListener("keydown", handleKeyDown);
+      document.removeEventListener('keydown', handleKeyDown);
       document.body.style.cssText = `overflow: auto; `;
     };
   }, [

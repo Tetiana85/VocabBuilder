@@ -9,30 +9,28 @@ import error from '../../img/error.svg';
 
 export const RegisterPageContainer = styled.div`
   width: 100%;
-  height: 100%;
-  padding-bottom: 50px;
-  display: grid;
+  height: 100vh;
+  display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border: 3px solid blue;
 
   @media only screen and (min-width: 768px) {
     background-image: url(${vector});
-    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
   }
 
   @media only screen and (min-width: 1440px) {
-    margin-top: 50px;
-    display: grid;
-    grid-template-areas:
-      'f i'
-      'f l'
-      'f l'
-      'f l';
+    display: flex;
+    flex-wrap: wrap;
+    max-height: 1000px;
+    flex-direction: column;
+    align-content: center;
   }
 
   .ImgContainer {
-    display: grid;
-    justify-content: end;
-
     @media only screen and (min-width: 768px) {
       display: none;
     }
@@ -43,15 +41,14 @@ export const RegisterPageContainer = styled.div`
   }
 
   .RegisterImg {
-    background-image: url(${desctopImg});
+    background-image: url(${mobileImg});
     width: 247px;
     height: 191px;
     background-repeat: no-repeat;
-    background-size: 85%;
+    margin-bottom: 8px;
     @media only screen and (min-width: 1440px) {
       width: 498px;
       height: 475px;
-      grid-area: i;
       background-image: url(${desctopImg});
     }
   }
@@ -61,19 +58,20 @@ export const RegisterPageContainer = styled.div`
     border-radius: 25px 25px 0 0;
     background: rgba(133, 170, 159, 0.1);
     height: 100vh;
+    max-width: 374px;
 
     @media only screen and (min-width: 768px) {
-      margin-top: 150px;
+      /* margin-top: 150px; */
       padding: 48px 64px;
       border-radius: 30px;
-      width: 627px;
-      height: 591px;
+      max-width: 628px;
+      height: 592px;
     }
 
     @media only screen and (min-width: 1440px) {
-      grid-area: f;
-      margin-right: 70px;
+      margin-right: 80px;
       margin-top: 0;
+      order: -1;
     }
   }
 
@@ -173,7 +171,7 @@ export const RegisterPageContainer = styled.div`
     display: none;
 
     @media only screen and (min-width: 768px) {
-      margin-top: 220px;
+      margin-top: 98px;
       display: flex;
       justify-content: center;
 

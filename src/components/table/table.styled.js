@@ -106,6 +106,10 @@ export const TableList = styled.table`
     height: 26px;
   }
 
+  .DotsColumn {
+    text-align: center;
+  }
+
   .AddToDictionaryText {
     display: none;
     @media only screen and (min-width: 768px) {
