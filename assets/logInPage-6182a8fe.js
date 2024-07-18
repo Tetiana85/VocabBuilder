@@ -1,27 +1,29 @@
-import{p as f,u as b,a as w,j as e,N as y,c as v}from"./index-09443a53.js";import{v as k,d as r,e as j,a as N}from"./eye-off-9823aa71.js";import{e as S,c as I,u as z,S as C,a as P}from"./error-81be8ae3.js";const R=f.div`
+import{p as u,u as f,a as w,j as e,N as b,c as y}from"./index-c64e8cad.js";import{m as v,e as k,c as j,u as I,S as N,b as S}from"./error-d9c0ed13.js";import{v as z,d as P,e as C,a as L}from"./eye-off-ff39b262.js";const T=u.div`
   width: 100%;
-  height: 100%;
+  height: 100vh;
   padding-bottom: 50px;
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
 
   @media only screen and (min-width: 768px) {
-    background-image: url(${k});
-    background-size: cover;
+    background-image: url(${z});
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
   }
 
   @media only screen and (min-width: 1440px) {
-    margin-top: 50px;
-    display: grid;
-    grid-template-areas:
-      'f i'
-      'f l'
-      'f l'
-      'f l';
+    display: flex;
+    flex-wrap: wrap;
+    max-height: 1000px;
+    flex-direction: column;
+    align-content: center;
   }
 
   .ImgContainer {
-    display: grid;
+    order: 1;
+    display: flex;
     justify-content: end;
 
     @media only screen and (min-width: 768px) {
@@ -34,37 +36,39 @@ import{p as f,u as b,a as w,j as e,N as y,c as v}from"./index-09443a53.js";impor
   }
 
   .RegisterImg {
-    background-image: url(${r});
+    background-image: url(${v});
     width: 247px;
     height: 191px;
-    background-repeat: no-repeat;
-    background-size: 85%;
+
     @media only screen and (min-width: 1440px) {
       width: 498px;
       height: 475px;
       grid-area: i;
-      background-image: url(${r});
+      background-image: url(${P});
     }
   }
 
   .FormContainer {
+    margin-top: 43px;
+    order: 3;
     padding: 32px 16px;
     border-radius: 25px 25px 0 0;
     background: rgba(133, 170, 159, 0.1);
     height: 100vh;
+    max-width: 374px;
 
     @media only screen and (min-width: 768px) {
       margin-top: 150px;
       padding: 48px 64px;
       border-radius: 30px;
-      width: 627px;
-      height: 591px;
+      max-width: 628px;
+      height: 518px;
     }
 
     @media only screen and (min-width: 1440px) {
-      grid-area: f;
-      margin-right: 70px;
+      margin-right: 80px;
       margin-top: 0;
+      order: -1;
     }
   }
 
@@ -91,8 +95,6 @@ import{p as f,u as b,a as w,j as e,N as y,c as v}from"./index-09443a53.js";impor
     @media only screen and (min-width: 768px) {
       font-size: 20px;
       margin-top: 20px;
-      width: 500px;
-      line-height: 30px;
     }
   }
 
@@ -102,7 +104,7 @@ import{p as f,u as b,a as w,j as e,N as y,c as v}from"./index-09443a53.js";impor
     gap: 18px;
 
     @media only screen and (min-width: 768px) {
-      margin-top: 32px;
+      margin-top: 36px;
     }
   }
 
@@ -119,7 +121,6 @@ import{p as f,u as b,a as w,j as e,N as y,c as v}from"./index-09443a53.js";impor
 
     &:focus {
       outline: none;
-      box-shadow: none;
     }
   }
 
@@ -134,13 +135,58 @@ import{p as f,u as b,a as w,j as e,N as y,c as v}from"./index-09443a53.js";impor
     line-height: 150%;
     color: #fcfcfc;
 
+    &:hover {
+      background: #fcfcfc;
+      color: #85aa9f;
+    }
+
     @media only screen and (min-width: 768px) {
       margin-top: 14px;
     }
+  }
 
-    &:hover {
-      color: #85aa9f;
-      background: #fcfcfc;
+  .SkilsList {
+    margin-top: 16px;
+    order: 2;
+    display: flex;
+    justify-content: center;
+    & li {
+      display: inline-block;
+      margin-right: 7px;
+    }
+
+    & li:not(:last-child)::after {
+      content: '·';
+      margin-left: 7px;
+    }
+
+    @media only screen and (min-width: 768px) {
+      margin-top: 172px;
+      order: 3;
+      & li {
+        margin-right: 15px;
+      }
+
+      & li:not(:last-child)::after {
+        margin-left: 15px;
+      }
+    }
+
+    @media only screen and (min-width: 1440px) {
+      margin-top: 0;
+      grid-area: l;
+    }
+  }
+
+  .Skil {
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+    color: rgba(18, 20, 23, 0.8);
+
+    @media only screen and (min-width: 768px) {
+      font-size: 22px;
+      line-height: 150%;
     }
   }
 
@@ -158,39 +204,6 @@ import{p as f,u as b,a as w,j as e,N as y,c as v}from"./index-09443a53.js";impor
     &:hover {
       color: #85aa9f;
     }
-  }
-
-  .SkilsList {
-    display: none;
-
-    @media only screen and (min-width: 768px) {
-      margin-top: 220px;
-      display: flex;
-      justify-content: center;
-
-      & li {
-        display: inline-block;
-        margin-right: 15px;
-      }
-
-      & li:not(:last-child)::after {
-        content: '·';
-        margin-left: 15px;
-      }
-    }
-
-    @media only screen and (min-width: 1440px) {
-      margin-top: 0;
-      grid-area: l;
-    }
-  }
-
-  .Skil {
-    font-weight: 400;
-    font-size: 22px;
-    line-height: 150%;
-    text-align: center;
-    color: rgba(18, 20, 23, 0.8);
   }
 
   .DivInput {
@@ -218,7 +231,7 @@ import{p as f,u as b,a as w,j as e,N as y,c as v}from"./index-09443a53.js";impor
     transform: translateY(-50%);
     width: 20px;
     height: 20px;
-    background-image: url(${j});
+    background-image: url(${C});
   }
 
   .HidePassword {
@@ -229,7 +242,11 @@ import{p as f,u as b,a as w,j as e,N as y,c as v}from"./index-09443a53.js";impor
     transform: translateY(-50%);
     width: 20px;
     height: 20px;
-    background-image: url(${N});
+    background-image: url(${L});
+  }
+
+  input::placeholder {
+    color: #121417;
   }
 
   .ErrorText {
@@ -241,7 +258,7 @@ import{p as f,u as b,a as w,j as e,N as y,c as v}from"./index-09443a53.js";impor
     display: flex;
 
     &::before {
-      content: url(${S});
+      content: url(${k});
       display: inline-block;
       margin-right: 5px;
     }
@@ -256,9 +273,9 @@ import{p as f,u as b,a as w,j as e,N as y,c as v}from"./index-09443a53.js";impor
     display: flex;
 
     &::before {
-      content: url(${I});
+      content: url(${j});
       display: inline-block;
       margin-right: 5px;
     }
   }
-`;function B(){const o=b(),l=w(),{values:i,errors:d,touched:p,isValid:c,handleBlur:a,handleChange:n,handleSubmit:m}=z({initialValues:{name:"",email:"",password:""},validationSchema:P,onSubmit:h=>{o(v.register(h)).then(u=>{u.payload.name&&l("/dictionary")})}}),{showPassword:g,getInputAlert:t,getHidePassword:x,getInputClass:s}=C(i,p,d);return e.jsxs(R,{children:[e.jsx("div",{className:"ImgContainer",children:e.jsx("div",{className:"RegisterImg"})}),e.jsxs("div",{className:"FormContainer",children:[e.jsx("h2",{className:"Title",children:"Register"}),e.jsx("p",{className:"Text",children:"To start using our services, please fill out the registration form below. All fields are mandatory:"}),e.jsxs("form",{className:"Form",children:[e.jsxs("div",{className:"DivInput",children:[e.jsx("input",{id:"registerName",name:"name",type:"text",placeholder:"Name",className:s("name"),onChange:n,value:i.name,onBlur:a}),t("name")]}),e.jsxs("div",{className:"DivInput",children:[e.jsx("input",{id:"registerEmail",name:"email",type:"email",placeholder:"Email",className:s("email"),onChange:n,value:i.email,onBlur:a}),t("email")]}),e.jsxs("div",{className:"DivInput",id:"password",children:[e.jsx("input",{id:"registerPassword",name:"password",placeholder:"Password",type:g?"text":"password",className:s("password"),onChange:n,value:i.password,onBlur:a}),t("password"),i.password&&x()]}),e.jsx("button",{className:"ButtonSubmit",type:"submit",disabled:!c,onClick:m,children:"Register"})]}),e.jsx(y,{className:"NavLogIn",to:"/login",children:"Login"})]}),e.jsxs("ul",{className:"SkilsList",children:[e.jsx("li",{className:"Skil",children:"Word"}),e.jsx("li",{className:"Skil",children:"Translation"}),e.jsx("li",{className:"Skil",children:"Grammar"}),e.jsx("li",{className:"Skil",children:"Progress"})]})]})}export{B as default};
+`;function E(){const r=f(),s=w(),{values:i,errors:l,touched:d,isValid:p,handleBlur:n,handleChange:a,handleSubmit:c}=I({initialValues:{email:"",password:""},validationSchema:S,onSubmit:g=>{r(y.logIn(g)).then(h=>{h.payload.name&&s("/dictionary")})}}),{showPassword:x,getInputAlert:o,getHidePassword:m,getInputClass:t}=N(i,d,l);return e.jsxs(T,{children:[e.jsx("div",{className:"ImgContainer",children:e.jsx("div",{className:"RegisterImg"})}),e.jsxs("div",{className:"FormContainer",children:[e.jsx("h2",{className:"Title",children:"Login"}),e.jsx("p",{className:"Text",children:"Please enter your login details to continue using our service:"}),e.jsxs("form",{className:"Form",children:[e.jsxs("div",{className:"DivInput",children:[e.jsx("input",{id:"logInEmail",name:"email",type:"email",placeholder:"Email",className:t("email"),onChange:a,value:i.email,onBlur:n}),o("email")]}),e.jsxs("div",{className:"DivInput",id:"password",children:[e.jsx("input",{id:"logInPassword",name:"password",placeholder:"Password",type:x?"text":"password",className:t("password"),onChange:a,value:i.password,onBlur:n}),o("password"),i.password&&m()]}),e.jsx("button",{className:"ButtonSubmit",type:"submit",disabled:!p,onClick:c,children:"Login"})]}),e.jsx(b,{className:"NavLogIn",to:"/register",children:"Register"})]}),e.jsxs("ul",{className:"SkilsList",children:[e.jsx("li",{className:"Skil",children:"Word"}),e.jsx("li",{className:"Skil",children:"Translation"}),e.jsx("li",{className:"Skil",children:"Grammar"}),e.jsx("li",{className:"Skil",children:"Progress"})]})]})}export{E as default};

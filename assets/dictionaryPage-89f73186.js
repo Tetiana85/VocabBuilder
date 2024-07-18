@@ -1,5 +1,5 @@
-import{p as B,r as o,u as R,b as n,E as m,y as z,F as S,j as t,L as W,C as F,N as D}from"./index-09443a53.js";import{s as A,u as E,l as P,T,P as M}from"./table-8c466738.js";import{t as H}from"./toggle-f96f5e19.js";import{S as V}from"./index-0578c2b6.js";import"./extends-52557f3c.js";const $=B.div`
-  height: 100vh;
+import{p as B,r as o,u as R,b as n,E as m,y as z,F as S,j as t,L as W,C as F,N as D}from"./index-c64e8cad.js";import{s as A,u as E,l as P,T,P as M}from"./table-feb365a9.js";import{t as H}from"./toggle-480cad5a.js";import{S as V}from"./index-133f36b0.js";import"./extends-369b3d31.js";const $=B.div`
+  /* height: 100vh; */
   padding: 32px 16px;
 
   @media only screen and (min-width: 768px) {
