@@ -9,18 +9,31 @@ export const ModalContainer = styled.div`
   background: #85aa9f;
   box-sizing: border-box;
 
+  @media only screen and (max-width: 374px) {
+    width: 288px;
+    padding: 40px 20px;
+  }
+
   .Title {
     font-weight: 600;
     font-size: 24px;
     line-height: 117%;
     letter-spacing: -0.02em;
     color: #fff;
+    @media only screen and (max-width: 374px) {
+      width: 248px;
+      text-align: center;
+      font-size: 22px;
+    }
   }
 
   .ListButton {
     display: flex;
     gap: 20px;
     justify-content: center;
+    @media only screen and (max-width: 374px) {
+      gap: 10px;
+    }
   }
 
   .ButtonYes {
@@ -41,6 +54,11 @@ export const ModalContainer = styled.div`
       background: #85aa9f;
       border: 1px solid #d1d5db;
     }
+
+    @media only screen and (max-width: 374px) {
+      width: 120px;
+      padding: 14px 45px;
+    }
   }
 
   .ButtonNo {
@@ -60,6 +78,9 @@ export const ModalContainer = styled.div`
     &:hover {
       color: #85aa9f;
       background: #fcfcfc;
+    }
+    @media only screen and (max-width: 374px) {
+      width: 120px;
     }
   }
 `;
