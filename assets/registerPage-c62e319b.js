@@ -1,14 +1,14 @@
-import{p as u,u as f,a as w,j as e,N as b,c as y}from"./index-be36d13a.js";import{m as v,e as k,c as j,u as I,S as N,b as S}from"./error-0b02cb4a.js";import{v as z,d as P,e as C,a as L}from"./eye-off-94fe664f.js";const T=u.div`
+import{p as u,u as f,a as b,j as e,N as w,c as y}from"./index-045823e1.js";import{v,m as k,d as N,e as j,a as S}from"./eye-off-ba0e9a84.js";import{e as I,c as z,u as C,S as P,a as R}from"./error-0a4a89bf.js";const T=u.div`
   width: 100%;
   height: 100vh;
-  padding-bottom: 50px;
   display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  border: 3px solid blue;
 
   @media only screen and (min-width: 768px) {
-    background-image: url(${z});
+    background-image: url(${v});
     background-repeat: no-repeat;
     background-size: 100% 100%;
   }
@@ -22,10 +22,6 @@ import{p as u,u as f,a as w,j as e,N as b,c as y}from"./index-be36d13a.js";impor
   }
 
   .ImgContainer {
-    order: 1;
-    display: flex;
-    justify-content: end;
-
     @media only screen and (min-width: 768px) {
       display: none;
     }
@@ -36,21 +32,19 @@ import{p as u,u as f,a as w,j as e,N as b,c as y}from"./index-be36d13a.js";impor
   }
 
   .RegisterImg {
-    background-image: url(${v});
+    background-image: url(${k});
     width: 247px;
     height: 191px;
-
+    background-repeat: no-repeat;
+    margin-bottom: 8px;
     @media only screen and (min-width: 1440px) {
       width: 498px;
       height: 475px;
-      grid-area: i;
-      background-image: url(${P});
+      background-image: url(${N});
     }
   }
 
   .FormContainer {
-    margin-top: 43px;
-    order: 3;
     padding: 32px 16px;
     border-radius: 25px 25px 0 0;
     background: rgba(133, 170, 159, 0.1);
@@ -58,11 +52,11 @@ import{p as u,u as f,a as w,j as e,N as b,c as y}from"./index-be36d13a.js";impor
     max-width: 374px;
 
     @media only screen and (min-width: 768px) {
-      margin-top: 150px;
+      /* margin-top: 150px; */
       padding: 48px 64px;
       border-radius: 30px;
       max-width: 628px;
-      height: 518px;
+      height: 592px;
     }
 
     @media only screen and (min-width: 1440px) {
@@ -95,6 +89,8 @@ import{p as u,u as f,a as w,j as e,N as b,c as y}from"./index-be36d13a.js";impor
     @media only screen and (min-width: 768px) {
       font-size: 20px;
       margin-top: 20px;
+      width: 500px;
+      line-height: 30px;
     }
   }
 
@@ -104,7 +100,7 @@ import{p as u,u as f,a as w,j as e,N as b,c as y}from"./index-be36d13a.js";impor
     gap: 18px;
 
     @media only screen and (min-width: 768px) {
-      margin-top: 36px;
+      margin-top: 32px;
     }
   }
 
@@ -121,6 +117,7 @@ import{p as u,u as f,a as w,j as e,N as b,c as y}from"./index-be36d13a.js";impor
 
     &:focus {
       outline: none;
+      box-shadow: none;
     }
   }
 
@@ -135,58 +132,13 @@ import{p as u,u as f,a as w,j as e,N as b,c as y}from"./index-be36d13a.js";impor
     line-height: 150%;
     color: #fcfcfc;
 
-    &:hover {
-      background: #fcfcfc;
-      color: #85aa9f;
-    }
-
     @media only screen and (min-width: 768px) {
       margin-top: 14px;
     }
-  }
 
-  .SkilsList {
-    margin-top: 16px;
-    order: 2;
-    display: flex;
-    justify-content: center;
-    & li {
-      display: inline-block;
-      margin-right: 7px;
-    }
-
-    & li:not(:last-child)::after {
-      content: '·';
-      margin-left: 7px;
-    }
-
-    @media only screen and (min-width: 768px) {
-      margin-top: 172px;
-      order: 3;
-      & li {
-        margin-right: 15px;
-      }
-
-      & li:not(:last-child)::after {
-        margin-left: 15px;
-      }
-    }
-
-    @media only screen and (min-width: 1440px) {
-      margin-top: 0;
-      grid-area: l;
-    }
-  }
-
-  .Skil {
-    font-weight: 400;
-    font-size: 14px;
-    text-align: center;
-    color: rgba(18, 20, 23, 0.8);
-
-    @media only screen and (min-width: 768px) {
-      font-size: 22px;
-      line-height: 150%;
+    &:hover {
+      color: #85aa9f;
+      background: #fcfcfc;
     }
   }
 
@@ -204,6 +156,39 @@ import{p as u,u as f,a as w,j as e,N as b,c as y}from"./index-be36d13a.js";impor
     &:hover {
       color: #85aa9f;
     }
+  }
+
+  .SkilsList {
+    display: none;
+
+    @media only screen and (min-width: 768px) {
+      margin-top: 98px;
+      display: flex;
+      justify-content: center;
+
+      & li {
+        display: inline-block;
+        margin-right: 15px;
+      }
+
+      & li:not(:last-child)::after {
+        content: '·';
+        margin-left: 15px;
+      }
+    }
+
+    @media only screen and (min-width: 1440px) {
+      margin-top: 0;
+      grid-area: l;
+    }
+  }
+
+  .Skil {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 150%;
+    text-align: center;
+    color: rgba(18, 20, 23, 0.8);
   }
 
   .DivInput {
@@ -231,7 +216,7 @@ import{p as u,u as f,a as w,j as e,N as b,c as y}from"./index-be36d13a.js";impor
     transform: translateY(-50%);
     width: 20px;
     height: 20px;
-    background-image: url(${C});
+    background-image: url(${j});
   }
 
   .HidePassword {
@@ -242,11 +227,7 @@ import{p as u,u as f,a as w,j as e,N as b,c as y}from"./index-be36d13a.js";impor
     transform: translateY(-50%);
     width: 20px;
     height: 20px;
-    background-image: url(${L});
-  }
-
-  input::placeholder {
-    color: #121417;
+    background-image: url(${S});
   }
 
   .ErrorText {
@@ -258,7 +239,7 @@ import{p as u,u as f,a as w,j as e,N as b,c as y}from"./index-be36d13a.js";impor
     display: flex;
 
     &::before {
-      content: url(${k});
+      content: url(${I});
       display: inline-block;
       margin-right: 5px;
     }
@@ -273,9 +254,9 @@ import{p as u,u as f,a as w,j as e,N as b,c as y}from"./index-be36d13a.js";impor
     display: flex;
 
     &::before {
-      content: url(${j});
+      content: url(${z});
       display: inline-block;
       margin-right: 5px;
     }
   }
-`;function E(){const r=f(),s=w(),{values:i,errors:l,touched:d,isValid:p,handleBlur:n,handleChange:a,handleSubmit:c}=I({initialValues:{email:"",password:""},validationSchema:S,onSubmit:g=>{r(y.logIn(g)).then(h=>{h.payload.name&&s("/dictionary")})}}),{showPassword:x,getInputAlert:o,getHidePassword:m,getInputClass:t}=N(i,d,l);return e.jsxs(T,{children:[e.jsx("div",{className:"ImgContainer",children:e.jsx("div",{className:"RegisterImg"})}),e.jsxs("div",{className:"FormContainer",children:[e.jsx("h2",{className:"Title",children:"Login"}),e.jsx("p",{className:"Text",children:"Please enter your login details to continue using our service:"}),e.jsxs("form",{className:"Form",children:[e.jsxs("div",{className:"DivInput",children:[e.jsx("input",{id:"logInEmail",name:"email",type:"email",placeholder:"Email",className:t("email"),onChange:a,value:i.email,onBlur:n}),o("email")]}),e.jsxs("div",{className:"DivInput",id:"password",children:[e.jsx("input",{id:"logInPassword",name:"password",placeholder:"Password",type:x?"text":"password",className:t("password"),onChange:a,value:i.password,onBlur:n}),o("password"),i.password&&m()]}),e.jsx("button",{className:"ButtonSubmit",type:"submit",disabled:!p,onClick:c,children:"Login"})]}),e.jsx(b,{className:"NavLogIn",to:"/register",children:"Register"})]}),e.jsxs("ul",{className:"SkilsList",children:[e.jsx("li",{className:"Skil",children:"Word"}),e.jsx("li",{className:"Skil",children:"Translation"}),e.jsx("li",{className:"Skil",children:"Grammar"}),e.jsx("li",{className:"Skil",children:"Progress"})]})]})}export{E as default};
+`;function L(){const r=f(),o=b(),{values:i,errors:l,touched:d,isValid:p,handleBlur:a,handleChange:n,handleSubmit:c}=C({initialValues:{name:"",email:"",password:""},validationSchema:R,onSubmit:g=>{r(y.register(g)).then(h=>{h.payload.name&&o("/dictionary")})}}),{showPassword:m,getInputAlert:t,getHidePassword:x,getInputClass:s}=P(i,d,l);return e.jsxs(T,{children:[e.jsx("div",{className:"ImgContainer",children:e.jsx("div",{className:"RegisterImg"})}),e.jsxs("div",{className:"FormContainer",children:[e.jsx("h2",{className:"Title",children:"Register"}),e.jsx("p",{className:"Text",children:"To start using our services, please fill out the registration form below. All fields are mandatory:"}),e.jsxs("form",{className:"Form",children:[e.jsxs("div",{className:"DivInput",children:[e.jsx("input",{id:"registerName",name:"name",type:"text",placeholder:"Name",className:s("name"),onChange:n,value:i.name,onBlur:a}),t("name")]}),e.jsxs("div",{className:"DivInput",children:[e.jsx("input",{id:"registerEmail",name:"email",type:"email",placeholder:"Email",className:s("email"),onChange:n,value:i.email,onBlur:a}),t("email")]}),e.jsxs("div",{className:"DivInput",id:"password",children:[e.jsx("input",{id:"registerPassword",name:"password",placeholder:"Password",type:m?"text":"password",className:s("password"),onChange:n,value:i.password,onBlur:a}),t("password"),i.password&&x()]}),e.jsx("button",{className:"ButtonSubmit",type:"submit",disabled:!p,onClick:c,children:"Register"})]}),e.jsx(w,{className:"NavLogIn",to:"/login",children:"Login"})]}),e.jsxs("ul",{className:"SkilsList",children:[e.jsx("li",{className:"Skil",children:"Word"}),e.jsx("li",{className:"Skil",children:"Translation"}),e.jsx("li",{className:"Skil",children:"Grammar"}),e.jsx("li",{className:"Skil",children:"Progress"})]})]})}export{L as default};

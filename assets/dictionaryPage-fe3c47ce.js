@@ -1,4 +1,4 @@
-import{p as B,r as o,u as R,b as n,E as m,y as z,F as S,j as t,L as W,C as F,N as D}from"./index-be36d13a.js";import{s as A,u as E,l as P,T,P as M}from"./table-92a812fe.js";import{t as H}from"./toggle-73a2ecbc.js";import{S as V}from"./index-a71a77f8.js";import"./extends-c2e341e7.js";const $=B.div`
+import{p as z,r as n,u as B,b as o,E as m,y as R,F as S,j as e,L as W,C as F,N as D}from"./index-045823e1.js";import{s as A,u as E,l as P,T,P as M}from"./table-c98c6d59.js";import{t as H}from"./toggle-c9fc8ecd.js";import{S as V}from"./index-6c12db67.js";import"./extends-1172ab5a.js";const $=z.div`
   /* height: 100vh; */
   padding: 32px 16px;
 
@@ -125,7 +125,11 @@ import{p as B,r as o,u as R,b as n,E as m,y as z,F as S,j as t,L as W,C as F,N a
     align-items: center;
     display: flex;
     gap: 8px;
+    font-size: calc(12px + (14 - 12) * ((100vw - 320px) / (375 - 320)));
 
+    @media only screen and (min-width: 375px) {
+      font-size: 14px;
+    }
     @media only screen and (min-width: 768px) {
       margin-top: 0px;
     }
@@ -135,13 +139,21 @@ import{p as B,r as o,u as R,b as n,E as m,y as z,F as S,j as t,L as W,C as F,N a
     font-weight: 500;
     font-size: 20px;
     color: #121417;
+    font-size: calc(16px + (20 - 16) * ((100vw - 320px) / (375 - 320)));
+    @media only screen and (min-width: 375px) {
+      font-size: 20px;
+    }
   }
 
   .ButtonList {
+    font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (375 - 320)));
     margin-top: 8px;
     display: flex;
     gap: 16px;
 
+    @media only screen and (min-width: 375px) {
+      font-size: 16px;
+    }
     @media only screen and (min-width: 1440px) {
       margin-top: 0;
     }
@@ -229,7 +241,7 @@ import{p as B,r as o,u as R,b as n,E as m,y as z,F as S,j as t,L as W,C as F,N a
   }
 
   .TableContainer {
-    margin-top: 40px;
+    margin-top: 32px;
     @media only screen and (min-width: 768px) {
       padding: 18px;
       background: #fcfcfc;
@@ -237,4 +249,4 @@ import{p as B,r as o,u as R,b as n,E as m,y as z,F as S,j as t,L as W,C as F,N a
       margin-top: 28px;
     }
   }
-`,Y=i=>o.createElement("svg",{xmlns:"http://www.w3.org/2000/svg",width:20,height:20,fill:"none",...i},o.createElement("path",{stroke:"#85AA9F",strokeLinecap:"round",strokeLinejoin:"round",strokeWidth:1.5,d:"M10 4.167v11.666M4.167 10h11.666"}));function Q(){const i=R(),{categories:g,customInputRef:h,inputRef:f,dropdownRef:b,capitalizeFirstLetter:w,toLowerCase:y}=E(),[a,d]=o.useState({filters:"",statistics:"",isIrregular:void 0,page:1}),[j,l]=o.useState(!1),r=n(e=>e.data.words),C=n(e=>e.data.statistics),v=n(e=>e.data.isLoadingCategories),I=n(e=>e.data.isLoadingStatistics),p=n(e=>e.data.isDeleteWord),c=n(e=>e.data.isAddWord);o.useEffect(()=>{i(m(p||c)),i(z()),i(S())},[i,p,c]);const N=o.useRef(P.debounce(e=>{const s={...e,statistics:y(e.statistics)};i(m(s))},300));o.useEffect(()=>{N.current(a)},[a]);const x=e=>{const{name:s,value:L}=e.target;d({...a,[s]:L.trim()})},k=e=>{d(s=>({...s,statistics:w(e.toLowerCase())})),e.toLowerCase()==="verb"?l(!0):l(!1)},u=e=>{d(s=>({...s,isIrregular:e}))};return t.jsxs($,{children:[t.jsxs("div",{className:"FilterContainer",children:[t.jsxs("form",{className:"Form",children:[t.jsx("div",{className:"SearchContainer",children:t.jsx("input",{id:"filters",className:"Input",type:"text",placeholder:"Find the word",name:"filters",value:a.filters,onChange:x})}),t.jsxs("div",{ref:h,className:"custom-input",children:[t.jsx("input",{id:"statistics",name:"statistics",className:"Input",type:"text",placeholder:"Categories",value:a.statistics,onChange:x,ref:f}),t.jsx("ul",{ref:b,className:"dropdown",children:v?t.jsx("div",{children:t.jsx(W,{})}):g.map(e=>t.jsx("li",{className:"ListItem",onClick:()=>k(e),children:e},e))})]}),t.jsxs("ul",{className:"RadioButtonList",style:{display:j?"flex":"none"},children:[t.jsxs("li",{className:"RadioButtonItem",children:[t.jsx("input",{className:"RadioButton",id:"regular",name:"regular",type:"radio",onChange:()=>u(!1),checked:a.isIrregular===!1}),"Regular"]}),t.jsxs("li",{className:"RadioButtonItem",children:[t.jsx("input",{className:"RadioButton",id:"irregular",name:"irregular",type:"radio",onChange:()=>u(!0),checked:a.isIrregular===!0}),"Irregular"]})]})]}),t.jsxs("div",{className:"CountContainer",children:[t.jsxs("p",{className:"CountWord",children:["To study:",t.jsx("span",{className:"NumberCountWord",children:!I&&C.totalCount})]}),t.jsxs("ul",{className:"ButtonList",children:[t.jsxs("li",{className:"ButtonItem",onClick:()=>i(F()),children:["Add word ",t.jsx(Y,{className:"IconButton"})]}),t.jsx("li",{children:t.jsxs(D,{className:"ButtonItem",to:"/training",children:["Train oneself ",t.jsx(V,{className:"IconButton"})]})})]})]})]}),t.jsx("div",{className:"TableContainer",children:r.results&&r.results.length!==0?t.jsx(T,{data:r}):t.jsx("p",{style:{fontSize:"20px",textAlign:"center"},children:"You don't have own words"})}),r.totalPages>1&&t.jsx(M,{data:r,formData:a,setFormData:d})]})}export{Q as default};
+`,Y=i=>n.createElement("svg",{xmlns:"http://www.w3.org/2000/svg",width:20,height:20,fill:"none",...i},n.createElement("path",{stroke:"#85AA9F",strokeLinecap:"round",strokeLinejoin:"round",strokeWidth:1.5,d:"M10 4.167v11.666M4.167 10h11.666"}));function Q(){const i=B(),{categories:h,customInputRef:g,inputRef:f,dropdownRef:w,capitalizeFirstLetter:b,toLowerCase:y}=E(),[a,d]=n.useState({filters:"",statistics:"",isIrregular:void 0,page:1}),[j,l]=n.useState(!1),r=o(t=>t.data.words),C=o(t=>t.data.statistics),v=o(t=>t.data.isLoadingCategories),I=o(t=>t.data.isLoadingStatistics),p=o(t=>t.data.isDeleteWord),c=o(t=>t.data.isAddWord);n.useEffect(()=>{i(m(p||c)),i(R()),i(S())},[i,p,c]);const N=n.useRef(P.debounce(t=>{const s={...t,statistics:y(t.statistics)};i(m(s))},300));n.useEffect(()=>{N.current(a)},[a]);const x=t=>{const{name:s,value:L}=t.target;d({...a,[s]:L.trim()})},k=t=>{d(s=>({...s,statistics:b(t.toLowerCase())})),t.toLowerCase()==="verb"?l(!0):l(!1)},u=t=>{d(s=>({...s,isIrregular:t}))};return e.jsxs($,{children:[e.jsxs("div",{className:"FilterContainer",children:[e.jsxs("form",{className:"Form",children:[e.jsx("div",{className:"SearchContainer",children:e.jsx("input",{id:"filters",className:"Input",type:"text",placeholder:"Find the word",name:"filters",value:a.filters,onChange:x})}),e.jsxs("div",{ref:g,className:"custom-input",children:[e.jsx("input",{id:"statistics",name:"statistics",className:"Input",type:"text",placeholder:"Categories",value:a.statistics,onChange:x,ref:f}),e.jsx("ul",{ref:w,className:"dropdown",children:v?e.jsx("div",{children:e.jsx(W,{})}):h.map(t=>e.jsx("li",{className:"ListItem",onClick:()=>k(t),children:t},t))})]}),e.jsxs("ul",{className:"RadioButtonList",style:{display:j?"flex":"none"},children:[e.jsxs("li",{className:"RadioButtonItem",children:[e.jsx("input",{className:"RadioButton",id:"regular",name:"regular",type:"radio",onChange:()=>u(!1),checked:a.isIrregular===!1}),"Regular"]}),e.jsxs("li",{className:"RadioButtonItem",children:[e.jsx("input",{className:"RadioButton",id:"irregular",name:"irregular",type:"radio",onChange:()=>u(!0),checked:a.isIrregular===!0}),"Irregular"]})]})]}),e.jsxs("div",{className:"CountContainer",children:[e.jsxs("p",{className:"CountWord",children:["To study:",e.jsx("span",{className:"NumberCountWord",children:!I&&C.totalCount})]}),e.jsxs("ul",{className:"ButtonList",children:[e.jsxs("li",{className:"ButtonItem",onClick:()=>i(F()),children:["Add word ",e.jsx(Y,{className:"IconButton"})]}),e.jsx("li",{children:e.jsxs(D,{className:"ButtonItem",to:"/training",children:["Train oneself ",e.jsx(V,{className:"IconButton"})]})})]})]})]}),e.jsx("div",{className:"TableContainer",children:r.results&&r.results.length!==0?e.jsx(T,{data:r}):e.jsx("p",{style:{fontSize:"20px",textAlign:"center"},children:"You don't have own words"})}),r.totalPages>1&&e.jsx(M,{data:r,formData:a,setFormData:d})]})}export{Q as default};

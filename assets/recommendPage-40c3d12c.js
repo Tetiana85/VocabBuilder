@@ -1,4 +1,4 @@
-import{p as j,u as C,r as s,b as I,y as N,z as v,j as e,N as R}from"./index-be36d13a.js";import{s as k,u as B,l as z,T as L,P as F}from"./table-92a812fe.js";import{t as S}from"./toggle-73a2ecbc.js";import{S as W}from"./index-a71a77f8.js";import"./extends-c2e341e7.js";const T=j.div`
+import{p as j,u as C,r as s,b as v,y as I,z as N,j as e,N as z}from"./index-045823e1.js";import{s as R,u as k,l as B,T as L,P as F}from"./table-c98c6d59.js";import{t as S}from"./toggle-c9fc8ecd.js";import{S as W}from"./index-6c12db67.js";import"./extends-1172ab5a.js";const T=j.div`
   height: 100vh;
   padding: 32px 16px;
 
@@ -43,7 +43,7 @@ import{p as j,u as C,r as s,b as I,y as N,z as v,j as e,N as R}from"./index-be36
     position: relative;
 
     &::after {
-      content: url(${k});
+      content: url(${R});
       position: absolute;
       top: 14px;
       right: 24px;
@@ -120,13 +120,14 @@ import{p as j,u as C,r as s,b as I,y as N,z as v,j as e,N as R}from"./index-be36
   .CountWord {
     margin-top: 40px;
     font-weight: 500;
-    font-size: 14px;
+    font-size: calc(12px + (14 - 12) * ((100vw - 320px) / (375 - 320)));
     color: rgba(18, 20, 23, 0.5);
-
     align-items: center;
     display: flex;
     gap: 8px;
-
+    @media only screen and (min-width: 375px) {
+      font-size: 14px;
+    }
     @media only screen and (min-width: 768px) {
       margin-top: 0px;
     }
@@ -134,8 +135,11 @@ import{p as j,u as C,r as s,b as I,y as N,z as v,j as e,N as R}from"./index-be36
 
   .NumberCountWord {
     font-weight: 500;
-    font-size: 20px;
+    font-size: calc(12px + (14 - 12) * ((100vw - 320px) / (375 - 320)));
     color: #121417;
+    @media only screen and (min-width: 375px) {
+      font-size: 20px;
+    }
   }
 
   .ButtonList {
@@ -154,6 +158,10 @@ import{p as j,u as C,r as s,b as I,y as N,z as v,j as e,N as R}from"./index-be36
     gap: 8px;
     cursor: pointer;
     color: #121417;
+    font-size: calc(12px + (16 - 12) * ((100vw - 320px) / (375 - 320)));
+    @media only screen and (min-width: 375px) {
+      font-size: 16px;
+    }
 
     &:hover {
       color: #85aa9f;
@@ -238,4 +246,4 @@ import{p as j,u as C,r as s,b as I,y as N,z as v,j as e,N as R}from"./index-be36
       margin-top: 28px;
     }
   }
-`;function V(){const r=C(),{categories:l,customInputRef:x,inputRef:m,dropdownRef:u,capitalizeFirstLetter:h,toLowerCase:g}=B(),[a,o]=s.useState({filters:"",statistics:"",isIrregular:void 0,page:1}),[f,p]=s.useState(!1),n=I(t=>t.data.allWords);s.useEffect(()=>{r(N())},[r]);const b=s.useRef(z.debounce(t=>{const i={...t,statistics:g(t.statistics)};r(v(i))},300));s.useEffect(()=>{b.current(a)},[a]);const d=t=>{const{name:i,value:y}=t.target;o({...a,[i]:y.trim()})},w=t=>{o(i=>({...i,statistics:h(t.toLowerCase())})),t.toLowerCase()==="verb"?p(!0):p(!1)},c=t=>{o(i=>({...i,isIrregular:t}))};return e.jsxs(T,{children:[e.jsxs("div",{className:"FilterContainer",children:[e.jsxs("form",{className:"Form",children:[e.jsx("div",{className:"SearchContainer",children:e.jsx("input",{id:"filters",className:"Input",type:"text",placeholder:"Find the word",name:"filters",value:a.filters,onChange:d})}),e.jsxs("div",{ref:x,className:"custom-input",children:[e.jsx("input",{id:"statistics",name:"statistics",className:"Input",type:"text",placeholder:"Categories",value:a.statistics,onChange:d,ref:m}),e.jsx("ul",{ref:u,className:"dropdown",children:l&&l.map(t=>e.jsx("li",{className:"ListItem",onClick:()=>w(t),children:t},t))})]}),e.jsxs("ul",{className:"RadioButtonList",style:{display:f?"flex":"none"},children:[e.jsxs("li",{className:"RadioButtonItem",children:[e.jsx("input",{className:"RadioButton",id:"regular",name:"regular",type:"radio",onChange:()=>c(!1),checked:a.isIrregular===!1}),"Regular"]}),e.jsxs("li",{className:"RadioButtonItem",children:[e.jsx("input",{className:"RadioButton",id:"reason",name:"reason",type:"radio",onChange:()=>c(!0),checked:a.isIrregular===!0}),"Irregular"]})]})]}),e.jsxs("div",{className:"CountContainer",children:[e.jsxs("p",{className:"CountWord",children:["To study:",e.jsx("span",{className:"NumberCountWord",children:n.results&&n.results.length})]}),e.jsx("ul",{className:"ButtonList",children:e.jsx("li",{children:e.jsxs(R,{className:"ButtonItem",to:"/training",children:["Train oneself ",e.jsx(W,{className:"IconButton"})]})})})]})]}),e.jsx("div",{className:"TableContainer",children:n?e.jsx(L,{data:n}):e.jsx("div",{children:"Oooops samething wrong..."})}),n.totalPages>1&&e.jsx(F,{data:n,formData:a,setFormData:o})]})}export{V as default};
+`;function V(){const r=C(),{categories:p,customInputRef:x,inputRef:m,dropdownRef:u,capitalizeFirstLetter:h,toLowerCase:g}=k(),[i,o]=s.useState({filters:"",statistics:"",isIrregular:void 0,page:1}),[f,l]=s.useState(!1),n=v(t=>t.data.allWords);s.useEffect(()=>{r(I())},[r]);const b=s.useRef(B.debounce(t=>{const a={...t,statistics:g(t.statistics)};r(N(a))},300));s.useEffect(()=>{b.current(i)},[i]);const d=t=>{const{name:a,value:y}=t.target;o({...i,[a]:y.trim()})},w=t=>{o(a=>({...a,statistics:h(t.toLowerCase())})),t.toLowerCase()==="verb"?l(!0):l(!1)},c=t=>{o(a=>({...a,isIrregular:t}))};return e.jsxs(T,{children:[e.jsxs("div",{className:"FilterContainer",children:[e.jsxs("form",{className:"Form",children:[e.jsx("div",{className:"SearchContainer",children:e.jsx("input",{id:"filters",className:"Input",type:"text",placeholder:"Find the word",name:"filters",value:i.filters,onChange:d})}),e.jsxs("div",{ref:x,className:"custom-input",children:[e.jsx("input",{id:"statistics",name:"statistics",className:"Input",type:"text",placeholder:"Categories",value:i.statistics,onChange:d,ref:m}),e.jsx("ul",{ref:u,className:"dropdown",children:p&&p.map(t=>e.jsx("li",{className:"ListItem",onClick:()=>w(t),children:t},t))})]}),e.jsxs("ul",{className:"RadioButtonList",style:{display:f?"flex":"none"},children:[e.jsxs("li",{className:"RadioButtonItem",children:[e.jsx("input",{className:"RadioButton",id:"regular",name:"regular",type:"radio",onChange:()=>c(!1),checked:i.isIrregular===!1}),"Regular"]}),e.jsxs("li",{className:"RadioButtonItem",children:[e.jsx("input",{className:"RadioButton",id:"reason",name:"reason",type:"radio",onChange:()=>c(!0),checked:i.isIrregular===!0}),"Irregular"]})]})]}),e.jsxs("div",{className:"CountContainer",children:[e.jsxs("p",{className:"CountWord",children:["To study:",e.jsx("span",{className:"NumberCountWord",children:n.results&&n.results.length})]}),e.jsx("ul",{className:"ButtonList",children:e.jsx("li",{children:e.jsxs(z,{className:"ButtonItem",to:"/training",children:["Train oneself ",e.jsx(W,{className:"IconButton"})]})})})]})]}),e.jsx("div",{className:"TableContainer",children:n?e.jsx(L,{data:n}):e.jsx("div",{children:"Oooops samething wrong..."})}),n.totalPages>1&&e.jsx(F,{data:n,formData:i,setFormData:o})]})}export{V as default};
