@@ -136,7 +136,7 @@ export const MainContainer = styled.div`
     height: 36px;
     background: #85aa9f;
 
-    @media only screen and (min-width: 748px) {
+    @media only screen and (min-width: 768px) {
       width: 48px;
       height: 48px;
     }

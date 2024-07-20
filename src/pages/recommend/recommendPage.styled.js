@@ -124,13 +124,14 @@ export const RecommendPageContainer = styled.div`
   .CountWord {
     margin-top: 40px;
     font-weight: 500;
-    font-size: 14px;
+    font-size: calc(12px + (14 - 12) * ((100vw - 320px) / (375 - 320)));
     color: rgba(18, 20, 23, 0.5);
-
     align-items: center;
     display: flex;
     gap: 8px;
-
+    @media only screen and (min-width: 375px) {
+      font-size: 14px;
+    }
     @media only screen and (min-width: 768px) {
       margin-top: 0px;
     }
@@ -138,8 +139,11 @@ export const RecommendPageContainer = styled.div`
 
   .NumberCountWord {
     font-weight: 500;
-    font-size: 20px;
+    font-size: calc(12px + (14 - 12) * ((100vw - 320px) / (375 - 320)));
     color: #121417;
+    @media only screen and (min-width: 375px) {
+      font-size: 20px;
+    }
   }
 
   .ButtonList {
@@ -158,6 +162,10 @@ export const RecommendPageContainer = styled.div`
     gap: 8px;
     cursor: pointer;
     color: #121417;
+    font-size: calc(12px + (16 - 12) * ((100vw - 320px) / (375 - 320)));
+    @media only screen and (min-width: 375px) {
+      font-size: 16px;
+    }
 
     &:hover {
       color: #85aa9f;

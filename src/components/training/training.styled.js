@@ -7,7 +7,7 @@ export const TrainingContainer = styled.div`
   width: 100%;
   height: 100vh;
   padding: 32px 16px;
-  display: grid;
+  display: flex;
   justify-content: center;
 
   @media only screen and (min-width: 1440px) {

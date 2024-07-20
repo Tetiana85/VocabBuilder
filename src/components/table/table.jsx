@@ -31,26 +31,51 @@ export function Table({ data }) {
   };
 
   const isDictionaryPage = location.pathname.includes('/dictionary');
+  const isRecommendPage = location.pathname.includes('/recommend');
 
   return (
     <TableList>
       <thead className="TableHeader">
         <tr className="TableHeaderList">
-          <th className="TableHeaderItem">
+          <th
+            className={`TableHeaderItem WordColumn ${
+              isRecommendPage ? 'WordColumnRecommend' : ''
+            }`}
+          >
             <div className="TableImagContainer">
               Word <England className="IconCountry" />
             </div>
           </th>
-          <th className="TableHeaderItem">
+          <th
+            className={`TableHeaderItem TranslationColumn ${
+              isRecommendPage ? 'TranslationColumnRecommend' : ''
+            }`}
+          >
             <div className="TableImagContainer">
               Translation <Ukraine className="IconCountry" />
             </div>
           </th>
-          <th className="TableHeaderItem">Category</th>
-          <th className="TableHeaderItem">
+          <th
+            className={`TableHeaderItem CategoryColumn ${
+              isRecommendPage ? 'CategoryColumnRecommend' : ''
+            }`}
+          >
+            Category
+          </th>
+          <th
+            className={`TableHeaderItem ProgressColumn ${
+              isRecommendPage ? 'ProgressColumnRecommend' : ''
+            }`}
+          >
             {isDictionaryPage ? 'Progress' : ''}
           </th>
-          {isDictionaryPage && <th className="TableHeaderItem"></th>}
+          {isDictionaryPage && (
+            <th
+              className={`TableHeaderItem DotsColumn ${
+                isRecommendPage ? 'DotsColumnRecommend' : ''
+              }`}
+            ></th>
+          )}
         </tr>
       </thead>
       {data.results &&
@@ -61,10 +86,32 @@ export function Table({ data }) {
             style={{ cursor: data.results[0].progress >= 0 ? 'pointer' : '' }}
           >
             <tr className="WordList">
-              <td className="TableHeaderItem">{word.en}</td>
-              <td className="TableHeaderItem">{word.ua}</td>
-              <td className="TableHeaderItem">{word.category}</td>
-              <td className="TableHeaderItem">
+              <td
+                className={`TableHeaderItem WordColumn ${
+                  isRecommendPage ? 'WordColumnRecommend' : ''
+                }`}
+              >
+                {word.en}
+              </td>
+              <td
+                className={`TableHeaderItem TranslationColumn ${
+                  isRecommendPage ? 'TranslationColumnRecommend' : ''
+                }`}
+              >
+                {word.ua}
+              </td>
+              <td
+                className={`TableHeaderItem CategoryColumn ${
+                  isRecommendPage ? 'CategoryColumnRecommend' : ''
+                }`}
+              >
+                {word.category}
+              </td>
+              <td
+                className={`TableHeaderItem ProgressColumn ${
+                  isRecommendPage ? 'ProgressColumnRecommend' : ''
+                }`}
+              >
                 {word.progress >= 0 ? (
                   <div className="PercentContainer">
                     <span className="ProgressText">{word.progress}%</span>
@@ -97,7 +144,9 @@ export function Table({ data }) {
               </td>
               {isDictionaryPage && (
                 <td
-                  className="TableHeaderItem DotsColumn"
+                  className={`TableHeaderItem DotsColumn ${
+                    isRecommendPage ? 'DotsColumnRecommend' : ''
+                  }`}
                   onClick={(event) => handleClickWord(event, word)}
                 >
                   ...

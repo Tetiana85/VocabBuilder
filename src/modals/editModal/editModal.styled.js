@@ -104,20 +104,21 @@ export const ModalContainer = styled.div`
   }
 
   .ButtonList {
-    margin-top: 30px;
+    /* margin-top: 30px; */
     display: flex;
     justify-content: space-between;
 
     @media only screen and (min-width: 768px) {
-      margin-top: 15px;
+      /* margin-top: 15px; */
     }
   }
 
   .ButtonAdd {
     cursor: pointer;
     border-radius: 30px;
-    padding: 12px 60px;
-    width: 158px;
+    /* padding: 12px 60px; */
+    width: 100%;
+    max-width: 158px;
     height: 48px;
     background: #fcfcfc;
     box-sizing: border-box;
@@ -135,13 +136,9 @@ export const ModalContainer = styled.div`
       border: 1px solid #d1d5db;
     }
 
-    @media only screen and (max-width: 374px) {
-      width: 125px;
-    }
-
     @media only screen and (min-width: 768px) {
-      padding: 14px 101px;
-      width: 245px;
+      /* padding: 14px 101px; */
+      max-width: 245px;
       height: 56px;
 
       font-size: 23px;
@@ -152,8 +149,9 @@ export const ModalContainer = styled.div`
   .ButtonCancel {
     border: 1px solid rgba(252, 252, 252, 0.4);
     border-radius: 30px;
-    padding: 12px 45px;
-    width: 145px;
+    /* padding: 12px 45px; */
+    width: 100%;
+    max-width: 145px;
     height: 48px;
     box-sizing: border-box;
     font-weight: 700;
@@ -169,13 +167,9 @@ export const ModalContainer = styled.div`
       background: #fcfcfc;
     }
 
-    @media only screen and (max-width: 374px) {
-      width: 125px;
-    }
-
     @media only screen and (min-width: 768px) {
-      padding: 14px 92px;
-      width: 245px;
+      /* padding: 14px 92px; */
+      max-width: 245px;
       height: 56px;
     }
   }

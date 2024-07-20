@@ -6,22 +6,21 @@ import error from '../../img/error.svg';
 export const ContainerAddWordModal = styled.div`
   position: relative;
   border-radius: 15px;
-  width: 343px;
+  max-width: 343px;
   height: 622px;
   background: #85aa9f;
   padding: 48px 16px;
-
-  @media only screen and (max-width: 374px) {
-    width: 288px;
-  }
+  color: #fcfcfc;
+  margin: 0 15px;
 
   @media only screen and (min-width: 768px) {
     box-sizing: border-box;
     border-radius: 30px;
-    width: 628px;
+    max-width: 628px;
     height: 622px;
     padding: 48px 64px;
     overflow: hidden;
+    margin: 0px;
   }
 
   .ButtonClose {
@@ -42,7 +41,7 @@ export const ContainerAddWordModal = styled.div`
     font-size: 24px;
     line-height: 117%;
     letter-spacing: -0.02em;
-    color: rgba(248, 248, 248, 0.8);
+    /* color: rgba(248, 248, 248, 0.8); */
 
     @media only screen and (min-width: 768px) {
       font-size: 40px;
@@ -54,7 +53,7 @@ export const ContainerAddWordModal = styled.div`
     font-weight: 400;
     font-size: 16px;
     line-height: 150%;
-    color: rgba(248, 248, 248, 0.8);
+    /* color: rgba(248, 248, 248, 0.8); */
     margin-top: 20px;
 
     @media only screen and (min-width: 768px) {
@@ -65,11 +64,11 @@ export const ContainerAddWordModal = styled.div`
   .Form {
     margin-top: 20px;
     position: relative;
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: 15px;
 
     @media only screen and (max-width: 374px) {
-      width: 288px;
     }
 
     @media only screen and (min-width: 768px) {
@@ -82,7 +81,7 @@ export const ContainerAddWordModal = styled.div`
     border: 1px solid #d1d5db;
     border-radius: 15px;
     padding: 12px 18px;
-    width: 311px;
+    max-width: 311px;
     height: 48px;
     background: none;
     box-sizing: border-box;
@@ -98,8 +97,7 @@ export const ContainerAddWordModal = styled.div`
 
   input[id='ukrainian'],
   input[id='english'] {
-    @media only screen and (max-width: 374px) {
-      width: 256px;
+    @media only screen and (max-width: 375px) {
     }
   }
 
@@ -189,10 +187,10 @@ export const ContainerAddWordModal = styled.div`
   }
 
   .UkrainianContainer[id='ukrainian'] {
-    margin-top: 50px;
+    margin-top: 32px;
 
-    @media only screen and (max-width: 374px) {
-      margin-top: 35px;
+    @media only screen and (max-width: 375px) {
+      /* margin-top: 35px; */
     }
 
     @media only screen and (min-width: 768px) {
@@ -202,12 +200,14 @@ export const ContainerAddWordModal = styled.div`
 
   .UkrainianContainer,
   .EnglishContainer {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: 8px;
     position: relative;
+    justify-content: space-between;
 
     @media only screen and (min-width: 768px) {
-      display: flex;
+      flex-direction: row;
       gap: 32px;
     }
   }
@@ -230,21 +230,22 @@ export const ContainerAddWordModal = styled.div`
     display: flex;
     gap: 8px;
 
-    @media only screen and (max-width: 374px) {
-      margin-top: 15px;
-      gap: 10px;
+    @media only screen and (max-width: 375px) {
+      /* margin-top: 15px;
+      gap: 10px; */
     }
   }
 
   @media only screen and (min-width: 768px) {
-    margin-top: 15px;
+    /* margin-top: 15px; */
   }
 
   .ButtonAdd {
     cursor: pointer;
     border-radius: 30px;
-    padding: 12px 63px;
-    width: 159px;
+    /* padding: 12px 63px; */
+    width: 100%;
+    max-width: 158px;
     height: 48px;
     background: #fcfcfc;
     box-sizing: border-box;
@@ -262,14 +263,10 @@ export const ContainerAddWordModal = styled.div`
       border: 1px solid #d1d5db;
     }
 
-    @media only screen and (max-width: 374px) {
-      width: 120px;
-    }
-
     @media only screen and (min-width: 768px) {
       border-radius: 30px;
-      padding: 14px 104px;
-      width: 245px;
+      /* padding: 14px 104px; */
+      max-width: 245px;
       height: 56px;
       font-size: 18px;
       line-height: 156%;
@@ -280,8 +277,9 @@ export const ContainerAddWordModal = styled.div`
     cursor: pointer;
     border: 1px solid rgba(252, 252, 252, 0.4);
     border-radius: 30px;
-    padding: 12px 45px;
-    width: 145px;
+    /* padding: 12px 45px; */
+    width: 100%;
+    max-width: 145px;
     height: 48px;
     box-sizing: border-box;
     font-weight: 700;
@@ -297,13 +295,9 @@ export const ContainerAddWordModal = styled.div`
       color: #85aa9f;
     }
 
-    @media only screen and (max-width: 374px) {
-      width: 120px;
-    }
-
     @media only screen and (min-width: 768px) {
-      padding: 14px 92px;
-      width: 245px;
+      /* padding: 14px 92px; */
+      max-width: 245px;
       height: 56px;
       font-size: 18px;
     }

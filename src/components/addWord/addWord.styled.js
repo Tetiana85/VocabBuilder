@@ -51,7 +51,8 @@ export const TrainingPageContainer = styled.div`
   }
 
   .FormContainer {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     @media only screen and (min-width: 768px) {
       border-radius: 15px;
       padding: 18px;
@@ -59,27 +60,24 @@ export const TrainingPageContainer = styled.div`
     }
 
     @media only screen and (min-width: 1440px) {
-      display: flex;
+      flex-direction: row;
     }
   }
 
   .InputContainer {
+    /* border: 1px solid red; */
     box-sizing: border-box;
     border-radius: 8px 8px 0 0;
     padding: 22px;
     width: 100%;
     height: 195px;
     background: #fcfcfc;
-    display: grid;
-    grid-template-areas:
-      'i i i i'
-      'b b n n';
+    display: flex;
+    flex-direction: column;
+    position: relative;
 
     @media only screen and (min-width: 768px) {
       height: 282px;
-      grid-template-areas:
-        'i i n n '
-        'b b _ _ ';
     }
 
     @media only screen and (min-width: 1440px) {
@@ -96,7 +94,6 @@ export const TrainingPageContainer = styled.div`
   }
 
   input {
-    grid-area: i;
     border: none;
     background: #fcfcfc;
     width: 100%;
@@ -105,6 +102,7 @@ export const TrainingPageContainer = styled.div`
     line-height: 150%;
     color: #121417;
     margin-bottom: auto;
+
     @media only screen and (min-width: 768px) {
       font-size: 20px;
     }
@@ -119,7 +117,6 @@ export const TrainingPageContainer = styled.div`
 
   .LangueButton {
     cursor: pointer;
-    grid-area: b;
     display: flex;
     align-items: center;
     gap: 8px;
@@ -127,6 +124,8 @@ export const TrainingPageContainer = styled.div`
     color: rgba(18, 20, 23, 0.5);
     background: none;
     border: none;
+    position: absolute;
+    bottom: 25px;
 
     &:hover {
       color: #85aa9f;
@@ -134,28 +133,33 @@ export const TrainingPageContainer = styled.div`
   }
 
   .LangueName {
-    grid-area: n;
     display: flex;
     align-items: center;
     gap: 8px;
     margin-top: auto;
     margin-left: auto;
     font-size: 14px;
+    position: absolute;
+    bottom: 18px;
+    right: 22px;
 
     @media only screen and (min-width: 768px) {
-      margin-top: 0;
-      margin-bottom: auto;
+      bottom: auto;
+      top: 20px;
       font-size: 16px;
     }
   }
 
   .ButtonList {
-    display: grid;
-    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 116px;
     justify-content: center;
+    align-items: center;
 
     @media only screen and (min-width: 768px) {
       display: flex;
+      flex-direction: row;
       gap: 10px;
       margin-top: 40px;
       justify-content: start;
@@ -166,18 +170,20 @@ export const TrainingPageContainer = styled.div`
   }
 
   .SaveButton {
+    display: flex;
     cursor: pointer;
     box-sizing: border-box;
     border-radius: 30px;
-    padding: 16px;
-    width: 343px;
+    width: 100%;
+    max-width: 343px;
     height: 56px;
     background: #85aa9f;
     font-weight: 700;
     font-size: 16px;
     line-height: 150%;
     color: #fcfcfc;
-    text-align: center;
+    justify-content: center;
+    align-items: center;
 
     &:hover {
       color: #85aa9f;
@@ -185,7 +191,6 @@ export const TrainingPageContainer = styled.div`
     }
 
     @media only screen and (max-width: 374px) {
-      width: 288px;
     }
 
     @media only screen and (min-width: 768px) {

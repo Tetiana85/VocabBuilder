@@ -129,7 +129,11 @@ export const DictionaryPageContainer = styled.div`
     align-items: center;
     display: flex;
     gap: 8px;
+    font-size: calc(12px + (14 - 12) * ((100vw - 320px) / (375 - 320)));
 
+    @media only screen and (min-width: 375px) {
+      font-size: 14px;
+    }
     @media only screen and (min-width: 768px) {
       margin-top: 0px;
     }
@@ -139,13 +143,21 @@ export const DictionaryPageContainer = styled.div`
     font-weight: 500;
     font-size: 20px;
     color: #121417;
+    font-size: calc(16px + (20 - 16) * ((100vw - 320px) / (375 - 320)));
+    @media only screen and (min-width: 375px) {
+      font-size: 20px;
+    }
   }
 
   .ButtonList {
+    font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (375 - 320)));
     margin-top: 8px;
     display: flex;
     gap: 16px;
 
+    @media only screen and (min-width: 375px) {
+      font-size: 16px;
+    }
     @media only screen and (min-width: 1440px) {
       margin-top: 0;
     }
@@ -233,7 +245,7 @@ export const DictionaryPageContainer = styled.div`
   }
 
   .TableContainer {
-    margin-top: 40px;
+    margin-top: 32px;
     @media only screen and (min-width: 768px) {
       padding: 18px;
       background: #fcfcfc;

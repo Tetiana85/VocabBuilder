@@ -5,6 +5,7 @@ import X from '../../img/x-modal.svg';
 export const ModalDiv = styled.div`
   background-color: #85aa9f;
   position: fixed;
+  display: flex;
   top: 0;
   right: 0;
   width: 100%;
@@ -12,6 +13,15 @@ export const ModalDiv = styled.div`
   z-index: 9999;
   transition: right 0.5s ease-in-out;
   padding: 16px;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  & > :nth-child(3) {
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
   .HeaderOfModal {
     display: flex;
@@ -56,9 +66,11 @@ export const ModalDiv = styled.div`
   }
 
   .NavList {
-    display: grid;
+    display: flex;
     gap: 28px;
     margin-top: 150px;
+    flex-direction: column;
+    margin-bottom: 92px;
   }
 
   .NavElement {
@@ -83,11 +95,13 @@ export const ModalDiv = styled.div`
   }
 
   .Img {
-    background-size: 100%;
-    background-image: url(${Img});
+    background-image: url(/VocabBuilder/src/img/registration-mobile.png);
     background-repeat: no-repeat;
-    background-position: center;
-    height: 1050px;
+    background-size: contain;
+    background-position: center center;
+    height: 435px;
+    width: 498px;
+    margin-top: auto;
   }
 
   .ButtonLogOut {
