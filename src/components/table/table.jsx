@@ -15,9 +15,7 @@ export function Table({ data }) {
   const navigate = useNavigate();
   const wordsData = useSelector((state) => state.data.words);
 
-  useEffect(() => {
-    console.log('Дані в Redux-сторі змінилися:', wordsData.results);
-  }, [wordsData.results]);
+  useEffect(() => {}, [wordsData.results]);
 
   const handleClickWord = (event, word) => {
     const { clientX, clientY } = event;

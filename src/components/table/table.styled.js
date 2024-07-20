@@ -7,7 +7,7 @@ export const TableList = styled.table`
   border-radius: 8px;
   overflow: hidden;
 
-  --h: 1px; /* Change this value to adjust h */
+  --h: 1px;
 
   .IconCountry {
     display: none;

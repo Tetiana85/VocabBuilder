@@ -1,6 +1,6 @@
 import { NavLink, Outlet, useNavigate } from 'react-router-dom';
 import { ReactComponent as Logo } from '../img/Craftwork.svg';
-import { ReactComponent as User } from '../img/gridicons_user-2.svg';
+import { ReactComponent as User } from '../img/icons_user-2.svg';
 import { ReactComponent as Burger } from '../img/Nav.svg';
 import { ReactComponent as Switch } from '../img/switch-horizontal-01.svg';
 import { MainContainer } from './layout.styled';
@@ -9,7 +9,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { openModalMobile } from '../redux/modals/modal-slice';
 import authOperations from '../redux/auth/auth-operations';
 import Modals from '../modals/modals';
-// import { Footer } from '../modals/footer/footer';
 import Loader from '../components/loader/loader';
 
 export default function Layout() {
@@ -100,7 +99,6 @@ export default function Layout() {
         isModalOpenConfirmation ||
         isModalOpenEdit ||
         isModalOpenWellDone) && <Modals />}
-      {/* <Footer /> */}
     </div>
   );
 }

@@ -109,8 +109,6 @@ const handleEditWordPending = (state) => {
 };
 
 const handleEditWordFulfilled = (state, { payload }) => {
-  console.log('Editing word fulfilled with payload:', payload);
-
   if (Array.isArray(state.words.results)) {
     const index = state.words.results.findIndex(
       (word) => word._id === payload._id

@@ -2,18 +2,27 @@ import { NavLink, useNavigate } from 'react-router-dom';
 import { ModalDiv } from './mobileModal.styled';
 import { ReactComponent as ButtonClose } from '../../img/x-modal.svg';
 import { ReactComponent as Switch } from '../../img/switch-horizontal-01.svg';
-import { ReactComponent as User } from '../../img/gridicons_user-modal.svg';
-import { useDispatch } from 'react-redux';
+import { ReactComponent as User } from '../../img/icons_user-modal.svg';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
 import authOperations from '../../redux/auth/auth-operations.js';
-import { useSelector } from 'react-redux';
 
 export default function MobileModal({ handleClickClose }) {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const handleSubmit = () => {
-    dispatch(authOperations.logOut()).then(navigate('/'));
-  };
   const userName = useSelector((state) => state.auth.name);
+  const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
+
+  const handleSubmit = () => {
+    dispatch(authOperations.logOut());
+  };
+
+  useEffect(() => {
+    if (!isLoggedIn) {
+      handleClickClose();
+      navigate('/');
+    }
+  }, [isLoggedIn, navigate, handleClickClose]);
 
   const handleCloseModal = () => {
     handleClickClose();

@@ -3,14 +3,14 @@ import styled from 'styled-components';
 export const ModalContainer = styled.div`
   border-radius: 15px;
   padding: 30px;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 50px;
-
   background: #85aa9f;
   box-sizing: border-box;
 
   @media only screen and (max-width: 374px) {
-    width: 288px;
+    max-width: 343px;
     padding: 40px 20px;
   }
 

@@ -36,7 +36,7 @@ const handleFetchCurrentUserReject = (state) => {
   state.isLoggedIn = false;
 };
 
-const handleRegisterLogInPending = (state, { payload }) => {
+const handleRegisterLogInPending = (state) => {
   state.isLoggedIn = false;
 };
 
@@ -47,7 +47,7 @@ const handleRegisterLogInFulfilled = (state, { payload }) => {
   state.isLoggedIn = payload.token ? true : false;
 };
 
-const handleRegisterLogInReject = (state, { payload }) => {
+const handleRegisterLogInReject = (state) => {
   state.isLoggedIn = false;
 };
 

@@ -14,7 +14,6 @@ export const RegisterPageContainer = styled.div`
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  border: 3px solid blue;
 
   @media only screen and (min-width: 768px) {
     background-image: url(${vector});
@@ -61,7 +60,6 @@ export const RegisterPageContainer = styled.div`
     max-width: 374px;
 
     @media only screen and (min-width: 768px) {
-      /* margin-top: 150px; */
       padding: 48px 64px;
       border-radius: 30px;
       max-width: 628px;
@@ -105,7 +103,8 @@ export const RegisterPageContainer = styled.div`
 
   .Form {
     margin-top: 16px;
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: 18px;
 
     @media only screen and (min-width: 768px) {
@@ -188,7 +187,6 @@ export const RegisterPageContainer = styled.div`
 
     @media only screen and (min-width: 1440px) {
       margin-top: 0;
-      grid-area: l;
     }
   }
 

@@ -12,6 +12,7 @@ export const BackdropStyle = styled.div`
   align-items: center;
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 1200;
+  padding: 0 16px;
 
   .ModalDiv {
     max-width: calc(100vw - 48px);

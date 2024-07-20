@@ -3,7 +3,6 @@ import search from '../../img/search.svg';
 import toggle from '../../img/toggle.svg';
 
 export const DictionaryPageContainer = styled.div`
-  /* height: 100vh; */
   padding: 32px 16px;
 
   @media only screen and (min-width: 768px) {
@@ -20,11 +19,12 @@ export const DictionaryPageContainer = styled.div`
 
   .Form {
     position: relative;
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: 8px;
 
     @media only screen and (min-width: 768px) {
-      display: flex;
+      flex-direction: row;
       margin-top: 16px;
     }
   }
@@ -98,6 +98,7 @@ export const DictionaryPageContainer = styled.div`
   .dropdown {
     z-index: 1000;
     position: absolute;
+    flex-direction: column;
     margin-top: 5px;
     display: none;
     gap: 8px;
@@ -186,7 +187,7 @@ export const DictionaryPageContainer = styled.div`
   .RadioButtonList {
     position: absolute;
     top: 120px;
-    display: grid;
+    display: flex;
     gap: 34px;
     left: 14px;
 
@@ -204,6 +205,9 @@ export const DictionaryPageContainer = styled.div`
     font-size: 12px;
     text-align: center;
     align-items: center;
+    @media only screen and (min-width: 768px) {
+      font-size: 14px;
+    }
   }
 
   .RadioButton {

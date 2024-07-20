@@ -20,11 +20,12 @@ export const RecommendPageContainer = styled.div`
 
   .Form {
     position: relative;
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: 8px;
 
     @media only screen and (min-width: 768px) {
-      display: flex;
+      flex-direction: row;
       margin-top: 16px;
     }
   }
@@ -98,6 +99,7 @@ export const RecommendPageContainer = styled.div`
   .dropdown {
     z-index: 1000;
     position: absolute;
+    flex-direction: column;
     margin-top: 5px;
     display: none;
     gap: 8px;
@@ -183,7 +185,6 @@ export const RecommendPageContainer = styled.div`
   .RadioButtonList {
     position: absolute;
     top: 120px;
-    display: grid;
     gap: 34px;
     left: 14px;
 
@@ -201,6 +202,9 @@ export const RecommendPageContainer = styled.div`
     font-size: 12px;
     text-align: center;
     align-items: center;
+    @media only screen and (min-width: 768px) {
+      font-size: 14px;
+    }
   }
 
   .RadioButton {

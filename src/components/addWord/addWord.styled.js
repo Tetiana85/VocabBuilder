@@ -65,7 +65,6 @@ export const TrainingPageContainer = styled.div`
   }
 
   .InputContainer {
-    /* border: 1px solid red; */
     box-sizing: border-box;
     border-radius: 8px 8px 0 0;
     padding: 22px;
@@ -86,10 +85,10 @@ export const TrainingPageContainer = styled.div`
   }
 
   .InputContainer[id='ukrainian'] {
-    border-bottom: 1px solid #dbdbdb;
+    border-bottom: 2px solid #dbdbdb;
     @media only screen and (min-width: 1440px) {
       border-bottom: none;
-      border-right: 1px solid #dbdbdb;
+      border-right: 2px solid #dbdbdb;
     }
   }
 

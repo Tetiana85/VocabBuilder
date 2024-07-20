@@ -5,21 +5,20 @@ import error from '../../img/error.svg';
 export const ModalContainer = styled.div`
   position: relative;
   border-radius: 15px;
-  width: 342px;
+  width: 100%;
+  max-width: 343px;
   height: 359px;
   padding: 16px;
-
   background: #85aa9f;
   box-sizing: border-box;
 
-  @media only screen and (max-width: 374px) {
-    width: 288px;
+  @media only screen and (max-width: 375px) {
   }
 
   @media only screen and (min-width: 768px) {
-    width: 627px;
-    height: 345px;
-    padding: 30px 60px;
+    max-width: 628px;
+    height: 346px;
+    padding: 30px 64px 64px 64px;
   }
 
   .ButtonClose {
@@ -36,12 +35,16 @@ export const ModalContainer = styled.div`
   }
 
   .Form {
-    margin-top: 30px;
+    width: 100%;
+    max-width: 343px;
+    margin-top: 34px;
     position: relative;
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: 15px;
     @media only screen and (min-width: 768px) {
-      gap: 20px;
+      gap: 32px;
+      max-width: 100%;
     }
   }
 
@@ -49,8 +52,9 @@ export const ModalContainer = styled.div`
   input[id='english'] {
     border: 1px solid #d1d5db;
     border-radius: 15px;
-    padding: 12px 176px 12px 24px;
-    width: 311px;
+    padding: 12px 24px 12px 24px;
+    width: 100%;
+    max-width: 311px;
     height: 48px;
     background: none;
     box-sizing: border-box;
@@ -66,29 +70,24 @@ export const ModalContainer = styled.div`
 
   input[id='ukrainian'],
   input[id='english'] {
-    @media only screen and (max-width: 374px) {
-      width: 256px;
-    }
-  }
-
-  input[id='ukrainian'],
-  input[id='english'] {
     @media only screen and (min-width: 768px) {
-      padding: 16px 227px 16px 18px;
-      width: 354px;
+      padding: 16px 18px 16px 18px;
+      max-width: 354px;
       height: 56px;
     }
   }
 
   .UkrainianContainer,
   .EnglishContainer {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: 8px;
     position: relative;
 
     @media only screen and (min-width: 768px) {
-      display: flex;
-      gap: 32px;
+      flex-direction: row;
+      gap: 0;
+      justify-content: space-between;
     }
   }
   .InputImagContainer {
@@ -104,19 +103,18 @@ export const ModalContainer = styled.div`
   }
 
   .ButtonList {
-    /* margin-top: 30px; */
     display: flex;
     justify-content: space-between;
+    gap: 8px;
 
     @media only screen and (min-width: 768px) {
-      /* margin-top: 15px; */
+      gap: 10px;
     }
   }
 
   .ButtonAdd {
     cursor: pointer;
     border-radius: 30px;
-    /* padding: 12px 60px; */
     width: 100%;
     max-width: 158px;
     height: 48px;
@@ -137,7 +135,6 @@ export const ModalContainer = styled.div`
     }
 
     @media only screen and (min-width: 768px) {
-      /* padding: 14px 101px; */
       max-width: 245px;
       height: 56px;
 
@@ -149,7 +146,6 @@ export const ModalContainer = styled.div`
   .ButtonCancel {
     border: 1px solid rgba(252, 252, 252, 0.4);
     border-radius: 30px;
-    /* padding: 12px 45px; */
     width: 100%;
     max-width: 145px;
     height: 48px;
@@ -168,7 +164,6 @@ export const ModalContainer = styled.div`
     }
 
     @media only screen and (min-width: 768px) {
-      /* padding: 14px 92px; */
       max-width: 245px;
       height: 56px;
     }

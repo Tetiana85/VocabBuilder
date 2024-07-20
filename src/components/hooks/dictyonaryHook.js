@@ -27,7 +27,7 @@ export const useDictionaryHook = () => {
     const dropdownItems = dropdown.querySelectorAll('li');
 
     const handleClick = () => {
-      dropdown.style.display = 'grid';
+      dropdown.style.display = 'flex';
     };
 
     const handleDropdownItemClick = (item) => {

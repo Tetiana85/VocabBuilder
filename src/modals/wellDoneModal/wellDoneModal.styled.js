@@ -4,20 +4,20 @@ import bookDesctop from '../../img/open-orange-book-desctop-min.png';
 
 export const WellDoneContainer = styled.div`
   border-radius: 15px;
-  width: 342px;
-  height: 458px;
+  width: 100%;
+  max-width: 343px;
+  height: 459px;
   padding: 18px;
   background: #85aa9f;
   position: relative;
   box-sizing: border-box;
 
-  @media only screen and (max-width: 374px) {
-    width: 288px;
+  @media only screen and (max-width: 375px) {
   }
 
   @media only screen and (min-width: 768px) {
     border-radius: 30px;
-    width: 528px;
+    max-width: 528px;
     height: 520px;
     padding: 18px 64px;
   }
@@ -77,7 +77,8 @@ export const WellDoneContainer = styled.div`
   .CorrectAnswerList,
   .MistakesList {
     margin-top: 10px;
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: 8px;
   }
 

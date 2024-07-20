@@ -26,11 +26,10 @@ export const TrainingContainer = styled.div`
     @media only screen and (min-width: 1440px) {
       width: 902px;
       height: 289px;
-      display: grid;
-      grid-template-areas:
-        't t i'
-        'b b i';
+      display: flex;
+      flex-direction: column;
       margin-top: 0px;
+      position: relative;
     }
   }
 
@@ -38,8 +37,8 @@ export const TrainingContainer = styled.div`
     display: flex;
     justify-content: center;
     @media only screen and (min-width: 1440px) {
-      grid-area: i;
-      margin-right: 32px;
+      position: absolute;
+      right: 0;
     }
   }
 
@@ -56,7 +55,7 @@ export const TrainingContainer = styled.div`
 
   .TextContainer {
     @media only screen and (min-width: 1440px) {
-      grid-area: t;
+      max-width: 581px;
     }
   }
 
@@ -83,16 +82,15 @@ export const TrainingContainer = styled.div`
   }
 
   .ButtonList {
-    margin-top: 140px;
+    margin-top: 132px;
 
     @media only screen and (min-width: 768px) {
-      margin-top: 60px;
+      margin-top: 64px;
       display: flex;
       gap: 8px;
     }
 
     @media only screen and (min-width: 1440px) {
-      grid-area: b;
     }
   }
 
@@ -101,10 +99,9 @@ export const TrainingContainer = styled.div`
     box-sizing: border-box;
     border-radius: 30px;
     padding: 16px;
-    width: 343px;
+    max-width: 343px;
     height: 56px;
     background: #85aa9f;
-
     font-weight: 700;
     font-size: 16px;
     line-height: 150%;
@@ -117,9 +114,6 @@ export const TrainingContainer = styled.div`
       background: #f8f8f8;
     }
 
-    @media only screen and (max-width: 374px) {
-      width: 288px;
-    }
     @media only screen and (min-width: 768px) {
       width: 203px;
       padding: 14px;

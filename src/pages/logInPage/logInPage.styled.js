@@ -52,7 +52,6 @@ export const LogInPageContainer = styled.div`
     @media only screen and (min-width: 1440px) {
       width: 498px;
       height: 475px;
-      grid-area: i;
       background-image: url(${desctopImg});
     }
   }
@@ -109,7 +108,8 @@ export const LogInPageContainer = styled.div`
 
   .Form {
     margin-top: 16px;
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: 18px;
 
     @media only screen and (min-width: 768px) {
@@ -183,7 +183,6 @@ export const LogInPageContainer = styled.div`
 
     @media only screen and (min-width: 1440px) {
       margin-top: 0;
-      grid-area: l;
     }
   }
 

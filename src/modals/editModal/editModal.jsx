@@ -26,7 +26,6 @@ export function EditModal({ handleClickClose }) {
         dispatch(editWord({ edit: values, id: clickWordId._id })).then(
           (response) => {
             !response.error && handleClickClose();
-            console.log('Слово обновлено:', response.payload);
           }
         );
       },
