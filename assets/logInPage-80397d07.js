@@ -1,4 +1,4 @@
-import{p as u,u as f,a as w,j as e,N as b,c as y}from"./index-045823e1.js";import{e as v,c as k,u as j,S as I,b as N}from"./error-0a4a89bf.js";import{v as S,m as z,d as P,e as C,a as L}from"./eye-off-ba0e9a84.js";const T=u.div`
+import{p as u,u as f,a as w,j as e,N as b,c as y}from"./index-239b5d5a.js";import{e as v,c as k,u as j,S as I,b as N}from"./error-f092eaff.js";import{v as S,m as z,d as P,e as C,a as L}from"./eye-off-47b65a59.js";const T=u.div`
   width: 100%;
   height: 100vh;
   padding-bottom: 50px;
@@ -43,7 +43,6 @@ import{p as u,u as f,a as w,j as e,N as b,c as y}from"./index-045823e1.js";impor
     @media only screen and (min-width: 1440px) {
       width: 498px;
       height: 475px;
-      grid-area: i;
       background-image: url(${P});
     }
   }
@@ -100,7 +99,8 @@ import{p as u,u as f,a as w,j as e,N as b,c as y}from"./index-045823e1.js";impor
 
   .Form {
     margin-top: 16px;
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: 18px;
 
     @media only screen and (min-width: 768px) {
@@ -174,7 +174,6 @@ import{p as u,u as f,a as w,j as e,N as b,c as y}from"./index-045823e1.js";impor
 
     @media only screen and (min-width: 1440px) {
       margin-top: 0;
-      grid-area: l;
     }
   }
 

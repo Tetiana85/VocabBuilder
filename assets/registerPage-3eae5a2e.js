@@ -1,11 +1,10 @@
-import{p as u,u as f,a as b,j as e,N as w,c as y}from"./index-045823e1.js";import{v,m as k,d as N,e as j,a as S}from"./eye-off-ba0e9a84.js";import{e as I,c as z,u as C,S as P,a as R}from"./error-0a4a89bf.js";const T=u.div`
+import{p as u,u as f,a as w,j as e,N as b,c as y}from"./index-239b5d5a.js";import{v,m as k,d as N,e as j,a as S}from"./eye-off-47b65a59.js";import{e as I,c as z,u as C,S as P,a as R}from"./error-f092eaff.js";const T=u.div`
   width: 100%;
   height: 100vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  border: 3px solid blue;
 
   @media only screen and (min-width: 768px) {
     background-image: url(${v});
@@ -52,7 +51,6 @@ import{p as u,u as f,a as b,j as e,N as w,c as y}from"./index-045823e1.js";impor
     max-width: 374px;
 
     @media only screen and (min-width: 768px) {
-      /* margin-top: 150px; */
       padding: 48px 64px;
       border-radius: 30px;
       max-width: 628px;
@@ -96,7 +94,8 @@ import{p as u,u as f,a as b,j as e,N as w,c as y}from"./index-045823e1.js";impor
 
   .Form {
     margin-top: 16px;
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: 18px;
 
     @media only screen and (min-width: 768px) {
@@ -179,7 +178,6 @@ import{p as u,u as f,a as b,j as e,N as w,c as y}from"./index-045823e1.js";impor
 
     @media only screen and (min-width: 1440px) {
       margin-top: 0;
-      grid-area: l;
     }
   }
 
@@ -259,4 +257,4 @@ import{p as u,u as f,a as b,j as e,N as w,c as y}from"./index-045823e1.js";impor
       margin-right: 5px;
     }
   }
-`;function L(){const r=f(),o=b(),{values:i,errors:l,touched:d,isValid:p,handleBlur:a,handleChange:n,handleSubmit:c}=C({initialValues:{name:"",email:"",password:""},validationSchema:R,onSubmit:g=>{r(y.register(g)).then(h=>{h.payload.name&&o("/dictionary")})}}),{showPassword:m,getInputAlert:t,getHidePassword:x,getInputClass:s}=P(i,d,l);return e.jsxs(T,{children:[e.jsx("div",{className:"ImgContainer",children:e.jsx("div",{className:"RegisterImg"})}),e.jsxs("div",{className:"FormContainer",children:[e.jsx("h2",{className:"Title",children:"Register"}),e.jsx("p",{className:"Text",children:"To start using our services, please fill out the registration form below. All fields are mandatory:"}),e.jsxs("form",{className:"Form",children:[e.jsxs("div",{className:"DivInput",children:[e.jsx("input",{id:"registerName",name:"name",type:"text",placeholder:"Name",className:s("name"),onChange:n,value:i.name,onBlur:a}),t("name")]}),e.jsxs("div",{className:"DivInput",children:[e.jsx("input",{id:"registerEmail",name:"email",type:"email",placeholder:"Email",className:s("email"),onChange:n,value:i.email,onBlur:a}),t("email")]}),e.jsxs("div",{className:"DivInput",id:"password",children:[e.jsx("input",{id:"registerPassword",name:"password",placeholder:"Password",type:m?"text":"password",className:s("password"),onChange:n,value:i.password,onBlur:a}),t("password"),i.password&&x()]}),e.jsx("button",{className:"ButtonSubmit",type:"submit",disabled:!p,onClick:c,children:"Register"})]}),e.jsx(w,{className:"NavLogIn",to:"/login",children:"Login"})]}),e.jsxs("ul",{className:"SkilsList",children:[e.jsx("li",{className:"Skil",children:"Word"}),e.jsx("li",{className:"Skil",children:"Translation"}),e.jsx("li",{className:"Skil",children:"Grammar"}),e.jsx("li",{className:"Skil",children:"Progress"})]})]})}export{L as default};
+`;function L(){const o=f(),r=w(),{values:i,errors:l,touched:d,isValid:p,handleBlur:a,handleChange:n,handleSubmit:c}=C({initialValues:{name:"",email:"",password:""},validationSchema:R,onSubmit:g=>{o(y.register(g)).then(h=>{h.payload.name&&r("/dictionary")})}}),{showPassword:m,getInputAlert:t,getHidePassword:x,getInputClass:s}=P(i,d,l);return e.jsxs(T,{children:[e.jsx("div",{className:"ImgContainer",children:e.jsx("div",{className:"RegisterImg"})}),e.jsxs("div",{className:"FormContainer",children:[e.jsx("h2",{className:"Title",children:"Register"}),e.jsx("p",{className:"Text",children:"To start using our services, please fill out the registration form below. All fields are mandatory:"}),e.jsxs("form",{className:"Form",children:[e.jsxs("div",{className:"DivInput",children:[e.jsx("input",{id:"registerName",name:"name",type:"text",placeholder:"Name",className:s("name"),onChange:n,value:i.name,onBlur:a}),t("name")]}),e.jsxs("div",{className:"DivInput",children:[e.jsx("input",{id:"registerEmail",name:"email",type:"email",placeholder:"Email",className:s("email"),onChange:n,value:i.email,onBlur:a}),t("email")]}),e.jsxs("div",{className:"DivInput",id:"password",children:[e.jsx("input",{id:"registerPassword",name:"password",placeholder:"Password",type:m?"text":"password",className:s("password"),onChange:n,value:i.password,onBlur:a}),t("password"),i.password&&x()]}),e.jsx("button",{className:"ButtonSubmit",type:"submit",disabled:!p,onClick:c,children:"Register"})]}),e.jsx(b,{className:"NavLogIn",to:"/login",children:"Login"})]}),e.jsxs("ul",{className:"SkilsList",children:[e.jsx("li",{className:"Skil",children:"Word"}),e.jsx("li",{className:"Skil",children:"Translation"}),e.jsx("li",{className:"Skil",children:"Grammar"}),e.jsx("li",{className:"Skil",children:"Progress"})]})]})}export{L as default};

@@ -1,5 +1,4 @@
-import{p as j,u as C,r as s,b as v,y as I,z as N,j as e,N as z}from"./index-045823e1.js";import{s as R,u as k,l as B,T as L,P as F}from"./table-c98c6d59.js";import{t as S}from"./toggle-c9fc8ecd.js";import{S as W}from"./index-6c12db67.js";import"./extends-1172ab5a.js";const T=j.div`
-  height: 100vh;
+import{p as L,r as s,u as B,b as o,E as u,y as R,F as S,j as e,L as W,C as F,N as D}from"./index-239b5d5a.js";import{s as A,u as E,l as P,T,P as M}from"./table-ab9a6282.js";import{t as H}from"./toggle-c5de6f17.js";import{S as V}from"./index-62ca473f.js";import"./extends-a0ac0fb1.js";const $=L.div`
   padding: 32px 16px;
 
   @media only screen and (min-width: 768px) {
@@ -16,11 +15,12 @@ import{p as j,u as C,r as s,b as v,y as I,z as N,j as e,N as z}from"./index-0458
 
   .Form {
     position: relative;
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: 8px;
 
     @media only screen and (min-width: 768px) {
-      display: flex;
+      flex-direction: row;
       margin-top: 16px;
     }
   }
@@ -43,7 +43,7 @@ import{p as j,u as C,r as s,b as v,y as I,z as N,j as e,N as z}from"./index-0458
     position: relative;
 
     &::after {
-      content: url(${R});
+      content: url(${A});
       position: absolute;
       top: 14px;
       right: 24px;
@@ -54,7 +54,7 @@ import{p as j,u as C,r as s,b as v,y as I,z as N,j as e,N as z}from"./index-0458
     position: relative;
 
     &::after {
-      content: url(${S});
+      content: url(${H});
       position: absolute;
       top: 14px;
       right: 24px;
@@ -94,6 +94,7 @@ import{p as j,u as C,r as s,b as v,y as I,z as N,j as e,N as z}from"./index-0458
   .dropdown {
     z-index: 1000;
     position: absolute;
+    flex-direction: column;
     margin-top: 5px;
     display: none;
     gap: 8px;
@@ -120,11 +121,13 @@ import{p as j,u as C,r as s,b as v,y as I,z as N,j as e,N as z}from"./index-0458
   .CountWord {
     margin-top: 40px;
     font-weight: 500;
-    font-size: calc(12px + (14 - 12) * ((100vw - 320px) / (375 - 320)));
+    font-size: 14px;
     color: rgba(18, 20, 23, 0.5);
     align-items: center;
     display: flex;
     gap: 8px;
+    font-size: calc(12px + (14 - 12) * ((100vw - 320px) / (375 - 320)));
+
     @media only screen and (min-width: 375px) {
       font-size: 14px;
     }
@@ -135,18 +138,23 @@ import{p as j,u as C,r as s,b as v,y as I,z as N,j as e,N as z}from"./index-0458
 
   .NumberCountWord {
     font-weight: 500;
-    font-size: calc(12px + (14 - 12) * ((100vw - 320px) / (375 - 320)));
+    font-size: 20px;
     color: #121417;
+    font-size: calc(16px + (20 - 16) * ((100vw - 320px) / (375 - 320)));
     @media only screen and (min-width: 375px) {
       font-size: 20px;
     }
   }
 
   .ButtonList {
+    font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (375 - 320)));
     margin-top: 8px;
     display: flex;
     gap: 16px;
 
+    @media only screen and (min-width: 375px) {
+      font-size: 16px;
+    }
     @media only screen and (min-width: 1440px) {
       margin-top: 0;
     }
@@ -158,10 +166,6 @@ import{p as j,u as C,r as s,b as v,y as I,z as N,j as e,N as z}from"./index-0458
     gap: 8px;
     cursor: pointer;
     color: #121417;
-    font-size: calc(12px + (16 - 12) * ((100vw - 320px) / (375 - 320)));
-    @media only screen and (min-width: 375px) {
-      font-size: 16px;
-    }
 
     &:hover {
       color: #85aa9f;
@@ -179,7 +183,7 @@ import{p as j,u as C,r as s,b as v,y as I,z as N,j as e,N as z}from"./index-0458
   .RadioButtonList {
     position: absolute;
     top: 120px;
-    display: grid;
+    display: flex;
     gap: 34px;
     left: 14px;
 
@@ -197,6 +201,9 @@ import{p as j,u as C,r as s,b as v,y as I,z as N,j as e,N as z}from"./index-0458
     font-size: 12px;
     text-align: center;
     align-items: center;
+    @media only screen and (min-width: 768px) {
+      font-size: 14px;
+    }
   }
 
   .RadioButton {
@@ -238,7 +245,7 @@ import{p as j,u as C,r as s,b as v,y as I,z as N,j as e,N as z}from"./index-0458
   }
 
   .TableContainer {
-    margin-top: 40px;
+    margin-top: 32px;
     @media only screen and (min-width: 768px) {
       padding: 18px;
       background: #fcfcfc;
@@ -246,4 +253,4 @@ import{p as j,u as C,r as s,b as v,y as I,z as N,j as e,N as z}from"./index-0458
       margin-top: 28px;
     }
   }
-`;function V(){const r=C(),{categories:p,customInputRef:x,inputRef:m,dropdownRef:u,capitalizeFirstLetter:h,toLowerCase:g}=k(),[i,o]=s.useState({filters:"",statistics:"",isIrregular:void 0,page:1}),[f,l]=s.useState(!1),n=v(t=>t.data.allWords);s.useEffect(()=>{r(I())},[r]);const b=s.useRef(B.debounce(t=>{const a={...t,statistics:g(t.statistics)};r(N(a))},300));s.useEffect(()=>{b.current(i)},[i]);const d=t=>{const{name:a,value:y}=t.target;o({...i,[a]:y.trim()})},w=t=>{o(a=>({...a,statistics:h(t.toLowerCase())})),t.toLowerCase()==="verb"?l(!0):l(!1)},c=t=>{o(a=>({...a,isIrregular:t}))};return e.jsxs(T,{children:[e.jsxs("div",{className:"FilterContainer",children:[e.jsxs("form",{className:"Form",children:[e.jsx("div",{className:"SearchContainer",children:e.jsx("input",{id:"filters",className:"Input",type:"text",placeholder:"Find the word",name:"filters",value:i.filters,onChange:d})}),e.jsxs("div",{ref:x,className:"custom-input",children:[e.jsx("input",{id:"statistics",name:"statistics",className:"Input",type:"text",placeholder:"Categories",value:i.statistics,onChange:d,ref:m}),e.jsx("ul",{ref:u,className:"dropdown",children:p&&p.map(t=>e.jsx("li",{className:"ListItem",onClick:()=>w(t),children:t},t))})]}),e.jsxs("ul",{className:"RadioButtonList",style:{display:f?"flex":"none"},children:[e.jsxs("li",{className:"RadioButtonItem",children:[e.jsx("input",{className:"RadioButton",id:"regular",name:"regular",type:"radio",onChange:()=>c(!1),checked:i.isIrregular===!1}),"Regular"]}),e.jsxs("li",{className:"RadioButtonItem",children:[e.jsx("input",{className:"RadioButton",id:"reason",name:"reason",type:"radio",onChange:()=>c(!0),checked:i.isIrregular===!0}),"Irregular"]})]})]}),e.jsxs("div",{className:"CountContainer",children:[e.jsxs("p",{className:"CountWord",children:["To study:",e.jsx("span",{className:"NumberCountWord",children:n.results&&n.results.length})]}),e.jsx("ul",{className:"ButtonList",children:e.jsx("li",{children:e.jsxs(z,{className:"ButtonItem",to:"/training",children:["Train oneself ",e.jsx(W,{className:"IconButton"})]})})})]})]}),e.jsx("div",{className:"TableContainer",children:n?e.jsx(L,{data:n}):e.jsx("div",{children:"Oooops samething wrong..."})}),n.totalPages>1&&e.jsx(F,{data:n,formData:i,setFormData:o})]})}export{V as default};
+`,Y=i=>s.createElement("svg",{xmlns:"http://www.w3.org/2000/svg",width:20,height:20,fill:"none",...i},s.createElement("path",{stroke:"#85AA9F",strokeLinecap:"round",strokeLinejoin:"round",strokeWidth:1.5,d:"M10 4.167v11.666M4.167 10h11.666"}));function Q(){const i=B(),{categories:h,customInputRef:g,inputRef:f,dropdownRef:w,capitalizeFirstLetter:b,toLowerCase:y}=E(),[a,d]=s.useState({filters:"",statistics:"",isIrregular:void 0,page:1}),[j,l]=s.useState(!1),r=o(t=>t.data.words),C=o(t=>t.data.statistics),v=o(t=>t.data.isLoadingCategories),I=o(t=>t.data.isLoadingStatistics),p=o(t=>t.data.isDeleteWord),c=o(t=>t.data.isAddWord);s.useEffect(()=>{i(u(p||c)),i(R()),i(S())},[i,p,c]);const N=s.useRef(P.debounce(t=>{const n={...t,statistics:y(t.statistics)};i(u(n))},300));s.useEffect(()=>{N.current(a)},[a]);const x=t=>{const{name:n,value:z}=t.target;d({...a,[n]:z.trim()})},k=t=>{d(n=>({...n,statistics:b(t.toLowerCase())})),t.toLowerCase()==="verb"?l(!0):l(!1)},m=t=>{d(n=>({...n,isIrregular:t}))};return e.jsxs($,{children:[e.jsxs("div",{className:"FilterContainer",children:[e.jsxs("form",{className:"Form",children:[e.jsx("div",{className:"SearchContainer",children:e.jsx("input",{id:"filters",className:"Input",type:"text",placeholder:"Find the word",name:"filters",value:a.filters,onChange:x})}),e.jsxs("div",{ref:g,className:"custom-input",children:[e.jsx("input",{id:"statistics",name:"statistics",className:"Input",type:"text",placeholder:"Categories",value:a.statistics,onChange:x,ref:f}),e.jsx("ul",{ref:w,className:"dropdown",children:v?e.jsx("div",{children:e.jsx(W,{})}):h.map(t=>e.jsx("li",{className:"ListItem",onClick:()=>k(t),children:t},t))})]}),e.jsxs("ul",{className:"RadioButtonList",style:{display:j?"flex":"none"},children:[e.jsxs("li",{className:"RadioButtonItem",children:[e.jsx("input",{className:"RadioButton",id:"regular",name:"regular",type:"radio",onChange:()=>m(!1),checked:a.isIrregular===!1}),"Regular"]}),e.jsxs("li",{className:"RadioButtonItem",children:[e.jsx("input",{className:"RadioButton",id:"irregular",name:"irregular",type:"radio",onChange:()=>m(!0),checked:a.isIrregular===!0}),"Irregular"]})]})]}),e.jsxs("div",{className:"CountContainer",children:[e.jsxs("p",{className:"CountWord",children:["To study:",e.jsx("span",{className:"NumberCountWord",children:!I&&C.totalCount})]}),e.jsxs("ul",{className:"ButtonList",children:[e.jsxs("li",{className:"ButtonItem",onClick:()=>i(F()),children:["Add word ",e.jsx(Y,{className:"IconButton"})]}),e.jsx("li",{children:e.jsxs(D,{className:"ButtonItem",to:"/training",children:["Train oneself ",e.jsx(V,{className:"IconButton"})]})})]})]})]}),e.jsx("div",{className:"TableContainer",children:r.results&&r.results.length!==0?e.jsx(T,{data:r}):e.jsx("p",{style:{fontSize:"20px",textAlign:"center"},children:"You don't have own words"})}),r.totalPages>1&&e.jsx(M,{data:r,formData:a,setFormData:d})]})}export{Q as default};

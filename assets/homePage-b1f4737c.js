@@ -1,4 +1,4 @@
-import{p as n,r as t,b as r,j as e,N as l}from"./index-045823e1.js";const c=n.div`
+import{p as n,r as t,b as r,j as e,N as l}from"./index-239b5d5a.js";const c=n.div`
   background: #85aa9f;
   width: 100vw;
   height: 100vh;
