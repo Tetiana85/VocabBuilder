@@ -1,4 +1,4 @@
-import{p as j,u as C,r as o,b as v,y as I,z as N,j as e,N as z}from"./index-239b5d5a.js";import{s as R,u as k,l as B,T as L,P as F}from"./table-ab9a6282.js";import{t as S}from"./toggle-c5de6f17.js";import{S as W}from"./index-62ca473f.js";import"./extends-a0ac0fb1.js";const T=j.div`
+import{p as j,u as C,r as o,b as v,g as I,e as N,j as e,N as z}from"./index-4ee2733a.js";import{s as R,u as k,l as B,T as L,P as F}from"./table-3c9e7e34.js";import{t as S}from"./confirmationModal-e793beea.js";import{S as W}from"./index-673db7ee.js";import"./error-c41fa518.js";const T=j.div`
   height: 100vh;
   padding: 32px 16px;
 
@@ -243,6 +243,7 @@ import{p as j,u as C,r as o,b as v,y as I,z as N,j as e,N as z}from"./index-239b
 
   .TableContainer {
     margin-top: 40px;
+    text-align: center;
     @media only screen and (min-width: 768px) {
       padding: 18px;
       background: #fcfcfc;
