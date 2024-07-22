@@ -83,7 +83,7 @@ export const WellDoneContainer = styled.div`
   }
 
   .CorrectAnswerList {
-    overflow: scroll;
+    overflow: auto;
     max-height: 300px;
 
     @media only screen and (min-width: 768px) {

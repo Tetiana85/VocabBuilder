@@ -1,7 +1,7 @@
-export const selectShowModalLogIn = (state) => state.modal.isModalOpenLogIn;
+// export const selectShowModalLogIn = (state) => state.modal.isModalOpenLogIn;
 
-export const selectShowModalRegister = (state) =>
-  state.modal.isModalOpenRegister;
+// export const selectShowModalRegister = (state) =>
+//   state.modal.isModalOpenRegister;
 
-export const selectShowModalClickWord = (state) =>
-  state.modal.isModalOpenClickWord;
+// export const selectShowModalClickWord = (state) =>
+//   state.modal.isModalOpenClickWord;

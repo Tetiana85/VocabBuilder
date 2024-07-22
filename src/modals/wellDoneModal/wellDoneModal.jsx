@@ -1,6 +1,6 @@
-import { WellDoneContainer } from "./wellDoneModal.styled";
-import { ReactComponent as ButtonClose } from "../../img/x-modal.svg";
-import { useSelector } from "react-redux";
+import { WellDoneContainer } from './wellDoneModal.styled';
+import { ReactComponent as ButtonClose } from '../../img/x-modal.svg';
+import { useSelector } from 'react-redux';
 
 export default function WellDoneModal({ handleClickClose }) {
   const answers = useSelector((state) => state.data.answers);
@@ -30,7 +30,7 @@ export default function WellDoneModal({ handleClickClose }) {
                 (mistake, item) =>
                   mistake.isDone === false && (
                     <li key={item} className="MistakesItem">
-                      {mistake.task === "en" ? mistake.en : mistake.ua}
+                      {mistake.task === 'en' ? mistake.en : mistake.ua}
                     </li>
                   )
               )}

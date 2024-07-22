@@ -250,6 +250,7 @@ export const DictionaryPageContainer = styled.div`
 
   .TableContainer {
     margin-top: 32px;
+    text-align: center;
     @media only screen and (min-width: 768px) {
       padding: 18px;
       background: #fcfcfc;

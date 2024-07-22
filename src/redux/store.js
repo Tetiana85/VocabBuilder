@@ -1,5 +1,5 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
-import { modalReducer } from './modals/modal-slice';
+// import { modalReducer } from './modals/modal-slice';
 import storage from 'redux-persist/lib/storage';
 import {
   persistStore,
@@ -20,20 +20,20 @@ const authPersistConfig = {
   whitelist: ['token'],
 };
 
-const modalPersistConfig = {
-  key: 'modal',
-  storage,
-  whitelist: [
-    'isModalOpenMobile',
-    'isModalOpenAddWord',
-    'isModalOpenTrainOneseif',
-    'isModalOpenConfirmation',
-    'isModalOpenEdit',
-    'clickWordCoordinates',
-    'clickWordId',
-    'isModalOpenWellDone',
-  ],
-};
+// const modalPersistConfig = {
+//   key: 'modal',
+//   storage,
+//   whitelist: [
+//     'isModalOpenMobile',
+//     'isModalOpenAddWord',
+//     'isModalOpenTrainOneseif',
+//     'isModalOpenConfirmation',
+//     'isModalOpenEdit',
+//     'clickWordCoordinates',
+//     'clickWordId',
+//     'isModalOpenWellDone',
+//   ],
+// };
 
 const dataPersistConfig = {
   key: 'data',
@@ -50,7 +50,7 @@ const dataPersistConfig = {
 
 const rootReducer = combineReducers({
   auth: persistReducer(authPersistConfig, authSlice),
-  modal: persistReducer(modalPersistConfig, modalReducer),
+  // modal: persistReducer(modalPersistConfig, modalReducer),
   data: persistReducer(dataPersistConfig, dataSlice),
 });
 
