@@ -1,14 +1,14 @@
 import { ModalContainer } from './confirmationModal.styled';
-import { deleteWord } from '../../redux/data/data-operation';
-import { useDispatch } from 'react-redux';
 
-export function ConfirmationModal({ handleClickClose, word }) {
-  const dispatch = useDispatch();
-
+export function ConfirmationModal({ handleClickClose, word, onDelete }) {
   const handleDeleteWord = () => {
-    dispatch(deleteWord(word)).then((response) => {
-      isNaN(response.payload) && handleClickClose();
-    });
+    onDelete(word)
+      .then(() => {
+        handleClickClose();
+      })
+      .catch((error) => {
+        console.error('Ошибка при удалении слова:', error);
+      });
   };
 
   return (
@@ -25,3 +25,5 @@ export function ConfirmationModal({ handleClickClose, word }) {
     </ModalContainer>
   );
 }
+
+export default ConfirmationModal;

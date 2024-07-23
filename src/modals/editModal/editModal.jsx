@@ -5,7 +5,7 @@ import { ReactComponent as England } from '../../img/united kingdom.svg';
 import { ShowRules } from '../../utils/showRules';
 import { useFormik } from 'formik';
 import { EditWordSchema } from '../../utils/validationSchemas';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { editWord } from '../../redux/data/data-operation';
 
 export function EditModal({ word, handleClickClose }) {
